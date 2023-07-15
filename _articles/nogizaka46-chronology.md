@@ -13,7 +13,7 @@ foam_template:
 
 ## Introduction
 
-The chronology of Nogizaka46 is currently incomplete, with numerous events yet to be documented. The process of updating this record is ongoing and will be carried out sequentially as a never-ending longpost.  It's important to note that the chronology includes both planned and actual events, which have been combined at least for the moment (I intend in signaling them in the future). Please be patient as I continue to refine and update this database.[^1]
+The chronology of Nogizaka46 is currently incomplete, with numerous events yet to be documented. The process of updating this record is ongoing and will be carried out sequentially as a never-ending longpost.  It's important to note that the chronology includes both planned and actual events, which have been combined at least for the moment (I intend in signalizing them in the future). Please be patient as I continue to refine and update this database.[^1]
 
 ## Pre-Debut
 
@@ -36,7 +36,7 @@ _The history of Nogizaka46 began with the birth of its members. Below is a chron
 - **11/21** - Rino Sashihara, of HKT48 was born in Oita City, Oita. Blood type: O
 
 ### 1993 (Heisei 05)
-- **01/04** - Misato Eto, a first-generation member, was born in Oita City, Oita. Blood type: AB
+- **01/04** - Misa Eto, a first-generation member, was born in Oita City, Oita. Blood type: AB
 - **02/20** - Nanami Hashimoto, a first-generation member, was born in Asahikawa City, Hokkaido. Blood type: B
 - **05/21** - Mikumo Ando, a first-generation member, was born in the Shonan area of Kanagawa. Blood type: O
 - **05/26** - Karin Ito, a second-generation member, was born in Yokohama City, Kanagawa. Blood type: O
