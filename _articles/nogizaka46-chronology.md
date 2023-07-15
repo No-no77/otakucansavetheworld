@@ -20,20 +20,20 @@ The chronology of Nogizaka46 is currently incomplete, with numerous events yet t
 _The history of Nogizaka46 began with the birth of its members. Below is a chronological list of the members' birth dates and blood types._[^2]
 
 ### 1988 (Showa 63)
-- **04/19** - Haruna Kojima of AKB48 was born in Urawa City, Saitama. Blood type: O
+- **04/19** - Haruna Kojima, of AKB48 was born in Urawa City, Saitama. Blood type: O
 
 ### 1990 (Heisei 02)
 - **06/12** - Yumiko Iwase, a first-generation member, was born in Saitama. She was the oldest member at the time of the group's formation. Blood type: A
 
 ### 1991 (Heisei 03)
 - **03/29** - Mai Fukagawa, a first-generation member, was born in Iwata City, Shizuoka. Blood type: O
-- **07/27** - Rena Matsui of SKE48 was born in Toyohashi City, Aichi. Blood type: O
+- **07/27** - Rena Matsui, of SKE48 was born in Toyohashi City, Aichi. Blood type: O
 
 ### 1992 (Heisei 04)
 - **01/22** - Mai Shinuchi, a second-generation member, was born in Saitama. Blood type: B
 - **08/20** - Mai Shiraishi, a first-generation member, was born in Gunma. Blood type: A
 - **08/27** - Sayuri Matsumura, a first-generation member, was born in Osaka. Blood type: B
-- **11/21** - Rino Sashihara of HKT48 was born in Oita City, Oita. Blood type: O
+- **11/21** - Rino Sashihara, of HKT48 was born in Oita City, Oita. Blood type: O
 
 ### 1993 (Heisei 05)
 - **01/04** - Misato Eto, a first-generation member, was born in Oita City, Oita. Blood type: AB
@@ -47,7 +47,7 @@ _The history of Nogizaka46 began with the birth of its members. Below is a chron
 
 ### 1994 (Heisei 06)
 - **02/08** - Kazumi Takayama, a first-generation member, was born in Minamiboso City, Chiba. Blood type: A
-- **03/26** - Mayu Watanabe of AKB48 was born in Saitama. Blood type: AB
+- **03/26** - Mayu Watanabe, of AKB48 was born in Saitama. Blood type: AB
 - **05/16** - Reika Sakurai, a first-generation member, was born in Kanagawa. Blood type: A
 - **05/19** - Seira Nagashima, a first-generation member, was born in Hekinan City, Aichi. Blood type: O
 - **05/25** - Nanase Nishino, a first-generation member, was born in Osaka. Blood type: O
@@ -140,15 +140,15 @@ _The history of Nogizaka46 began with the birth of its members. Below is a chron
 
 ### 2005 (Heisei 17)
 - **02/17** - Nagi Inoue, a fifth-generation member, was born in Kanagawa. Blood type: B
-- **07/29** - Ioki Mao, a fifth-generation member, was born in Hyogo. Blood type: O
-- **08/20** - Okuda Iroha, a fifth-generation member, was born in Chiba. Blood type: A
-- **10/31** - Sugawara Satsuki, a fifth-generation member, was born in Chiba. Blood type: A
+- **07/29** - Mao Ioki, a fifth-generation member, was born in Hyogo. Blood type: O
+- **08/20** - Iroha Okuda, a fifth-generation member, was born in Chiba. Blood type: A
+- **10/31** - Satsuki Sugawara, a fifth-generation member, was born in Chiba. Blood type: A
 
 ### 2006 (Heisei 18)
-- **09/18** - Tomisato Nao, a fifth-generation member, was born in Chiba. Blood type: O
+- **09/18** - Nao Tomisato, a fifth-generation member, was born in Chiba. Blood type: O
 
 ### 2007 (Heisei 19)
-- **06/27** - Ogawa Aya, a fifth-generation member, was born in Chiba. She became the youngest member of the group after joining the fifth generation. Blood type: B
+- **06/27** - Aya Ogawa, a fifth-generation member, was born in Chiba. She became the youngest member of the group after joining the fifth generation. Blood type: B
 
 ### 2011 (Heisei 23)
 - **June 2011** - Nogizaka46 debuts.
