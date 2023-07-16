@@ -167,6 +167,7 @@ _The history of Nogizaka46 began with the birth of its members. Below is a chron
 ### August
 - **08/21** - The final audition is held, and 36 people pass. This is the "formation day of Nogizaka46".
     - The songs performed by the 36 people in the final audition are listed as:
+
 | Idol            | Music                                                                     |
 |-----------------|---------------------------------------------------------------------------|
 | Akimoto Manatsu | [Nakanomori BAND "Oh My Darlin'"](https://youtu.be/v0qdK_aIilI)           |
