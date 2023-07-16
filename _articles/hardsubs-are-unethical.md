@@ -9,7 +9,7 @@ foam_template:
   name: Article
 ---
 
-# Hardsubs are unethical
+# Hardsubs are Unethical
 
 ## Formalizing an alternative to hardsubs.
 
