@@ -634,7 +634,7 @@ img+em {
 
     
     &:hover {
-        color: red;
+        color: blue;
     }
 }
 
@@ -649,7 +649,7 @@ font-weight: bold;
     color: $color-text;
     overflow: hidden;
         &:hover {
-        color: red;
+        color: blue;
     }
 }
 
@@ -707,7 +707,7 @@ font-weight: normal;
     // margin: 0.5em 0.5em auto auto;
     // position: absolute;
     float: right;
-    background-color: red;
+    background-color: blue;
     color: white;
   }
   
@@ -793,7 +793,7 @@ font-weight: normal;
 .prev-next a {
     text-decoration: underline;
     &:hover {
-        color: red;
+        color: blue;
     }
 }
 .prev {
