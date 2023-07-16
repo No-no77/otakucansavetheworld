@@ -38,7 +38,7 @@ Softsubs, or non-hardcoded subtitles, present a solution to the issues posed by 
 
 ## Extracting Subtitles from Hardcoded Videos
 
-Subtitles can be extracted from any hardcoded video with two simple programs: VideoSubFinder and SubtitleEdit. VideoSubFinder is used to export the frames as very clean images containing only the subtitles, then SubtitleEdit's built-in OCR function is used to transform that into perfectly timed subtitles. After running it, all that's left is to curate the results, clean it, and then it can be published and shared.
+Subtitles can be extracted from any hardcoded video with two simple programs: [VideoSubFinder](https://sourceforge.net/projects/videosubfinder/) and [SubtitleEdit](https://www.nikse.dk/subtitleedit). VideoSubFinder is used to export the frames as very clean images containing only the subtitles, then SubtitleEdit's built-in OCR function is used to transform that into perfectly timed subtitles. After running it, all that's left is to curate the results, clean it, and then it can be published and shared.
 
 ## Conclusion
 
