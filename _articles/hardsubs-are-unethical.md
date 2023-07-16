@@ -50,7 +50,7 @@ Moreover, the shift from hardsubs to softsubs presents an opportunity to preserv
 
 **TO-DO:**
 
-1. **Defend the Argument "Bad Subs are Better Than No Subs":** Articulate a defense for the notion that having poor quality subtitles is preferable to having none at all. This argument is often met with resistance, particularly from those who prioritize quality and accuracy in translations. However, it is essential to consider the context and the broader implications of this statement.
+1. **Refuting the Argument "Bad Subs are Better Than No Subs":** Articulate a defense against the notion that having poor quality subtitles is preferable to having none at all. This argument is often met with resistance, particularly from those who prioritize having access to it. However, it is essential to consider the context and the broader implications of this statement.
 2. **Discuss the Development of ASR Systems:** Highlight the rapid development of Automatic Speech Recognition (ASR) systems and how this progress will eventually eliminate the scarcity of subtitles. 
 3. **Provide Real Examples:** Use actual instances to support the argument, such as the case of the Nogizaka Skits Blu-ray release. Discuss how the availability of Tamuhaya's translation could have expedited the subbing process.
 4. **Identify Benefits for Unethical Fansubbers:** Analyze what fansubbers gain from unethically copyrighting their work. This could include recognition, control over content, or potential financial benefits.
