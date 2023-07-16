@@ -9,7 +9,7 @@ foam_template:
   name: Article
 ---
 
-# Hardsubs: An Unethical Practice and Its Alternatives
+# Hardsubs are Unethical
 
 ## Understanding Hardsubs and Their Limitations
 
