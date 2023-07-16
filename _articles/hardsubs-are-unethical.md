@@ -16,7 +16,7 @@ foam_template:
 
 Hardcoding subtitles, or "hardsubs", is a process that overlays text onto video frames during encoding, resulting in a single, inseparable file. This practice, while suitable for streaming, introduces a significant risk factor: data fragility. If the video file is lost or corrupted, the subtitles are lost as well. 
 
-A notable example of this fragility occurred in September 2021, when a Google Drive security update led to numerous broken file links. This event resulted in a significant amount of lost content, demonstrating the inherent vulnerability of hardsubs. Many links in the Nogizaka Masterlist[^1] and many other google related archives are now completely unnaccessible.
+A notable example of this fragility occurred in September 2021, when a [Google Drive security update led to numerous broken file links](https://support.google.com/drive/answer/10729743?hl=en). This event resulted in a significant amount of lost content, demonstrating the inherent vulnerability of hardsubs. Many links in the Nogizaka Masterlist[^1] and many other google related archives are now completely unnaccessible.
 
 Hardsubs also present issues with accessibility and quality control. They cannot be resized, recolored, or repositioned to accommodate individual viewer needs, nor can they be read with text-to-speech applications. Once subtitles are embedded into a video, any errors in translation or timing become permanent, and the process of correcting these mistakes post-production is effectively impossible.
 
