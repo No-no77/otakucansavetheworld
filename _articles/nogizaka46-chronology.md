@@ -206,6 +206,7 @@ _The history of Nogizaka46 began with the birth of its members. Below is a chron
 | Yoshimoto Ayaka | [Ayumi Hamasaki "Sunrise? LOVE is ALL?"](https://youtu.be/EbXH3nmrLW4)    |
 | Wakatsuki Yumi  | [SONOMI "You're Not Alone"](https://youtu.be/hVjba1aw21M)                 |
 | Wada Maaya      | [AKB48 "Ponytail and Shushu"](https://youtu.be/SwXtaahxjls)               |
+
 - **08/22** - The 36 first-generation members are introduced, and the provisional selection consisting of 16 people is revealed.
 - **Late August:** Instructions are given to the selected members by the staff.
     - "Those who live in the countryside, basically, will come to Tokyo by October 1st."
