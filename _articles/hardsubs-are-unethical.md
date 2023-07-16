@@ -3,7 +3,7 @@ published: yes
 subtitle: And other implications for Data Integrity, Accessibility and QC.
 topic: subtitles
 date: 2023-07-16
-tags: otaku, nogizaka46, ethics
+tags: otaku nogizaka46 ethics
 foam_template:
   filepath: '_articles/hardsubs-are-unethical.md'
   name: Article

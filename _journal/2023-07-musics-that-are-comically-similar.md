@@ -2,7 +2,7 @@
 published: true
 subtitle:
 date: 2023-07-15
-tags:
+tags: music
 foam_template:
   filepath: '_journal/2023-07-musics-that-are-comically-similar.md'
   name: Journal Entry
