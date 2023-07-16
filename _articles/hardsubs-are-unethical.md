@@ -24,13 +24,13 @@ Hardsubs also present issues with accessibility and quality control. They cannot
 
 The act of hardsubbing is inherently anti-otaku[^2]. It prevents the creation of procedural derivative works, which is a key aspect of otaku culture. For example, a fan might want to create their own fansub with a different translation or interpretation of the dialogue, or change it to another language entirely, but to do so they would require some sort of approval from the original subber. 
 
-Notice too that some fansubbers and fansub groups copyright their created subtitles (img_1, img_2), despite the fact that the content they are subtitling is often copyrighted material that they do not own[^3]. This creates a paradox where they are breaking copyright laws while also enforcing their own copyrights, which can be only result of extreme stupidity or an openly spiteful intention.
+Notice too that some fansubbers and fansub groups copyright their created subtitles (img_1, img_2), despite the fact that the content they are subtitling is often copyrighted material that they do not own. This creates a paradox where they are breaking copyright laws while also enforcing their own copyrights, which can only be the result of extreme stupidity or an openly spiteful intention.
 
 ![](../images/imagine_hypocrisy.png)
 *img_1: Imagine Subs showing how much they care about their immoral copyright claim, even if it means total loss of information, or how they call it: a mere inconvenience*
 
 ![](../images/gin_hypocrisy.png)
-*img_2: GinSubs work is also another one that is completely*
+*img_2: GinSubs work is also another one that is completely covered on watermarks and copyright claims.*
 
 ## An Alternative
 
@@ -61,4 +61,3 @@ Moreover, the shift from hardsubs to softsubs presents an opportunity to preserv
 
 [^1]: Large parts of the community still organize and share content in giant collectively managed spreadsheets, where fansub groups go to share and store links to specific episodes and events.
 [^2]: Doujin can best be defined as independent derivative work made by the members of a specific fanbase. In this context, hardsubbing is seen as anti-otaku because it prevents the creation of procedural derivative works.
-[^3]: Some fansubbers and fansubgroups copyright their created subtitles, despite the fact that the content they are subtitling is often copyrighted material that they do not own. This creates a paradox where they are breaking copyright laws while also enforcing their own copyrights.
