@@ -167,42 +167,44 @@ _The history of Nogizaka46 began with the birth of its members. Below is a chron
 ### August
 - **08/21** - The final audition is held, and 36 people pass. This is the "formation day of Nogizaka46".
     - The songs performed by the 36 people in the final audition are listed as:
-    - Akimoto Manatsu / [Nakanomori BAND "Oh My Darlin'"](https://youtu.be/v0qdK_aIilI)
-    - Ando Mikumo / [Ayaka "Peace loving people"](https://youtu.be/wcqu7QxQ6SA)
-    - Ikuta Erika / [aiko "Star"](https://youtu.be/zUR657LxP4k)
-    - Ikoma Rina / [Piko "Sakura Sound"](https://youtu.be/vFfPYPd16CU)
-    - Ichiki Rena / [Ai Otsuka "Planetarium"](https://youtu.be/txmw-wGnDoA)
-    - Ito Nene / [aiko "Boyfriend"](https://youtu.be/JzdWR_RfH3s)
-    - Ito Marika / [aiko "Beetle"](https://youtu.be/wp2U40KI63A)
-    - Inoue Sayuri / [AKB48 "Being Myself"](https://youtu.be/JOJBLeDO8cY)
-    - Iwase Yumiko / [Aya Ueto "For Love"](https://youtu.be/oFvE_m_644U)
-    - Eto Misa / [Every Little Thing "Like When We Met"](https://youtu.be/k1S0i8FoV4c)
-    - Kashiwa Yukina / [Seiko Matsuda "Summer Door"](https://youtu.be/WojtxUZvuKA)
-    - Kawago Hina / [Atsuko Maeda "Flower"](https://youtu.be/HwM3sqaLpfI)
-    - Kawamura Mahiro / [Miho Fukuhara featuring AI "O2"](https://youtu.be/clrgylIk4Mk)
-    - Saito Asuka / [Kana Nishino "if"](https://youtu.be/fQK9itJT4LA)
-    - Saito Chiharu / [Kaela Kimura "Butterfly"](https://youtu.be/h5b-tBZfsT8)
-    - Saito Yuri / [AKB48 "About You"](https://youtu.be/hOpuFBfc_UA)
-    - Sakurai Reika / [Happiness "Kiss Me"](https://youtu.be/4UAP--Ltb1E)
-    - Shiraishi Mai / [Kana Nishino "As It Is"](https://youtu.be/77DXiyjv1k8)
-    - Takayama Kazumi / [Momoe Yamaguchi "Dream Guide"](https://youtu.be/rj3Jo8wchAQ)
-    - Nagashima Seira / [Ai Kawashima "My Love"](https://youtu.be/Ng5LgIfMfR4)
-    - Nakada Kana / [French Kiss "The Work of the Night Wind"](https://youtu.be/BkxOLER3pMI)
-    - Nakamoto Himeka / [AKB48 "I Wanted to Meet You"](https://youtu.be/fikzcy8s-f4)
-    - Nishino Nanase / [Yui Aragaki "Red Thread"](https://youtu.be/o8OC7977uyw)
-    - Nōjō Ami / [Angela Aki "Letter"](https://youtu.be/8MB7H88GZ-w)
-    - Hashimoto Nanami / [Undergraph "Wing"](https://youtu.be/7pAO3TsuTjo)
-    - Hatanaka Seira / [Ayumi Hamasaki "HEAVEN"](https://youtu.be/UZduO8YltB0)
-    - Higuchi Hina / [Mika Nakashima "ORION"](https://youtu.be/G_1VqiTYn8k)
-    - Fukagawa Mai / [aiko "Kiss Hug"](https://youtu.be/r8yTsDQCfR0)
-    - Hoshino Minami / [Warota "Flag of Youth"](https://youtu.be/3gRUfdbjKQs)
-    - Matsumura Sayuri / [YUI "feel my soul"](https://youtu.be/h9WWfh_WZ6M)
-    - Miyazawa Seira / [Ayaka "Under the Same Sky"](https://youtu.be/Eq4hSV6Hvn0)
-    - Yamato Rina / [Asami Hayashi "Tsuntsun Tsugaru"](https://youtu.be/iVdSeUXiydw)
-    - Yamamoto Honoka / [AZU "For You"](https://youtu.be/AD1-R7PxYx8)
-    - Yoshimoto Ayaka / [Ayumi Hamasaki "Sunrise? LOVE is ALL?"](https://youtu.be/EbXH3nmrLW4)
-    - Wakatsuki Yumi / [SONOMI "You're Not Alone"](https://youtu.be/hVjba1aw21M)
-    - Wada Maaya / [AKB48 "Ponytail and Shushu"](https://youtu.be/SwXtaahxjls)
+| Idol            | Music                                                                     |
+|-----------------|---------------------------------------------------------------------------|
+| Akimoto Manatsu | [Nakanomori BAND "Oh My Darlin'"](https://youtu.be/v0qdK_aIilI)           |
+| Ando Mikumo     | [Ayaka "Peace loving people"](https://youtu.be/wcqu7QxQ6SA)               |
+| Ikuta Erika     | [aiko "Star"](https://youtu.be/zUR657LxP4k)                               |
+| Ikoma Rina      | [Piko "Sakura Sound"](https://youtu.be/vFfPYPd16CU)                       |
+| Ichiki Rena     | [Ai Otsuka "Planetarium"](https://youtu.be/txmw-wGnDoA)                   |
+| Ito Nene        | [aiko "Boyfriend"](https://youtu.be/JzdWR_RfH3s)                          |
+| Ito Marika      | [aiko "Beetle"](https://youtu.be/wp2U40KI63A)                             |
+| Inoue Sayuri    | [AKB48 "Being Myself"](https://youtu.be/JOJBLeDO8cY)                      |
+| Iwase Yumiko    | [Aya Ueto "For Love"](https://youtu.be/oFvE_m_644U)                       |
+| Eto Misa        | [Every Little Thing "Like When We Met"](https://youtu.be/k1S0i8FoV4c)     |
+| Kashiwa Yukina  | [Seiko Matsuda "Summer Door"](https://youtu.be/WojtxUZvuKA)               |
+| Kawago Hina     | [Atsuko Maeda "Flower"](https://youtu.be/HwM3sqaLpfI)                     |
+| Kawamura Mahiro | [Miho Fukuhara featuring AI "O2"](https://youtu.be/clrgylIk4Mk)           |
+| Saito Asuka     | [Kana Nishino "if"](https://youtu.be/fQK9itJT4LA)                         |
+| Saito Chiharu   | [Kaela Kimura "Butterfly"](https://youtu.be/h5b-tBZfsT8)                  |
+| Saito Yuri      | [AKB48 "About You"](https://youtu.be/hOpuFBfc_UA)                         |
+| Sakurai Reika   | [Happiness "Kiss Me"](https://youtu.be/4UAP--Ltb1E)                       |
+| Shiraishi Mai   | [Kana Nishino "As It Is"](https://youtu.be/77DXiyjv1k8)                   |
+| Takayama Kazumi | [Momoe Yamaguchi "Dream Guide"](https://youtu.be/rj3Jo8wchAQ)             |
+| Nagashima Seira | [Ai Kawashima "My Love"](https://youtu.be/Ng5LgIfMfR4)                    |
+| Nakada Kana     | [French Kiss "The Work of the Night Wind"](https://youtu.be/BkxOLER3pMI)  |
+| Nakamoto Himeka | [AKB48 "I Wanted to Meet You"](https://youtu.be/fikzcy8s-f4)              |
+| Nishino Nanase  | [Yui Aragaki "Red Thread"](https://youtu.be/o8OC7977uyw)                  |
+| Nōjō Ami        | [Angela Aki "Letter"](https://youtu.be/8MB7H88GZ-w)                       |
+| Hashimoto Nanami| [Undergraph "Wing"](https://youtu.be/7pAO3TsuTjo)                         |
+| Hatanaka Seira  | [Ayumi Hamasaki "HEAVEN"](https://youtu.be/UZduO8YltB0)                   |
+| Higuchi Hina    | [Mika Nakashima "ORION"](https://youtu.be/G_1VqiTYn8k)                    |
+| Fukagawa Mai    | [aiko "Kiss Hug"](https://youtu.be/r8yTsDQCfR0)                           |
+| Hoshino Minami  | [Warota "Flag of Youth"](https://youtu.be/3gRUfdbjKQs)                    |
+| Matsumura Sayuri| [YUI "feel my soul"](https://youtu.be/h9WWfh_WZ6M)                        |
+| Miyazawa Seira  | [Ayaka "Under the Same Sky"](https://youtu.be/Eq4hSV6Hvn0)                |
+| Yamato Rina     | [Asami Hayashi "Tsuntsun Tsugaru"](https://youtu.be/iVdSeUXiydw)          |
+| Yamamoto Honoka | [AZU "For You"](https://youtu.be/AD1-R7PxYx8)                             |
+| Yoshimoto Ayaka | [Ayumi Hamasaki "Sunrise? LOVE is ALL?"](https://youtu.be/EbXH3nmrLW4)    |
+| Wakatsuki Yumi  | [SONOMI "You're Not Alone"](https://youtu.be/hVjba1aw21M)                 |
+| Wada Maaya      | [AKB48 "Ponytail and Shushu"](https://youtu.be/SwXtaahxjls)               |
 - **08/22** - The 36 first-generation members are introduced, and the provisional selection consisting of 16 people is revealed.
 - **Late August:** Instructions are given to the selected members by the staff.
     - "Those who live in the countryside, basically, will come to Tokyo by October 1st."
