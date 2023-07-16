@@ -3,7 +3,7 @@ published: true
 subtitle: An In-Depth Timeline of Nogizaka46. 
 topic: History
 date: 2023-07-15
-tags: nogizaka46, j-pop, log
+tags: nogizaka46 j-pop log
 foam_template:
   filepath: '_articles/nogizaka46-chronology.md'
   name: Article
@@ -383,7 +383,7 @@ _The history of Nogizaka46 began with the birth of its members. Below is a chron
 
 ## 2012 (Heisei 24)
 
-# Footnote
+# Footnotes
 
 [^1]: This project is a translation and a continuation of the extensive work made by makuramoto-san, member of the Saitama-based Sakamichi Uncle Otaku Association in http://f-makuramoto.com/46-nogi/. His content is copyrighted, but I believe this would fall under fair use.
 
