@@ -44,7 +44,7 @@ Subtitles can be extracted from any hardcoded video with two simple programs: [V
 
 While there was a time when hardcoding subtitles was the best way to share information through pirate networks, the internet has evolved to handle more data. It's necessary for fansubbers to become aware of the risks they are imposing on their own work and in the culture in general. 
 
-Moreover, the shift from hardsubs to softsubs presents an opportunity to preserve old media that is on the brink of being lost forever. By extracting and separately storing subtitles, we can ensure the longevity of these materials and protect them from potential data loss or corruption. This not only safeguards the work of fansubbers but also contributes to the preservation of otaku culture as a whole as it make possible for content that was originally lost to.
+Moreover, the shift from hardsubs to softsubs presents an opportunity to preserve old media that is on the brink of being lost forever. By extracting and separately storing subtitles, we can ensure the longevity of these materials and protect them from potential data loss or corruption. This not only safeguards the work of fansubbers but also contributes to the preservation of non-japanese otaku culture as a whole.
 
 **This is a Work In Progress**
 
