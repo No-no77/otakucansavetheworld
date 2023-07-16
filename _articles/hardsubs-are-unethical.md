@@ -38,7 +38,7 @@ Softsubs, or non-hardcoded subtitles, present a solution to the issues posed by 
 
 ## Extracting Subtitles from Hardcoded Videos
 
-Subtitles can be extracted from any hardcoded video with two simple programs: [VideoSubFinder](https://sourceforge.net/projects/videosubfinder/) and [SubtitleEdit](https://www.nikse.dk/subtitleedit). VideoSubFinder is used to export the frames as very clean images containing only the subtitles, then SubtitleEdit's built-in OCR function is used to transform that into perfectly timed subtitles. After running it, all that's left is to curate the results, clean it, and then it can be published and shared.
+Subtitles can be extracted from any hardcoded video with two simple programs: [VideoSubFinder](https://sourceforge.net/projects/videosubfinder/) and [SubtitleEdit](https://www.nikse.dk/subtitleedit). VideoSubFinder is used to export the frames as very clean images containing only the subtitles, then SubtitleEdit's built-in OCR function[^3] is used to transform that into perfectly timed subtitles. After running it, all that's left is to curate the results, clean it, and then it can be published and shared.
 
 ## Conclusion
 
@@ -61,3 +61,8 @@ Moreover, the shift from hardsubs to softsubs presents an opportunity to preserv
 
 [^1]: Large parts of the community still organize and share content in giant collectively managed spreadsheets, where fansub groups go to share and store links to specific episodes and events.
 [^2]: Doujin can best be defined as independent derivative work made by the members of a specific fanbase. In this context, hardsubbing is seen as anti-otaku because it prevents the creation of procedural derivative works.
+[^3]: It uses Tesseract-OCR.
+
+## Further Readings
+
+1. [EXTORTION INDUSTRY](https://extortionindustry.org/extortion)
