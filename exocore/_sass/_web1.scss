@@ -13,11 +13,11 @@ $color-items: $background;
 $color-text: #333333;
 $color-subtext: #333333;
 $color-code: pink;
-$internal-links: blue;
-$external-links: blue;
+$internal-links: #7E2483;
+$external-links: #7E2483;
 $invalid-links: $internal-links;
-$color-primary: blue;
-$color-secondary: blue;
+$color-primary: #7E2483;
+$color-secondary: #7E2483;
 $color-box-shadow: none;
 
 
@@ -156,7 +156,7 @@ a {
 
 }
 nav a {
-    color: blue !important;
+    color: #7E2483 !important;
     text-decoration: underline;
   
 }

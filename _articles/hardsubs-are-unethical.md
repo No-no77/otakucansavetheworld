@@ -11,19 +11,19 @@ foam_template:
 
 # Hardsubs are Unethical
 
-## Formalizing an alternative to hardsubs.
+## Proposing an alternative to hardsubs.
 
-While watching another hardcoded Nogizaka46 video I came to a realization: A lot of subtitles are lost. Not a matter of _will_ be lost eventually. Most of it **is** lost by definition. An example: In September 2021 a [Google Drive security update resulted in a variety of file links broken](https://support.google.com/drive/answer/10729743?hl=en). I can't remember the amount of times I clicked on a Google Drive link in Nogizaka46's main masterlists and found out it was broken, lost forever [^1]. This worried me.
+While enjoying another hardcoded Nogizaka46 video, I had a realization: A significant amount of subtitles are lost. It's not a matter of _if_ they will be lost eventually. Most of them **are** lost by default. For instance, in September 2021, a [Google Drive security update led to numerous broken file links](https://support.google.com/drive/answer/10729743?hl=en). I've lost count of the times I clicked on a Google Drive link in Nogizaka46's main masterlists and found it was broken, lost forever [^1]. This concerned me.
 
-Well, maybe they are not lost forever. Maybe someone somewhere downloaded it, and if they are some kind of data hoarder it might stay in their computer for a really, really long time, but it might never be shared again. It might just stay there, rotting in the sectors of someone else's hard drive somewhere.
+Perhaps they are not lost forever. Maybe someone somewhere downloaded it, and if they are a data hoarder, it might stay on their computer for a very long time, but it might never be shared again. It might just stay there, languishing in the sectors of someone else's hard drive somewhere.
 
-This realization then raised a question: How to fix it, or beter phrased, is it even possible to make an attempt at establishing a standardized, ethically sound approach to subtitling that ensures first and foremost longevity of the material?
+This realization then raised a question: How can we fix this, or better yet, is it even possible to attempt to establish a standardized, ethically sound approach to subtitling that ensures the longevity of the material?
 
-To answer this question let's first define what are hardsubs:
+To answer this question, let's first define what hardsubs are:
 
-Hardcoding subtitles, or hardsubbing, is a practice that involves overlaying text onto the video frames during the encoding process, resulting in a single, inseparable file. This process, while straightfoward and coherent if you're looking for streaming, introduces a significant risk factor: data fragility. If the video file is lost or corrupted, the subtitles are lost as well. The videos are in most cases safe, we can find the raw file being illegaly distributed in j-pop related pirate torrent trackers, but as I have explained before, the risk to subtitles is not theoretical and the process of hardcoding contributes to its vulnerability.
+Hardcoding subtitles, or hardsubbing, is a practice that involves overlaying text onto the video frames during the encoding process, resulting in a single, inseparable file. This process, while straightforward and suitable for streaming, introduces a significant risk factor: data fragility. If the video file is lost or corrupted, the subtitles are lost as well. The videos are in most cases safe, we can find the raw file being illegally distributed in j-pop related pirate torrent trackers, but as I have explained before, the risk to subtitles is not theoretical and the process of hardcoding contributes to its vulnerability.
 
-Not only subjected to weak integrity, hardcoded subtitles also present a disregard for accessibility and quality control. They are an inherent barrier to visually impaired viewers, as unlike soft-subtitles - think of them as the opposite of hardcoded subtitles - hardsubs cannot be resized, recolored or repositioned to accommodate individual viewer needs, or read with text-to-speech applications. Quality control being another significant concern as once subtitles are embedded into a video, any errors in translation or timing become permanent, and the process of correcting these mistakes post-production is effectively impossible, creating a likely very compromised experience to the consumer,  with no possibility of adjustment.
+Not only subjected to weak integrity, hardcoded subtitles also present a disregard for accessibility and quality control. They are an inherent barrier to visually impaired viewers, as unlike soft-subtitles - think of them as the opposite of hardcoded subtitles - hardsubs cannot be resized, recolored or repositioned to accommodate individual viewer needs, or read with text-to-speech applications. Quality control being another significant concern as once subtitles are embedded into a video, any errors in translation or timing become permanent, and the process of correcting these mistakes post-production is effectively impossible, creating a likely very compromised experience to the consumer, with no possibility of adjustment.
 
 But first and foremost: translating subtitles is _doujin_ [^2]. In this context, the act of hardsubbing is in itself oxymoronic as it is inherently anti-otaku.
 
@@ -31,19 +31,19 @@ Now back to the original question, how can we fix this to make sure:
 
 1. You can easily help information to not get lost.
 2. You gain ownership and agency of the information you are consuming.
-3. You can easily use old high-quality subtitles in low quality videos and add eventually add them to videos of higher quality.
+3. You can easily use old high-quality subtitles in low-quality videos and add eventually add them to videos of higher quality.
 4. Easily retime the subtitles for a TV version of a show or other piece of media whenever a Blu-Ray comes out.
 
-Softsubs feel like the only adequate answer, as operating with softsubs as the standard model would make it so that people have the need to interact with hardsubs only through their desire to consume something specifically curated and redesigned based on the quality of the derivative work, you transform hardsubs in actual art and properly doujin work - [though there are some impressive resuts that can be entirely achieved only with extremely autistic ASS work](https://streamable.com/e4ze3g). In addition, by releasing softsubs you let the information free to be remodeled and redesigned as desired without risking the original content from being lost. Hardsubs do not share the attribute of being possibly enhanced by another derivative work built from it, it's a break in the otaku doujin circuit.
+Softsubs seem like the only adequate answer, as operating with softsubs as the standard model would make it so that people have the need to interact with hardsubs only through their desire to consume something specifically curated and redesigned based on the quality of the derivative work, you transform hardsubs into actual art and properly doujin work - [though there are some impressive results that can be entirely achieved only with extremely autistic ASS work](https://streamable.com/e4ze3g). In addition, by releasing softsubs you let the information free to be remodeled and redesigned as desired without risking the original content from being lost. Hardsubs do not share the attribute of being possibly enhanced by another derivative work built from it, it's a break in the otaku doujin circuit.
 
 ## Subbers and Copyright Misuse
 
-To understand overseas otaku culture we need to recognize that it is mostly entangled in pirate culture, but even though this is a well stated fact, it seems some fansubbers and fansubgroups lack the basic understanding that Copyright claims work on a trust-based chain, once that chain is broken, it is inherently hypocritical to claim it back, but somehow a few of them still copyright their created subtitles, which is not only materially adding a risk to the content's likelihood to be kept safely data loss hazard, while actively denying a possibility of refinement that transcends the capability of the first subber. 
+To understand overseas otaku culture we need to recognize that it is mostly entangled in pirate culture, but even though this is a well-stated fact, it seems some fansubbers and fansubgroups lack the basic understanding that Copyright claims work on a trust-based chain, once that chain is broken, it is inherently hypocritical to claim it back, but somehow a few of them still copyright their created subtitles, which is not only materially adding a risk to the content's likelihood to be kept safely data loss hazard, while actively denying a possibility of refinement that transcends the capability of the first subber. 
 
-Here is an example of how bizarrely dishonest some of those people can be. It's not to hard to understand where I'm coming from:
+Here is an example of how bizarrely dishonest some of those people can be. It's not too hard to understand where I'm coming from:
 
 ![](../images/imagine_hypocrisy.png)
-*Imagine Subs showing how much they care about recognition even if it means total lost of information, or how they call it: a mere inconvenience*
+*Imagine Subs showing how much they care about recognition even if it means total loss of information, or how they call it: a mere inconvenience*
 
 ## How to set subtitles free
 
@@ -53,6 +53,6 @@ It's necessary to understand that historically there was a time when hardcoding 
 
 **WORK IN PROGRESS**
 
-[^1]: I'm not sure if this is an specific thing to J-pop but large part of the community still organize and share the content in giant collectively managed spreadsheets, where fansub groups go to share and storage links to specific episodes and events.
+[^1]: I'm not sure if this is a specific thing to J-pop but a large part of the community still organize and share the content in giant collectively managed spreadsheets, where fansub groups go to share and storage links to specific episodes and events.
 
-[^2]: Doujin can best be defined as independent derivative work made by the members of an specific fanbase.
+[^2]: Doujin can best be defined as independent derivative work made by the members of a specific fanbase.
