@@ -24,19 +24,23 @@ Hardsubs also present issues with accessibility and quality control. They cannot
 
 The act of hardsubbing is inherently anti-otaku as it defies doujin culture[^2]. It prevents the creation of procedural derivative works, which is a key aspect of otaku culture. For example, a fan might want to create their own fansub with a different translation or interpretation of the dialogue, or change it to another language entirely, but to do so they would require some sort of approval from the original subber. 
 
-Notice too that some fansubbers and fansub groups copyright their created subtitles (img_1, img_2), despite the fact that the content they are subtitling is often copyrighted material that they do not own. This creates a paradox where they are breaking copyright laws while also enforcing their own copyrights, which can only be the result of extreme stupidity or an openly malicious intention.
+Notice too that some fansubbers and fansub groups attempt to copyright their created subtitles (__img_1__, __img_2__), despite the fact that the content they are subtitling is often copyrighted material that they do not own. This creates a paradox where they are breaking copyright laws while also enforcing their own copyrights, which can only be the result of extreme stupidity or an openly malicious intention.
 
 ![](../images/imagine_hypocrisy.png)
 *img_1: Imagine Subs showing how much they care about their immoral copyright claim, even if it means total loss of information, or how they call it: a mere inconvenience*
 
 ![](../images/gin_hypocrisy.png)
-*img_2: GinSubs work is also another one that is completely covered on watermarks and copyright claims.*
+*img_2: GinSubs is also another subber whose final product is completely covered in watermarks often reinforcing his supposed ownership of it.*
 
-## An Alternative
+## A Peaceful Solution
 
-Softsubs, or non-hardcoded subtitles, present a solution to the issues posed by hardsubs. They allow for the information to be remodeled and redesigned as desired without risking the original content from being lost. They also provide viewers with the ability to adjust the subtitles to their individual needs.
+In an ideal world all fansub groups would understand this post and proceed ethically, doing an honest-to-god work by commiting to at least release their translations as a simple .ASS file as an option, even if they decide to move on with these disgraceful watermarked content for any reason.
 
-## Extracting Subtitles from Hardcoded Videos
+Softsubs, or non-hardcoded subtitles, present a solution to the issues posed by hardsubs as they allow for the information to be remodeled and redesigned as desired without risking the original content from being lost. They also provide viewers with the ability to adjust the subtitles to their individual needs and all the other points regarding accessibility I have mentioned before.
+
+## A Less Peaceful Solution
+
+But what to do if ethics cannot be simply achieved by a consensual realization that the current situation is evidentially wrong? It must be enforced.
 
 Subtitles can be extracted from any hardcoded video with two simple programs: [VideoSubFinder](https://sourceforge.net/projects/videosubfinder/) and [SubtitleEdit](https://www.nikse.dk/subtitleedit). VideoSubFinder is used to export the frames as very clean images containing only the subtitles, then SubtitleEdit's built-in OCR function[^3] is used to transform that into perfectly timed subtitles. After running it, all that's left is to curate the results, clean it, and then it can be published and shared.
 

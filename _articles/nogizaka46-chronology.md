@@ -383,6 +383,72 @@ _The history of Nogizaka46 began with the birth of its members. Below is a chron
 
 ## 2012 (Heisei 24)
 
+### January
+
+- **Early January** - "Meiji Handmade Chocolate" CM Shooting Day
+  - The waiting room is filled with chocolates and sweets prepared by Meiji Confectionery. The members are delighted with the abundance of sweets.
+  - Members who were not selected for the "Meiji Selection" have to wait for the shooting of the selected members.
+  - During the group shooting, each member of the selection is instructed by the staff on their standing position.
+  - Ikoma is positioned in the center
+- **01/05** - Nogizaka46 Prays for a Hit at Nogi Shrine
+  - The members gather at Nogi Shrine to pray for the success of their debut single, which is scheduled to be released on February 22nd.
+  - In a solemn atmosphere, Ikuta Erika, representing the members, performs the tamagushi ritual.
+  - The members move from Nogi Shrine to SME Nogizaka Building.
+  - An event called "New Year's Greeting! Meeting" is held with fans.
+  - At the event, they make rice cakes and serve sweet red-bean soup to the fans, and all the members write their first calligraphy of the year to declare their determination.
+  - At the end, Reika Sakurai tearfully declares, "I want to become a real professional idol and build a group that is worth supporting".
+  - Yumi Wakatsuki, who had been refraining from activities, resumes her activities. Her official blog is updated on the 6th.
+  - Wakatsuki, who was later said to be a candidate for captaincy, was not selected as a member of the 2nd single selection.
+- **01/08** - The members of the debut single selection are announced on the late-night show "Where is Nogizaka?".
+  - The Kami7: Ikuta Erika, Ikoma Rina, Shiraishi Mai, Takayama Kazumi, Hashimoto Nanami, Hoshino Minami, Matsumura Sayuri.
+  - The nine selected members: Ichiki Rena, Inoue Sayuri, Kawamura Mahiro, Saito Asuka, Saito Yuri, Sakurai Reika, Nakada Kana, Nishino Nanase, Nojo Ami.
+  - The two members of Banana Man, who serve as MCs, are in the studio. The 33 members are sitting in chairs in the waiting room.
+  - The members have mobile phones in their hands. The selected members receive a call on their mobile phones.
+  - The first phone to ring was Shiraishi's. The next person to pick up the phone was Matsumura.
+  - Hashimoto also picked up her phone. Both Matsumura and Hashimoto were not selected among the 15 members at the start of the program.
+  - After that, the mobile phones of Ikoma, Takayama, and Ikuta, who were the first seven lucky gods.
+  - Six of the seven lucky gods are decided. The names of Ichiki, Nakada, and Sakurai, who were the first seven lucky gods, have not been called.
+  - The last phone to ring was Minami Hoshino.
+  - Next, the nine selected members are called: Kawamura, Inoue, Nishino, Nakada, Yuri Saito, Asuka Saito, Ichiki, Nōjō, Sakurai.
+  - The selected members are about half of the 15 members selected.
+  - The 16 people lined up in the studio and the 17 people watching them on the monitor in the waiting room.
+  - For the first time, they are divided into "selected" and "non-selected (**under**)".
+  - A message arrives from Yasushi Akimoto, the general producer, to the members who missed the selection:
+  > To those of you who, unfortunately, were not selected. Don't be disappointed. This is just the beginning. It's not that you're not good because you weren't selected for the first selection. This time, we decided to go with these members because of the taste of the song, the tie-up situation, and so on. We've just started, so there's no such thing as who's superior and who's inferior. Find your own color and work hard to bring out a color that you think is indispensable to Nogizaka46. I'm looking forward to it.
+- **01/12** - [The new TV commercial announcement event for Meiji's "Meiji Handmade Chocolate" is held, and the members who appear in the commercial attend.](https://www.youtube.com/watch?v=xivUmMG77kU&ab_channel=SankeiNews)
+  - Sixteen members of the "Meiji Handmade Chocolate Selection" from all 33 members of Nogizaka46 appear in the commercial.
+  - The members of Nogizaka46 depict a scene of "friend chocolate delivery" at school.
+  - The debut song "Guruguru Curtain", which will be released on February 22nd (Wed), is used as the CM song.
+  - Ahead of the CD release, the CM will be broadcast nationwide from January 14th (Sat).
+  - At the announcement, the members' TV commercial is premiered for the first time. The members who participated in the shooting share their impressions in various ways.
+  - The members talk happily about their first CM appearance in the talk corner and reveal episodes from the CM shooting.
+  - The 16 selected members debut their song "Guruguru Curtain".
+  - The selected members, dressed in purple checkered dresses, perform their debut song.
+
+![](../images/guruguru_curtain.png)
+*Nogizaka46 performs their debut song "Guruguru Curtain."*
+
+- **01/13** - The drama "Saba Doru" starring Mayu Watanabe of AKB48 starts on TV Tokyo.
+  - The drama airs every Friday from 24:53 to 25:23, and it is Watanabe's first starring role in a serial drama.
+  - The members of Nogizaka46 appear as Nogizaka46.
+- **01/14** - "Guruguru Curtain" is used as the CM song for "Meiji Handmade Chocolate" and is broadcasted nationwide.
+  - They depict a scene of "friend chocolate delivery" at school.
+- **01/15** - Late at night, the coupling song of the 1st single "Aitakattakamoshirenai" is premiered for the first time on "Where is Nogizaka? (#015)". The lyrics are exactly the same as AKB48's major debut single "Aitakatta". The melody and arrangement are tweaked to a minor rock tone, resulting in an interesting finish with a darker image. As soon as the song is aired, a controversy arises on the internet.
+- **01/19** - 
+  - A full-page advertisement from Nogizaka46 is published on the 20th page of the Asahi Shimbun morning edition. The ad is only published in the Kanto region. The title is "Dear AKB48".
+  - "AKB48 Request Hour Set List Best 100 2012" is held. The venue is Tokyo Dome City Hall in Koraku 1-chome, Bunkyo-ku, Tokyo. It is held for four consecutive days every January. The songs of the AKB48 group chosen by fan voting are announced in a ranking format.
+- **01/26** - Three members appear on the live broadcast of "DJ Tomoaki's Radio Show!" on Shimokitazawa FM from 19:00.
+- **01/27** - A special interview with Rena Ichiki is published in the March issue of the monthly "Dance View".
+- **01/29** - At 4:00 in the morning, the selected members are called out. The 16 members are divided into four teams of four each for the PR of the debut CD.
+- **01/30** 
+  - The ringtone pre-distribution of "Guruguru Curtain" starts.
+  - Three members appear on the live broadcast of BAY FM "K-WEST ENTAME GENERATION".
+- **01/31**
+  - The behind-the-scenes of "Guruguru Curtain" is published in the magazine "FLASH" published by Kobunsha.
+  - Eto Misa's 1st photo book "Irodori" is released by Wani Books.
+
+### February
+
 # Footnotes
 
 [^1]: This project is a translation and a continuation of the extensive work made by makuramoto-san, member of the Saitama-based Sakamichi Uncle Otaku Association in http://f-makuramoto.com/46-nogi/. His content is copyrighted, but I believe this would fall under fair use.
