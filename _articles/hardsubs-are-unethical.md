@@ -48,16 +48,14 @@ Moreover, the shift from hardsubs to softsubs presents an opportunity to preserv
 
 **This is a Work In Progress**
 
-**This is a work in progress**
-
 **TO-DO:**
 
-1. Write defense on the argument of "bad subs is better than no subs";
-2. Clarify that, as ASR systems develop, there will be no more scarcity;
-3. Show more actual examples, like the fact that now that Nogizaka Skits blu-ray is out we cannot quickly work over it using Tamuhaya's translation as a basis;
-4. Identify what exactly fansubbers gain from unethically copyrighting their work;
-5. Show the many other instances of unethical behavior from some fansubbers: paywalled content for access, which takes this hypocrisy to another entire level. Ad-filled and highly vulnerable websites with 0 care for the user's safety and so on.
-6. Present a list of ethical subbers within the Nogizaka46 community.
+1. **Defend the Argument "Bad Subs are Better Than No Subs":** Articulate a defense for the notion that having poor quality subtitles is preferable to having none at all. This argument is often met with resistance, particularly from those who prioritize quality and accuracy in translations. However, it is essential to consider the context and the broader implications of this statement.
+2. **Discuss the Development of ASR Systems:** Highlight the rapid development of Automatic Speech Recognition (ASR) systems and how this progress will eventually eliminate the scarcity of subtitles. 
+3. **Provide Real Examples:** Use actual instances to support the argument, such as the case of the Nogizaka Skits Blu-ray release. Discuss how the availability of Tamuhaya's translation could have expedited the subbing process.
+4. **Identify Benefits for Unethical Fansubbers:** Analyze what fansubbers gain from unethically copyrighting their work. This could include recognition, control over content, or potential financial benefits.
+5. **Highlight Instances of Unethical Behavior:** Discuss other unethical practices within the fansubbing community, such as paywalling content, using ad-filled and vulnerable websites with little regard for user safety, etc.
+6. **Present a List of Ethical Subbers:** Compile a list of fansubbers within the Nogizaka46 community who are known for their ethical practices.
 
 [^1]: Large parts of the community still organize and share content in giant collectively managed spreadsheets, where fansub groups go to share and store links to specific episodes and events.
 [^2]: Doujin can best be defined as independent derivative work made by the members of a specific fanbase. In this context, hardsubbing is seen as anti-otaku because it prevents the creation of procedural derivative works.
