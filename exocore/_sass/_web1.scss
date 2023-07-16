@@ -13,11 +13,11 @@ $color-items: $background;
 $color-text: #333333;
 $color-subtext: #333333;
 $color-code: pink;
-$internal-links: #7E2483;
-$external-links: #7E2483;
+$internal-links: blue;
+$external-links: blue;
 $invalid-links: $internal-links;
-$color-primary: #7E2483;
-$color-secondary: #7E2483;
+$color-primary: blue;
+$color-secondary: blue;
 $color-box-shadow: none;
 
 
@@ -156,7 +156,7 @@ a {
 
 }
 nav a {
-    color: #7E2483 !important;
+    color: blue !important;
     text-decoration: underline;
   
 }
@@ -634,7 +634,7 @@ img+em {
 
     
     &:hover {
-        color: blue;
+        color: #7E2483;
     }
 }
 
@@ -649,7 +649,7 @@ font-weight: bold;
     color: $color-text;
     overflow: hidden;
         &:hover {
-        color: blue;
+        color: #7E2483;
     }
 }
 
@@ -707,7 +707,7 @@ font-weight: normal;
     // margin: 0.5em 0.5em auto auto;
     // position: absolute;
     float: right;
-    background-color: blue;
+    background-color: #7E2483;
     color: white;
   }
   
@@ -793,7 +793,7 @@ font-weight: normal;
 .prev-next a {
     text-decoration: underline;
     &:hover {
-        color: blue;
+        color: #7E2483;
     }
 }
 .prev {
