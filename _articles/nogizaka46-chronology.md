@@ -152,7 +152,6 @@ _The history of Nogizaka46 began with the birth of its members. Below is a chron
 
 
 ## 2011 (Heisei 23)
-
 ### June
 
 - **06/29** - The recruitment for members of AKB48's official rival, "Nogizaka46", begins.
@@ -164,6 +163,8 @@ _The history of Nogizaka46 began with the birth of its members. Below is a chron
     - (Application Method) Choose one of the methods: "WEB", "mail", or "present".
     - Only one entry per person is possible, and there is no need to enter in all methods.
     - There is no advantage or disadvantage in the selection depending on the application method.
+
+### August
 - **08/21** - The final audition is held, and 36 people pass. This is the "formation day of Nogizaka46".
     - The songs performed by the 36 people in the final audition are listed as:
 - Akimoto Manatsu / [Nakanomori BAND "Oh My Darlin'"](https://youtu.be/v0qdK_aIilI)
@@ -209,6 +210,8 @@ _The history of Nogizaka46 began with the birth of its members. Below is a chron
     - In the case of commuting, it will be a weekend-only visit to Tokyo.
     - Nagashima Seira from Aichi Prefecture is seen off by many best friends at the entrance of the Shinkansen when she moves to Tokyo.
     - Wakatsuki Yumi from Shizuoka Prefecture immediately decides on a high school in Tokyo, and goes to a high school in Tokyo on September 1st (Thursday) after the summer vacation.
+
+### September
 - **Early September:** The selected members from the countryside will live in a dormitory prepared by the staff.
     - Due to applications and other circumstances, they cannot enter the dormitory. They will live together in a hotel for a month.
     - The shared life is in a business hotel with two people in one room.
@@ -256,6 +259,8 @@ _The history of Nogizaka46 began with the birth of its members. Below is a chron
     - Two popular members who attracted a lot of attention compete. Mai Shiraishi and Kazumi Takayama. 
     - Some members only had one fan come to shake hands.
     - Nevertheless, all members shake hands of their fans with all their hearts.
+
+### October
 - **10/01** - Late at night, the broadcast of "Where is Nogizaka?" produced by TV Aichi on the TV Tokyo network begins.
     - [For details on all 180 episodes of "Where is Nogizaka?", please refer here] ==> **TO-DO**
 - **10/01** - "Where is Nogizaka? (#001)" is broadcast.
@@ -301,6 +306,8 @@ _The history of Nogizaka46 began with the birth of its members. Below is a chron
 - **10/24** - The event is once again held at Zepp Tokyo from 19:00.
   - The total number of fans who attended the first meeting on September 25th, and the additional meetings on October 23rd and 24th is 3200.
   - Overall the most popular members for handshakes are: 1st / Shiraishi Mai, 2nd / Takayama Kazumi, 3rd / Inoue Sayuri, 4th / Ikoma Rina, 5th / Matsumura Sayuri.
+
+### November
 - **11/06** "Where is Nogizaka? (#006)" airs revealing the "Chinsuko Incident".
    - In the first dressing room meeting, Ikuta Erika ate two pieces and Eto Misa ate two pieces (possibly three) of chinsuko (a type of Okinawan cookie) which was brought as a souvenir by Eto Misa. 
    - Because of this, the cookies did not reach other members.
@@ -332,6 +339,8 @@ _The history of Nogizaka46 began with the birth of its members. Below is a chron
    - At the event, the members decide the content of their own performances and showcase their talents with elaborate singing and dancing.
    - The contents will be a focus of attention for future activities. The Nico Nico Live broadcast starts from 18:30 before the start of the event
    - The event starts at 19:00. Middle school members will participate until 21:00.
+
+### December
 - **Early December**
   - Purikura (photo booth) images of Wakatsuki Yumi taken before joining Nogizaka46 leak on the Internet, sparking a major online discussion.
     - Nogizaka46 Management Committee later releases a statement: "We do not question members' actions prior to joining unless they involve criminal activities. However, we apologize for the inconvenience caused to many fans and related parties."
