@@ -22,7 +22,7 @@ Hardsubs also present issues with accessibility and quality control. They cannot
 
 ## The Ethical Implications of Hardsubs
 
-The act of hardsubbing is inherently anti-otaku[^2]. It prevents the creation of procedural derivative works, which is a key aspect of otaku culture. For example, a fan might want to create their own fansub with a different translation or interpretation of the dialogue, or change it to another language entirely, but to do so they would require some sort of approval from the original subber. 
+The act of hardsubbing is inherently anti-otaku as it defies doujin culture[^2]. It prevents the creation of procedural derivative works, which is a key aspect of otaku culture. For example, a fan might want to create their own fansub with a different translation or interpretation of the dialogue, or change it to another language entirely, but to do so they would require some sort of approval from the original subber. 
 
 Notice too that some fansubbers and fansub groups copyright their created subtitles (img_1, img_2), despite the fact that the content they are subtitling is often copyrighted material that they do not own. This creates a paradox where they are breaking copyright laws while also enforcing their own copyrights, which can only be the result of extreme stupidity or an openly spiteful intention.
 
