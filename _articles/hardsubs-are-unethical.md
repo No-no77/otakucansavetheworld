@@ -30,7 +30,7 @@ Notice too that some fansubbers and fansub groups copyright their created subtit
 *img_1: Imagine Subs showing how much they care about their immoral copyright claim, even if it means total loss of information, or how they call it: a mere inconvenience*
 
 ![](../images/gin_hypocrisy.png)
-*img_1: GinSubs work is also another one that is completely *
+*img_2: GinSubs work is also another one that is completely*
 
 ## An Alternative
 
