@@ -62,12 +62,14 @@ Moreover, the shift from hardsubs to softsubs presents an opportunity to preserv
 6. Compile a list of fansubbers within the Nogizaka46 community who are known for their ethical practices.
 7. Recently I've come to notice an issue presented by subbers of tv shows: big sites, such as dramakiss as an example, stealing their subs and profiting off of it. I'll be thinking about this.
 
-## Footnotes
-
-[^1]: Large parts of the community still organize and share content in giant collectively managed spreadsheets, where fansub groups go to share and store links to specific episodes and events.
-[^2]: Doujin can best be defined as independent derivative work made by the members of a specific fanbase. In this context, hardsubbing is seen as anti-otaku because it prevents the creation of procedural derivative works.
-[^3]: It uses Tesseract-OCR.
-
 ## Further Readings
 
 1. [EXTORTION INDUSTRY](https://extortionindustry.org/extortion)
+
+## Footnotes
+
+[^1]: Large parts of the community still organize and share content in giant collectively managed spreadsheets, where fansub groups go to share and store links to specific episodes and events.
+
+[^2]: Doujin can best be defined as independent derivative work made by the members of a specific fanbase. In this context, hardsubbing is seen as anti-otaku because it prevents the creation of procedural derivative works.
+
+[^3]: It uses Tesseract-OCR.
