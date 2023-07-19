@@ -37,7 +37,7 @@ digraph MVC {
     
     // Edges
     Model -> View [xlabel="Updates", labelfloat=false];
-    User -> View [label="Sees", labelfloat=false];
+    View -> User [label="Sees", labelfloat=false];
     User -> Controller [label="Uses", labelfloat=false];
     Controller -> Model [label="Manipulates", labelfloat=false];
     
