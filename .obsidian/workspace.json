@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_wiki/Data Models.md",
-                "mode": "preview",
+                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
+                "mode": "source",
                 "source": true
               }
             }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_wiki/Data Models.md",
+                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_wiki/Data Models.md",
+                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_wiki/Data Models.md"
+                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md"
               }
             }
           },
@@ -166,23 +166,38 @@
   },
   "active": "ac83e42bedc1c766",
   "lastOpenFiles": [
+    "_journal/Similar Music Discovered by Accident.md",
+    "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
+    "library/delta green rpg - targets of opportunity.pdf",
+    "library/delta green rpg - night at the opera.pdf",
+    "library/delta green rpg - need to know.pdf",
+    "library/delta green rpg - music from a darkened room.pdf",
+    "library/delta green rpg - kali ghati.pdf",
+    "library/delta green rpg - handlers screen.pdf",
+    "library/delta green rpg - handlers guide.pdf",
+    "library/delta green rpg - grace under pressure.pdf",
+    "library/delta green rpg - extremophilia.pdf",
+    "library/delta green rpg - executive summary no disorders.pdf",
+    "images/5.png",
+    "images/4th album.png",
+    "images/4.png",
+    "images/3rd album.png",
+    "images/3.png",
+    "images/2nd album.png",
+    "images/1st album.png",
+    "images/29 online.png",
+    "images/28 online.png",
+    "images/27 online.png",
+    "ring.md",
+    "_wiki/Data Models.md",
     "_articles/Nogizaka46 Chronology.md",
     "_articles/Hardsubs are Unethical.md",
-    "_journal/Similar Music Discovered by Accident.md",
     "_wiki/MERN Stack.md",
     "_wiki/HTTP.md",
-    "_wiki/Data Models.md",
-    "ring.md",
     "readme.md",
-    "library/Capital_as_power.pdf",
     "_wiki/Hypertext.md",
     "_daily/2023-07-18.md",
     "_wiki/3c108f.md",
-    "library/Virtual-Worlds-market-and society-on-cyberian-frontier.pdf",
-    "library/Parascientific_Research_Council_Major_Thoughts.pdf",
-    "library/Money-for-nothing-Virtual-Worlds-and-Virtual-Economies.pdf",
-    "library/buildingTheMemexSixtyYearsLaterTrendsAndDirectionsInPe.pdf",
-    "library/Against Intellectual Property_2.pdf",
     "Untitled.canvas",
     "_daily/2022-10-29.md",
     "_daily/2022-10-27.md",
@@ -190,7 +205,6 @@
     "_daily/2022-10-25.md",
     "_articles/Exocore Installation Instructions.md",
     "_articles/Writing with Exocore Syntax.md",
-    "assets/imgs/bg-yotsuba.gif",
     "_articles/Configure Exocore for Personal Use.md",
     "_daily/2022-10-23.md",
     "_daily/2022-05-11.md"
