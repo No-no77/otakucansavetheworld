@@ -107,7 +107,7 @@ To be found.
 ### Shiawase no Hogoshoku
 ![](/images/25.png)
 
-### Boku wa Boku o Suki ni Naru”
+### Boku wa Boku o Suki ni Naru
 
 ![](/images/26%20ONLINE.png)
 
@@ -115,21 +115,23 @@ To be found.
 
 ![](/images/27%20ONLINE.png)
 
-### Gomen ne Fingers Crossed
+### Kimi ni Shikarareta
 
 ![](/images/28%20ONLINE.png)
 
-### Gomen ne Fingers Crossed
+### Actually...
 
 ![](/images/29%20ONLINE.png)
 
 ### Suki to Iu no wa Rock da ze!
 
-To be found
+ADD
 
 ### Koko ni wa Nai Mono
 
-To be found
+ADD
+
+
 
 ## ALBUMS
 
@@ -141,11 +143,11 @@ To be found
 
 ![](/images/2ND%20ALBUM.png)
 
-### Sorezore no Isu
+### Umarete kara Hajimete Mita Yume
 
 ![](/images/3RD%20ALBUM.png)
 
-### Sorezore no Isu
+### Ima ga Omoide ni Naru made
 
 ![](/images/4TH%20ALBUM.png)
 
@@ -153,6 +155,11 @@ To be found
 
 ### Boku dake no Kimi: Under Super Best
 
-To Be Found
+ADD
 
 ### Time Flies
+
+ADD
+
+## References
+

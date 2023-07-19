@@ -19,11 +19,11 @@ tags: internet programming
 
 ## MVC
 
-**Model** : Manages the business logic of an application. Determines how data should be stored, created, and modified
+**Model**: Manages the business logic of an application. Determines how data should be stored, created, and modified
 
-**View** : Any visual representation of the data or information
+**View**: Any visual representation of the data or information
 
-**Controller** : Interprets user-generated events and transforms them into commands for the model and view to update accordingly:
+**Controller**: Interprets user-generated events and transforms them into commands for the model and view to update accordingly:
 
 {% graphviz %}
 
@@ -101,7 +101,6 @@ Node.js will treat `.cjs` files as CommonJS modules and `.mjs` files as ECMA
 [^1]: **Declarative**: Developers describe the desired user interface based on the application's state, and React takes care of efficiently updating the DOM.
 	
 	**Component-based**: React promotes the use of reusable components, which are self-contained units of functionality that can be combined to create complex UIs.
-	
 	**Isomorphic**: React can render interfaces on both the server and client sides, resulting in faster page loads, better SEO, and an improved user experience.
 
 [^2]: [Express application generator (expressjs.com)](https://expressjs.com/en/starter/generator.html)

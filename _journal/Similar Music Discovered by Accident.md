@@ -11,7 +11,7 @@ foam_template:
 
 # Similar Music Discovered by Accident
 
-I have randomly discovered the following songs that exhibit similarities:
+I have randomly realized that the following songs exhibit similarities, I'm not sure how to confirm it, but I cannot believe there's nothing in here that is causing my brain to correlate those songs. The songs that brought my attention to the topic are:
 
 1. MONGOL800 - "小さな恋のうた" and Aya Ueto - "愛のために。"
 2. Ho-Kago Tea Time - "ふわふわ時間" and SPLAY - "Drawing days"
