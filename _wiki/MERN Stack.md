@@ -98,7 +98,7 @@ Node.js will treat `.cjs` files as CommonJS modules and `.mjs` files as ECMA
 
 ## Footnotes
 
-[^1]: - **Declarative**: Developers describe the desired user interface based on the application's state, and React takes care of efficiently updating the DOM.
+[^1]: **Declarative**: Developers describe the desired user interface based on the application's state, and React takes care of efficiently updating the DOM.
 	
 	**Component-based**: React promotes the use of reusable components, which are self-contained units of functionality that can be combined to create complex UIs.
 	
