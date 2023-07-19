@@ -9,7 +9,7 @@ tags:
 
 ## Introduction to HTTP
 
-HTTP stands for Hypertext Transfer Protocol. It's a protocol used for transmitting [hypertext](Hypertext) over the internet. HTTP is a [request-response protocol](Request-response Protocol) in the [client-server computing model](Client-server Computing Model).
+HTTP stands for Hypertext Transfer Protocol. It's a protocol used for transmitting hypertext[^1] over the internet. HTTP is a [request-response protocol](Request-response Protocol) in the [client-server computing model](Client-server Computing Model).
 
 HTTP is stateless, which means that the server does not keep any data (state) between two requests. Though often based on a [TCP/IP](TCP/IP) layer, it can be used on any reliable transport layer - that is, a protocol that doesn't lose messages silently, such as [UDP](UDP).
 
@@ -56,3 +56,5 @@ HTTP response status codes indicate whether a specific HTTP request has been suc
 - Server error responses (500–599)
 
 For example, `200` status code means 'OK', `404` means 'Not Found', and `500` means 'Internal Server Error'.
+
+[^1]: Hypertext is [text](https://en.wikipedia.org/wiki/E-text "E-text") displayed on a [computer display](https://en.wikipedia.org/wiki/Computer_display "Computer display") or other [electronic devices](https://en.wikipedia.org/wiki/Electronic_devices "Electronic devices") with references ([hyperlinks](https://en.wikipedia.org/wiki/Hyperlinks "Hyperlinks")) to other text that the reader can immediately access.
