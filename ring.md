@@ -3,16 +3,28 @@ layout: ring
 title: Webring
 ---
 
+### Historically Important
+
+| [Outside in](https://web.archive.org/web/20180213122613/http://www.xenosystems.net/) | Involvements with reality |
+| [Urban Future (2.1)](https://web.archive.org/web/20180126083013/http://www.ufblog.net/) | views from the decopunk delta |
 | [Gwern](https://gwern.net/) | This Is The Website of **Gwern Branwen**. |
 | [Slate Star Codex](https://slatestarcodex.com/) | This Is The Website of **Scott Alexander**. |
 | [Edith Reisen](http://reisen.netlify.app/) | Para-academic knowledge repository and power hikikomori optimization manual |
+| [k-punk](http://k-punk.abstractdynamics.org/) | Mark Fisher's Blog |
+| [Journal of Memetics](https://web.archive.org/web/20180118114441/http://cfpm.org/jom-emit/all.html) | Evolutionary Models of Information Transmission |
+
+
+### Remi-sphere
+
 | [Renn of White Oath](https://whiteoath.net/) | Emptiness and Omnipresence |
 | [Charlotte Fang](https://goldenlight.mirror.xyz/) | 恋人 ♡ GODS FAVORITE NFT MAVERICK ♡ @REMILIACORP CEO ♡ SCION OF THE NEW WAVE ♡ |
-| [socialecologies](https://socialecologies.wordpress.com/) | The Dark Fantastic: Literature, Philosophy, and Digital Arts |
-| [Thomas Ligotti](http://ligotti.net/?s=db75f909e907d113072ad860dbc55fef&styleid=75) | “Like peeping in windows?' asked a voice behind me. 'Windows are the eyes of the soulless,' said another.” |
 
-Wota-sphere
+### Wota-sphere
 
 | [Nao Kanzaki and a few friends](https://aitoda.blogspot.com/) | Welcome to this Baka's blog on his fave Japanese Pop Culture interests. |
-| [Allez! Nogizaka 46 / 乃木坂46応援ブログ](http://nogizaka64.blogspot.com/) | Abandoned |
+| [Allez! Nogizaka 46 / 乃木坂46応援ブログ](http://nogizaka64.blogspot.com/) | Abandoned Nogizaka-wota Blog |
+| [hime do kungfuu](http://kungfuuhime.blogspot.com/) | I want a lot of people to know and like Himetan ! ひめたん大好きーー！|
 
+### Horror
+
+| [Thomas Ligotti](http://ligotti.net/?s=db75f909e907d113072ad860dbc55fef&styleid=75) | “Like peeping in windows?' asked a voice behind me. 'Windows are the eyes of the soulless,' said another.” |
