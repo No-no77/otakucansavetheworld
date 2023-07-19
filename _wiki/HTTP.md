@@ -2,7 +2,7 @@
 published: true
 subtitle:
 date: 2023-07-18
-tags: internet
+tags: internet programming
 ---
 
 #  HTTP
@@ -56,6 +56,8 @@ HTTP response status codes indicate whether a specific HTTP request has been suc
 - Server error responses (500–599)
 
 For example, `200` status code means 'OK', `404` means 'Not Found', and `500` means 'Internal Server Error'.
+
+## Footnotes
 
 [^1]: Hypertext is [text](https://en.wikipedia.org/wiki/E-text "E-text") displayed on a [computer display](https://en.wikipedia.org/wiki/Computer_display "Computer display") or other [electronic devices](https://en.wikipedia.org/wiki/Electronic_devices "Electronic devices") with references ([hyperlinks](https://en.wikipedia.org/wiki/Hyperlinks "Hyperlinks")) to other text that the reader can immediately access.
 

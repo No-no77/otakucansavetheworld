@@ -2,7 +2,7 @@
 published: true
 subtitle:
 date: 2023-07-18
-tags: 
+tags: internet programming
 ---
 
 # MERN Stack
@@ -89,6 +89,8 @@ Node.js's original module system is [CommonJs](https://web.archive.org/web/2023
 Since Node.js was created, the [ECMAScript module system](https://web.archive.org/web/20230126081858/https://nodejs.org/docs/latest/api/esm.html) (which uses `import` and `export`) has become standard and Node.js has added support for it.
 
 Node.js will treat `.cjs` files as CommonJS modules and `.mjs` files as ECMAScript modules. It will treat `.js` files as whatever the default module system for the project is (which is CommonJS unless _package.json_ says `"type": "module",`). <== IMPORTANT.
+
+## Footnotes
 
 [^1]: - **Declarative**: Developers describe the desired user interface based on the application's state, and React takes care of efficiently updating the DOM.
 	**Component-based**: React promotes the use of reusable components, which are self-contained units of functionality that can be combined to create complex UIs.

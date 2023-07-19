@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ring.md",
-                "mode": "source",
+                "file": "_wiki/Data Models.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "\"[乃木坂46年表 (f-makuramoto.com)](http://f-makuramoto.com/46-nogi/noginen.html#a2)\"",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,8 +73,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -94,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ring.md",
+                "file": "_wiki/Data Models.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ring.md",
+                "file": "_wiki/Data Models.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -134,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ring.md"
+                "file": "_wiki/Data Models.md"
               }
             }
           },
@@ -165,15 +164,16 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "cf91471a0053b065",
+  "active": "ac83e42bedc1c766",
   "lastOpenFiles": [
-    "readme.md",
     "_articles/Nogizaka46 Chronology.md",
     "_articles/Hardsubs are Unethical.md",
     "_journal/Similar Music Discovered by Accident.md",
-    "_wiki/HTTP.md",
     "_wiki/MERN Stack.md",
+    "_wiki/HTTP.md",
+    "_wiki/Data Models.md",
     "ring.md",
+    "readme.md",
     "library/Capital_as_power.pdf",
     "_wiki/Hypertext.md",
     "_daily/2023-07-18.md",

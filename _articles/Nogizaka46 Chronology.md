@@ -449,7 +449,7 @@ _The history of Nogizaka46 began with the birth of its members. Below is a chron
 
 ### February
 
-# Footnotes
+## Footnotes
 
 [^1]: This project is a translation and a continuation of the extensive work made by makuramoto-san, member of the Saitama-based Sakamichi Uncle Otaku Association in http://f-makuramoto.com/46-nogi/. His content is copyrighted, but I believe this would fall under fair use.
 
