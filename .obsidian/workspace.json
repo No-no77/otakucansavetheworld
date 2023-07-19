@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_wiki/MERN Stack.md",
+                "file": "ring.md",
                 "mode": "source",
                 "source": true
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_wiki/MERN Stack.md",
+                "file": "ring.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_wiki/MERN Stack.md",
+                "file": "ring.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_wiki/MERN Stack.md"
+                "file": "ring.md"
               }
             }
           },
@@ -166,8 +166,8 @@
   },
   "active": "ac83e42bedc1c766",
   "lastOpenFiles": [
-    "_wiki/HTTP.md",
     "_wiki/MERN Stack.md",
+    "_wiki/HTTP.md",
     "_wiki/Hypertext.md",
     "_daily/2023-07-18.md",
     "readme.md",

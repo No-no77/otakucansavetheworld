@@ -8,7 +8,6 @@ tags:
 # MERN Stack
 
 **MERN** stack is a collection of tools that share a common denominator: **JavaScript**.
-
 **MongoDB**: [Document-oriented database](https://en.wikipedia.org/wiki/Document-oriented_database)
 **[ExpressJS](https://en.wikipedia.org/wiki/Express.js)**: Web application **framework** for building WebApps and APIs.
 **ReactJS**: Declarative, Component-based, Isomorphic[^1]. JavaScript library for building interfaces.
@@ -20,7 +19,36 @@ tags:
 **View** : Any visual representation of the data or information
 **Controller** : Interprets user-generated events and transforms them into commands for the model and view to update accordingly:
 
-Follows **SOC**: Separation of Concerns
+{% graphviz %}
+
+digraph MVC {
+    rankdir=TB;
+    
+    // Nodes
+    node [shape=box, style=filled, fillcolor=yellow];
+    Model [label="Model"];
+    
+    node [shape=oval, style=filled, fillcolor=lightyellow];
+    View [label="View"];
+    Controller [label="Controller"];
+    
+    node [shape=circle, style=filled, fillcolor=black, fontcolor=white];
+    User [label="User"];
+    
+    // Edges
+    Model -> View [xlabel="Updates", labelfloat=false];
+    User -> View [label="Sees", labelfloat=false];
+    User -> Controller [label="Uses", labelfloat=false];
+    Controller -> Model [label="Manipulates", labelfloat=false];
+    
+    // Alignment
+    {rank=same; View; Controller;}
+    {rank=sink; User;}
+}
+
+{% endgraphviz %}
+
+Important to notice that it also follows **SOC**: Separation of Concerns[^2]
 
 
 
@@ -56,3 +84,4 @@ Follows **SOC**: Separation of Concerns
 [^1]: - **Declarative**: Developers describe the desired user interface based on the application's state, and React takes care of efficiently updating the DOM.
 	**Component-based**: React promotes the use of reusable components, which are self-contained units of functionality that can be combined to create complex UIs.
 	**Isomorphic**: React can render interfaces on both the server and client sides, resulting in faster page loads, better SEO, and an improved user experience.
+[^2]: [Express application generator (expressjs.com)](https://expressjs.com/en/starter/generator.html)
