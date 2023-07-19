@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
+                "file": "_wiki/MERN Stack.md",
                 "mode": "source",
                 "source": true
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
+                "file": "_wiki/MERN Stack.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
+                "file": "_wiki/MERN Stack.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md"
+                "file": "_wiki/MERN Stack.md"
               }
             }
           },
@@ -166,8 +166,12 @@
   },
   "active": "ac83e42bedc1c766",
   "lastOpenFiles": [
-    "_journal/Similar Music Discovered by Accident.md",
+    "_wiki/HTTP.md",
+    "_wiki/Data Models.md",
+    "ring.md",
+    "readme.md",
     "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
+    "_journal/Similar Music Discovered by Accident.md",
     "library/delta green rpg - targets of opportunity.pdf",
     "library/delta green rpg - night at the opera.pdf",
     "library/delta green rpg - need to know.pdf",
@@ -188,13 +192,9 @@
     "images/29 online.png",
     "images/28 online.png",
     "images/27 online.png",
-    "ring.md",
-    "_wiki/Data Models.md",
     "_articles/Nogizaka46 Chronology.md",
     "_articles/Hardsubs are Unethical.md",
     "_wiki/MERN Stack.md",
-    "_wiki/HTTP.md",
-    "readme.md",
     "_wiki/Hypertext.md",
     "_daily/2023-07-18.md",
     "_wiki/3c108f.md",

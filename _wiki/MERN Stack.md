@@ -79,7 +79,7 @@ Important to notice that it also follows **SOC**: Separation of Concerns[^2]
 12. ```npm list```
     Check installed version.
 
-## [.js VS .mjs]
+## .js VS .mjs
 
 
 [javascript - What is the difference between .js and .mjs files? - Stack Overflow (archive.org)](https://web.archive.org/web/20230126081858/https://stackoverflow.com/questions/57492546/what-is-the-difference-between-js-and-mjs-files)
