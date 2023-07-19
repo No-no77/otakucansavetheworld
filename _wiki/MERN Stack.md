@@ -85,3 +85,4 @@ Important to notice that it also follows **SOC**: Separation of Concerns[^2]
 	**Component-based**: React promotes the use of reusable components, which are self-contained units of functionality that can be combined to create complex UIs.
 	**Isomorphic**: React can render interfaces on both the server and client sides, resulting in faster page loads, better SEO, and an improved user experience.
 [^2]: [Express application generator (expressjs.com)](https://expressjs.com/en/starter/generator.html)
+	[Separation of Concerns in React](https://alialhaddad.medium.com/separation-of-concerns-in-react-d4f74aaf3800)

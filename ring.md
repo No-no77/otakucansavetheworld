@@ -5,19 +5,20 @@ title: Webring
 
 ### Historically Important
 
+| [HYPERSTITION](http://hyperstition.abstractdynamics.org/) | ......... |
 | [Outside in](https://web.archive.org/web/20180213122613/http://www.xenosystems.net/) | Involvements with reality |
 | [Urban Future (2.1)](https://web.archive.org/web/20180126083013/http://www.ufblog.net/) | views from the decopunk delta |
 | [Gwern](https://gwern.net/) | This Is The Website of **Gwern Branwen**. |
 | [Slate Star Codex](https://slatestarcodex.com/) | This Is The Website of **Scott Alexander**. |
 | [Edith Reisen](http://reisen.netlify.app/) | Para-academic knowledge repository and power hikikomori optimization manual |
-| [k-punk](http://k-punk.abstractdynamics.org/) | Mark Fisher's Blog |
+| [Satoshi Nakamoto Institute](https://nakamotoinstitute.org/) | I've been working on a new electronic cash system that's fully peer-to-peer, with no trusted third party... |
+| [CCRU](http://www.ccru.net/) | Cybernetic culture research unit |
 | [Journal of Memetics](https://web.archive.org/web/20180118114441/http://cfpm.org/jom-emit/all.html) | Evolutionary Models of Information Transmission |
-
 
 ### Remi-sphere
 
-| [Renn of White Oath](https://whiteoath.net/) | Emptiness and Omnipresence |
 | [Charlotte Fang](https://goldenlight.mirror.xyz/) | 恋人 ♡ GODS FAVORITE NFT MAVERICK ♡ @REMILIACORP CEO ♡ SCION OF THE NEW WAVE ♡ |
+| [Renn of White Oath](https://whiteoath.net/) | Emptiness and Omnipresence |
 
 ### Wota-sphere
 

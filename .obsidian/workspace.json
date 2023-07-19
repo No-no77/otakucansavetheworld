@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ring.md",
-                "mode": "source",
+                "file": "_wiki/MERN Stack.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ring.md",
+                "file": "_wiki/MERN Stack.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ring.md",
+                "file": "_wiki/MERN Stack.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ring.md"
+                "file": "_wiki/MERN Stack.md"
               }
             }
           },
@@ -164,8 +164,9 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e509f202f4abd033",
+  "active": "ac83e42bedc1c766",
   "lastOpenFiles": [
+    "ring.md",
     "library/Capital_as_power.pdf",
     "_wiki/MERN Stack.md",
     "_wiki/HTTP.md",
@@ -178,7 +179,6 @@
     "library/Money-for-nothing-Virtual-Worlds-and-Virtual-Economies.pdf",
     "library/buildingTheMemexSixtyYearsLaterTrendsAndDirectionsInPe.pdf",
     "library/Against Intellectual Property_2.pdf",
-    "ring.md",
     "Untitled.canvas",
     "_daily/2022-10-29.md",
     "_daily/2022-10-27.md",
