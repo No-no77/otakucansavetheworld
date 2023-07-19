@@ -9,7 +9,7 @@ foam_template:
 ---
 
 
-# Similar Musics Discovered by Accident
+# Similar Music Discovered by Accident
 
 I have randomly discovered the following songs that exhibit similarities:
 

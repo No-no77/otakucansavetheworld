@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_wiki/MERN Stack.md",
-                "mode": "preview",
+                "file": "ring.md",
+                "mode": "source",
                 "source": true
               }
             }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "\"[乃木坂46年表 (f-makuramoto.com)](http://f-makuramoto.com/46-nogi/noginen.html#a2)\"",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -73,7 +73,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -93,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_wiki/MERN Stack.md",
+                "file": "ring.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +111,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_wiki/MERN Stack.md",
+                "file": "ring.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +134,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_wiki/MERN Stack.md"
+                "file": "ring.md"
               }
             }
           },
@@ -164,15 +165,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ac83e42bedc1c766",
+  "active": "cf91471a0053b065",
   "lastOpenFiles": [
+    "readme.md",
+    "_articles/Nogizaka46 Chronology.md",
+    "_articles/Hardsubs are Unethical.md",
+    "_journal/Similar Music Discovered by Accident.md",
+    "_wiki/HTTP.md",
+    "_wiki/MERN Stack.md",
     "ring.md",
     "library/Capital_as_power.pdf",
-    "_wiki/MERN Stack.md",
-    "_wiki/HTTP.md",
     "_wiki/Hypertext.md",
     "_daily/2023-07-18.md",
-    "readme.md",
     "_wiki/3c108f.md",
     "library/Virtual-Worlds-market-and society-on-cyberian-frontier.pdf",
     "library/Parascientific_Research_Council_Major_Thoughts.pdf",

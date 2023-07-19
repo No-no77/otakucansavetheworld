@@ -286,7 +286,7 @@ _The history of Nogizaka46 began with the birth of its members. Below is a chron
   - The "7 Lucky Gods" are decided on the 2nd broadcast. This decision comes about a month after the final audition (recording in late September?).
   - Each member's name is called one by one: Shiraishi Mai, Sakurai Reika, Nakada Kana, Ikuta Erika, Takayama Kazumi, and Ikoma Rina.
 - **Mid-October** - 1st photo shoot of Eto Misa takes place on Ishigaki Island, Okinawa Prefecture
-  - The photobook "Irodori" will be released on 01/31/2012 by Wani Books.
+  - The photobook "Aaze" will be released on 01/31/2012 by Wani Books.
 - **10/23** - Additional event for the "1st Generation Omitatekai" is held
   - The venue is Shinkiba STUDIO COAST, 2 Chome Shinkiba, Koto City, Tokyo.
   - This is an additional performance due to a large number of applicants for Nogizaka46's first event held on September 25th.
@@ -445,7 +445,7 @@ _The history of Nogizaka46 began with the birth of its members. Below is a chron
   - Three members appear on the live broadcast of BAY FM "K-WEST ENTAME GENERATION".
 - **01/31**
   - The behind-the-scenes of "Guruguru Curtain" is published in the magazine "FLASH" published by Kobunsha.
-  - Eto Misa's 1st photo book "Irodori" is released by Wani Books.
+  - Eto Misa's 1st photo book "Aaze" is released by Wani Books.
 
 ### February
 
