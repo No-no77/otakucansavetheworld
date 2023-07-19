@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_daily/2023-07-18.md",
+                "file": "_wiki/HTTP.md",
                 "mode": "source",
                 "source": true
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_daily/2023-07-18.md",
+                "file": "_wiki/HTTP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_daily/2023-07-18.md",
+                "file": "_wiki/HTTP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_daily/2023-07-18.md"
+                "file": "_wiki/HTTP.md"
               }
             }
           },
@@ -166,6 +166,7 @@
   },
   "active": "ac83e42bedc1c766",
   "lastOpenFiles": [
+    "_daily/2023-07-18.md",
     "_wiki/HTTP.md",
     "readme.md",
     "_wiki/3c108f.md",
@@ -176,7 +177,6 @@
     "library/Against Intellectual Property_2.pdf",
     "ring.md",
     "Untitled.canvas",
-    "_daily/2023-07-18.md",
     "_daily/2022-10-29.md",
     "_daily/2022-10-27.md",
     "_articles/table test.md",
