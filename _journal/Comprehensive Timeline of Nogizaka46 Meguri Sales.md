@@ -21,6 +21,16 @@ To be found.
 
 ![](/images/3.png)
 
+| Slots Sold | Amount of Members | Members                                           |
+| ---------- | ----------------- | ------------------------------------------------- |
+| 100%       | 1                 | Eto Misa                                          |
+| ≥ 90%      | 3                 | Matsumura Sayuri, Shiraishi Mai, Hashimoto Nanami |
+| > 50%      | 3                 | Ikoma Rina, Nishino Nanase, Takayama Kazumi       |
+| 50%        | 1                 | Ikuta Erika                                       |
+| < 50%      |                   | Sakurai Reika                                     |
+| ≤ 10%      |                   | Inoue Sayuri                                      |
+| 0%         |                   |                                                   |
+
 ### Seifuku no Mannequin
 
 ![](/images/4.png)
