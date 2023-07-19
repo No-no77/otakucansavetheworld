@@ -19,31 +19,31 @@ To be found.
 
 ### Hashire! Bicycle
 
-![](images/3.png)
+![](/images/3.png)
 
 ### Seifuku no Mannequin
 
-![](images/4.png)
+![](/images/4.png)
 
 ### Kimi no Na wa Kibō
 
-![](images/5.png)
+![](/images/5.png)
 
 ### Girls’ Rule
 
-![](images/6.png)
+![](/images/6.png)
 
 ### Barrette
 
-![](images/7.png)
+![](/images/7.png)
 
 ### Kizuitara Kataomoi
 
-![](images/8.png)
+![](/images/8.png)
 
 ### Natsu no Free & Easy
 
-![](images/9.png)
+![](/images/9.png)
 
 ### Nandome no Aozora Ka?
 
@@ -55,34 +55,34 @@ To be found.
 
 ### Taiyō Knock
 
-![](images/12.png)
+![](/images/12.png)
 
 ### Ima, Hanashitai Dareka ga Iru
 
-![](images/13.png)
+![](/images/13.png)
 
 ### Harujion ga Sakukoro
 
-![](images/14.png)
+![](/images/14.png)
 
 ### Hadashi de Summer
 
-![](images/15.png)
+![](/images/15.png)
 
 ### Sayonara no Imi
 
-![](images/16.png)
+![](/images/16.png)
 
 ### Influencer
 
 ![](/images/17.png)
 
 ### Nigemizu
-![](images/18.png)
+![](/images/18.png)
 
 ### Itsuka Dekiru kara Kyō Dekiru
 
-![](images/19.png)
+![](/images/19.png)
 
 ### Synchronicity
 
@@ -102,26 +102,26 @@ To be found.
 
 ### Yoake Made Tsuyogaranakutemoii
 
-![](images/24.png)
+![](/images/24.png)
 
 ### Shiawase no Hogoshoku
-![](images/25.png)
+![](/images/25.png)
 
 ### Boku wa Boku o Suki ni Naru”
 
-![](images/26%20ONLINE.png)
+![](/images/26%20ONLINE.png)
 
 ### Gomen ne Fingers Crossed
 
-![](images/27%20ONLINE.png)
+![](/images/27%20ONLINE.png)
 
 ### Gomen ne Fingers Crossed
 
-![](images/28%20ONLINE.png)
+![](/images/28%20ONLINE.png)
 
 ### Gomen ne Fingers Crossed
 
-![](images/29%20ONLINE.png)
+![](/images/29%20ONLINE.png)
 
 ### Suki to Iu no wa Rock da ze!
 
@@ -135,7 +135,7 @@ To be found
 
 ### Tōmei na Iro
 
-![](images/1ST%20ALBUM.png)
+![](/images/1ST%20ALBUM.png)
 
 ### Sorezore no Isu
 
