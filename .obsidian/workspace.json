@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_articles/Hardsubs are Unethical.md",
+                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
                 "mode": "source",
                 "source": true
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_articles/Hardsubs are Unethical.md",
+                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_articles/Hardsubs are Unethical.md",
+                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_articles/Hardsubs are Unethical.md"
+                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md"
               }
             }
           },
@@ -166,6 +166,8 @@
   },
   "active": "ac83e42bedc1c766",
   "lastOpenFiles": [
+    "_articles/Nogizaka46 Chronology.md",
+    "_articles/Hardsubs are Unethical.md",
     "_wiki/MERN Stack.md",
     "_wiki/Data Models.md",
     "_wiki/HTTP.md",
@@ -193,8 +195,6 @@
     "images/29 online.png",
     "images/28 online.png",
     "images/27 online.png",
-    "_articles/Nogizaka46 Chronology.md",
-    "_articles/Hardsubs are Unethical.md",
     "_wiki/Hypertext.md",
     "_daily/2023-07-18.md",
     "_wiki/3c108f.md",
