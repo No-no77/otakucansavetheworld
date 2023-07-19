@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_wiki/Data Models.md",
+                "file": "_wiki/MERN Stack.md",
                 "mode": "source",
                 "source": true
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_wiki/Data Models.md",
+                "file": "_wiki/MERN Stack.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_wiki/Data Models.md",
+                "file": "_wiki/MERN Stack.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_wiki/Data Models.md"
+                "file": "_wiki/MERN Stack.md"
               }
             }
           },
@@ -167,8 +167,8 @@
   "active": "ac83e42bedc1c766",
   "lastOpenFiles": [
     "_wiki/HTTP.md",
-    "_wiki/MERN Stack.md",
     "_wiki/Data Models.md",
+    "_wiki/MERN Stack.md",
     "ring.md",
     "readme.md",
     "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
