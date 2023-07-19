@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_wiki/MERN Stack.md",
+                "file": "_wiki/Data Models.md",
                 "mode": "source",
                 "source": true
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_wiki/MERN Stack.md",
+                "file": "_wiki/Data Models.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_wiki/MERN Stack.md",
+                "file": "_wiki/Data Models.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_wiki/MERN Stack.md"
+                "file": "_wiki/Data Models.md"
               }
             }
           },
@@ -167,6 +167,7 @@
   "active": "ac83e42bedc1c766",
   "lastOpenFiles": [
     "_wiki/HTTP.md",
+    "_wiki/MERN Stack.md",
     "_wiki/Data Models.md",
     "ring.md",
     "readme.md",
@@ -194,7 +195,6 @@
     "images/27 online.png",
     "_articles/Nogizaka46 Chronology.md",
     "_articles/Hardsubs are Unethical.md",
-    "_wiki/MERN Stack.md",
     "_wiki/Hypertext.md",
     "_daily/2023-07-18.md",
     "_wiki/3c108f.md",

@@ -8,15 +8,21 @@ tags: internet programming
 # MERN Stack
 
 **MERN** stack is a collection of tools that share a common denominator: **JavaScript**.
+
 **MongoDB**: [Document-oriented database](https://en.wikipedia.org/wiki/Document-oriented_database)
+
 **[ExpressJS](https://en.wikipedia.org/wiki/Express.js)**: Web application **framework** for building WebApps and APIs.
+
 **ReactJS**: Declarative, Component-based, Isomorphic[^1]. JavaScript library for building interfaces.
+
 **NodeJS**: Cross-platform JavaScript environment for basically running JavaScript outside of a browser.
 
 ## MVC
 
 **Model** : Manages the business logic of an application. Determines how data should be stored, created, and modified
+
 **View** : Any visual representation of the data or information
+
 **Controller** : Interprets user-generated events and transforms them into commands for the model and view to update accordingly:
 
 {% graphviz %}
