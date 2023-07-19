@@ -4,31 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "9a6d7b65dfe24a65",
+        "id": "f527783b7fb5b05f",
         "type": "tabs",
         "children": [
           {
-            "id": "68bdb0177a6320a6",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "3aa1ea3782e80e19",
+            "id": "ac83e42bedc1c766",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_daily/2023-07-18.md",
+                "file": "_wiki/HTTP.md",
                 "mode": "source",
                 "source": true
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -47,7 +38,7 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
+                "sortOrder": "alphabeticalReverse"
               }
             }
           },
@@ -102,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_daily/2023-07-18.md",
+                "file": "_wiki/HTTP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_daily/2023-07-18.md",
+                "file": "_wiki/HTTP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -142,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_daily/2023-07-18.md"
+                "file": "_wiki/HTTP.md"
               }
             }
           },
@@ -173,8 +164,18 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "3aa1ea3782e80e19",
+  "active": "ac83e42bedc1c766",
   "lastOpenFiles": [
+    "readme.md",
+    "_wiki/HTTP.md",
+    "_wiki/3c108f.md",
+    "library/Virtual-Worlds-market-and society-on-cyberian-frontier.pdf",
+    "library/Parascientific_Research_Council_Major_Thoughts.pdf",
+    "library/Money-for-nothing-Virtual-Worlds-and-Virtual-Economies.pdf",
+    "library/buildingTheMemexSixtyYearsLaterTrendsAndDirectionsInPe.pdf",
+    "library/Against Intellectual Property_2.pdf",
+    "ring.md",
+    "Untitled.canvas",
     "_daily/2023-07-18.md",
     "_daily/2022-10-29.md",
     "_daily/2022-10-27.md",
