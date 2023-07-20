@@ -9,6 +9,8 @@ tags: Horror Writing
 
 ## Notes on the Writing of Horror: A Story
 
+[Download here](../library/Notes%20on%20the%20Writing%20of%20Horror%20[Ligotti].pdf)
+
 ### The Story
 
 Thomas Ligotti is the most startling and talented horror writer to emerge in recent years. Exclusively a short story writer thus far in his career, he published all of his early stories in semiprofessional and small press genre magazines for several years, remaining obscure. An American writer, his first trade collection of stories, Songs of a Dead Dreamer (1990), was published in England, the result of a gradually growing reputation among the avid genre readers. His second collection. Grimscribe (1991), was published at the end of 1991. Perhaps the most startling thing about his work, aside from the extraordinary stylistic sophistication (one is reminded of the polished prose and effects of Robert Aickman’s strange stories), is his devotion to horror, which is positively Lovecraftian— as is his bent for theory and knowledge of the history of the literature. This present piece selected is his masterpiece to date. “Few other writers,” says Ramsey Campbell, “could conceive a horror story in the form of notes on the writing of the genre, and I can't think of any other writer who could have brought it off." It is no less than an instructional essay on the writing of horror, transformed by stylistic magic and artful construction into a powerful work of fiction. Writing students I have taught have found it a revelation. It is included for your delight and instruction.
