@@ -5,7 +5,8 @@ topic: subtitles
 date: 2023-07-16
 tags: otaku nogizaka46 ethics
 certainty: high
-importance: low
+importance: autism
+status: in progress
 foam_template:
   filepath: '_articles/hardsubs-are-unethical.md'
   name: Article

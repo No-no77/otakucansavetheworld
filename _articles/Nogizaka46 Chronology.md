@@ -5,7 +5,8 @@ topic: History
 date: 2023-07-15
 tags: nogizaka46 j-pop log
 certainty: log
-importance: high
+importance: autism
+status: eternal
 foam_template:
   filepath: '_articles/nogizaka46-chronology.md'
   name: Article
