@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "f527783b7fb5b05f",
+        "id": "19b564ac00c49649",
         "type": "tabs",
         "children": [
           {
-            "id": "ac83e42bedc1c766",
+            "id": "84c5ea4679dfef9b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
+                "file": "Thomas Ligotti.md",
                 "mode": "source",
                 "source": true
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
+                "file": "Thomas Ligotti.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
+                "file": "Thomas Ligotti.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md"
+                "file": "Thomas Ligotti.md"
               }
             }
           },
@@ -166,6 +166,11 @@
   },
   "active": "e509f202f4abd033",
   "lastOpenFiles": [
+    "Untitled",
+    "Thomas Ligotti.md",
+    "ring.md",
+    "Untitled.md",
+    "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
     "pages/noginback.html",
     "_journal/Similar Music Discovered by Accident.md",
     "_articles/Hardsubs are Unethical.md",
@@ -173,8 +178,6 @@
     "_wiki/HTTP.md",
     "_wiki/Data Models.md",
     "_wiki/MERN Stack.md",
-    "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
-    "ring.md",
     "readme.md",
     "library/delta green rpg - targets of opportunity.pdf",
     "library/delta green rpg - night at the opera.pdf",
@@ -185,7 +188,6 @@
     "library/delta green rpg - handlers guide.pdf",
     "library/delta green rpg - grace under pressure.pdf",
     "library/delta green rpg - extremophilia.pdf",
-    "library/delta green rpg - executive summary no disorders.pdf",
     "images/5.png",
     "images/4th album.png",
     "images/4.png",

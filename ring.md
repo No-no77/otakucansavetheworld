@@ -8,7 +8,7 @@ title: Webring
 | [HYPERSTITION](http://hyperstition.abstractdynamics.org/) | ......... |
 | [Outside in](https://web.archive.org/web/20180213122613/http://www.xenosystems.net/) | Involvements with reality |
 | [Urban Future (2.1)](https://web.archive.org/web/20180126083013/http://www.ufblog.net/) | views from the decopunk delta |
-| [Gwern](https://gwern.net/) | This Is The Website of **Gwern Branwen** |
+| [Gwern](https://gwern.net/) | This Is The Website of **Gwern Branwen**. |
 | [Slate Star Codex](https://slatestarcodex.com/) | This Is The Website of **Scott Alexander** |
 | [Edith Reisen](http://reisen.netlify.app/) | Para-academic knowledge repository and power hikikomori optimization manual |
 | [Satoshi Nakamoto Institute](https://nakamotoinstitute.org/) | I've been working on a new electronic cash system that's fully peer-to-peer, with no trusted third party |
