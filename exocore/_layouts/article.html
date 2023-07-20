@@ -21,6 +21,8 @@ layout: default
           {% endif %}
           <div class="post-date"><strong>Created:</strong> {{ page.date | date: '%b %d, %Y' }}</div>
           <div class="post-date"><strong>Modified:</strong> {{ page.last_modified_at | date: '%b %d, %Y' }}</div>
+          <div class="post-date"><strong>Confidence:</strong> {{ page.certainty }}</div>
+          <div class="post-date"><strong>Importance:</strong> {{ page.importance }}</div>
         </div>
 
       <div class="title">

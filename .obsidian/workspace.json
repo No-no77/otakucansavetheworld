@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_wiki/Thomas Ligotti.md",
+                "file": "_articles/Hardsubs are Unethical.md",
                 "mode": "source",
                 "source": true
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_wiki/Thomas Ligotti.md",
+                "file": "_articles/Hardsubs are Unethical.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_wiki/Thomas Ligotti.md",
+                "file": "_articles/Hardsubs are Unethical.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_wiki/Thomas Ligotti.md"
+                "file": "_articles/Hardsubs are Unethical.md"
               }
             }
           },
@@ -166,13 +166,13 @@
   },
   "active": "84c5ea4679dfef9b",
   "lastOpenFiles": [
+    "_wiki/Thomas Ligotti.md",
     "library/Notes on the Writing of Horror [Ligotti].pdf",
     "ring.md",
     "readme.md",
     "_wiki/MERN Stack.md",
     "Untitled.md",
     "_site/images/lukasa.jpg",
-    "_wiki/Thomas Ligotti.md",
     "_daily/2023-07-20.md",
     "Untitled",
     "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
@@ -189,7 +189,6 @@
     "library/delta green rpg - kali ghati.pdf",
     "library/delta green rpg - handlers screen.pdf",
     "library/delta green rpg - handlers guide.pdf",
-    "library/delta green rpg - grace under pressure.pdf",
     "images/5.png",
     "images/4th album.png",
     "images/4.png",
