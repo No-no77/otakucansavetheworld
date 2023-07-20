@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Thomas Ligotti.md",
-                "mode": "source",
+                "file": "_wiki/Thomas Ligotti.md",
+                "mode": "preview",
                 "source": true
               }
             }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Thomas Ligotti.md",
+                "file": "_wiki/Thomas Ligotti.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Thomas Ligotti.md",
+                "file": "_wiki/Thomas Ligotti.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Thomas Ligotti.md"
+                "file": "_wiki/Thomas Ligotti.md"
               }
             }
           },
@@ -164,12 +164,17 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e509f202f4abd033",
+  "active": "84c5ea4679dfef9b",
   "lastOpenFiles": [
-    "Untitled",
-    "Thomas Ligotti.md",
+    "library/Notes on the Writing of Horror [Ligotti].pdf",
     "ring.md",
+    "readme.md",
+    "_wiki/MERN Stack.md",
     "Untitled.md",
+    "_site/images/lukasa.jpg",
+    "_wiki/Thomas Ligotti.md",
+    "_daily/2023-07-20.md",
+    "Untitled",
     "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
     "pages/noginback.html",
     "_journal/Similar Music Discovered by Accident.md",
@@ -177,8 +182,6 @@
     "_articles/Nogizaka46 Chronology.md",
     "_wiki/HTTP.md",
     "_wiki/Data Models.md",
-    "_wiki/MERN Stack.md",
-    "readme.md",
     "library/delta green rpg - targets of opportunity.pdf",
     "library/delta green rpg - night at the opera.pdf",
     "library/delta green rpg - need to know.pdf",
@@ -187,7 +190,6 @@
     "library/delta green rpg - handlers screen.pdf",
     "library/delta green rpg - handlers guide.pdf",
     "library/delta green rpg - grace under pressure.pdf",
-    "library/delta green rpg - extremophilia.pdf",
     "images/5.png",
     "images/4th album.png",
     "images/4.png",
@@ -197,7 +199,6 @@
     "images/1st album.png",
     "images/29 online.png",
     "images/28 online.png",
-    "images/27 online.png",
     "_wiki/Hypertext.md",
     "_daily/2023-07-18.md",
     "_wiki/3c108f.md",

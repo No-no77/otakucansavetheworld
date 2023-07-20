@@ -7,8 +7,11 @@ tags: Horror Writing
 
 # Thomas Ligotti
 
-## Notes on the Writing of Horror: A Story
+## Notes on "Notes on the Writing of Horror: A Story"
 
-`Excerpt from Visions of Fear: Foundations of Fear Volume III`
+
 `An instructional essay on the writing of horror, transformed by stylistic magic and artful construction into a powerful work of fiction.`
+
+![[Notes on the Writing of Horror [Ligotti].pdf]]
+
 
