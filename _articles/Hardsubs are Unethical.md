@@ -1,7 +1,7 @@
 ---
 published: yes
 subtitle: And other implications for Data Integrity, Accessibility and QC.
-topic: subtitles
+topic: Ethics
 date: 2023-07-16
 tags: otaku nogizaka46 ethics
 certainty: high
