@@ -4,7 +4,7 @@ subtitle:
 date: 2023-07-21
 tags:
 foam_template:
-  filepath: '_journal/2023-07-milady.md'
+  filepath: '_journal/milady.md'
   name: Journal Entry
 ---
 
