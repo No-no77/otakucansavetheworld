@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "19b564ac00c49649",
+        "id": "178668318cbccc96",
         "type": "tabs",
         "children": [
           {
-            "id": "84c5ea4679dfef9b",
+            "id": "41b6345d5bea82eb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_articles/Laws of True D&D.md",
+                "file": "_wiki/MERN Stack.md",
                 "mode": "source",
                 "source": true
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_articles/Laws of True D&D.md",
+                "file": "_wiki/MERN Stack.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_articles/Laws of True D&D.md",
+                "file": "_wiki/MERN Stack.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_articles/Laws of True D&D.md"
+                "file": "_wiki/MERN Stack.md"
               }
             }
           },
@@ -164,8 +164,10 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "84c5ea4679dfef9b",
+  "active": "41b6345d5bea82eb",
   "lastOpenFiles": [
+    "images/tanasinn.jpg",
+    "_articles/Laws of True D&D.md",
     "assets/favicon/favicon.ico",
     "assets/favicon/favicon-32x32 copy.png",
     "assets/favicon/favicon-32x32.png",
@@ -178,7 +180,6 @@
     "library/styled-miya-archive.htm",
     "_articles/Nogizaka46 Chronology.md",
     "_articles/Hardsubs are Unethical.md",
-    "_articles/Laws of True D&D.md",
     "images/image0.jpg",
     "images/cbd95b8be0b0781dbb9bda30eb76770f.png",
     "images/398ab40ea18bef12472386e9e8941fb1.png",
@@ -199,7 +200,6 @@
     "library/delta green rpg - night at the opera.pdf",
     "library/delta green rpg - need to know.pdf",
     "library/delta green rpg - music from a darkened room.pdf",
-    "library/delta green rpg - kali ghati.pdf",
     "_wiki/Hypertext.md",
     "_daily/2023-07-18.md",
     "_wiki/3c108f.md",
