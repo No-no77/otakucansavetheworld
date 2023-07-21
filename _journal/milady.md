@@ -1,8 +1,11 @@
 ---
 published: true
-subtitle: 
+subtitle:
 date: 2023-07-21
-tags: 
+tags:
+foam_template:
+  filepath: '_journal/2023-07-milady.md'
+  name: Journal Entry
 ---
 
 #  milady
