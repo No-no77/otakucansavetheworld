@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_wiki/MERN Stack.md",
+                "file": "_wiki/milady.md",
                 "mode": "source",
                 "source": true
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_wiki/MERN Stack.md",
+                "file": "_wiki/milady.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_wiki/MERN Stack.md",
+                "file": "_wiki/milady.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_wiki/MERN Stack.md"
+                "file": "_wiki/milady.md"
               }
             }
           },
@@ -166,6 +166,8 @@
   },
   "active": "41b6345d5bea82eb",
   "lastOpenFiles": [
+    "_wiki/MERN Stack.md",
+    "_wiki/milady.md",
     "images/tanasinn.jpg",
     "_articles/Laws of True D&D.md",
     "assets/favicon/favicon.ico",
@@ -182,12 +184,10 @@
     "_articles/Hardsubs are Unethical.md",
     "images/image0.jpg",
     "images/cbd95b8be0b0781dbb9bda30eb76770f.png",
-    "images/398ab40ea18bef12472386e9e8941fb1.png",
     "_wiki/Thomas Ligotti.md",
     "library/Notes on the Writing of Horror [Ligotti].pdf",
     "ring.md",
     "readme.md",
-    "_wiki/MERN Stack.md",
     "Untitled.md",
     "_daily/2023-07-20.md",
     "Untitled",
