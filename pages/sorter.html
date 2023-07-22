@@ -61,7 +61,6 @@ title: 乃木坂46 Sorter
     <div class="side-card">
     </div>
     <br>
-    <div id="counter" style="font-weight: bold; margin: 10px 0;">0%</div>
     <div class="tag-grid">
       <button id="start" onclick="startSorting()">Start Sorting</button>
       <button id="button1" onclick="choose(1)">Loading...</button>
@@ -74,137 +73,95 @@ title: 乃木坂46 Sorter
     {% include license.html %}
 
     <script>
-      var names = ["IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
-        "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO",
-        "NAKANISHI ARUNO", "OKAMOTO HINA"];
-    
-      var comparisons = {};
-      var queue = [];
-      var activePair = null;
-      var totalPairs = 0;
-      var pairsProcessed = 0; // Moved the variable declaration to a global scope
-    
-      function startSorting() {
-        document.getElementById('start').style.display = "none";
-        mergeSort(names, 0, names.length - 1);
-    
-        // Calculate the total number of pairs
-        totalPairs = names.length * (names.length - 1) / 2;
-    
-        processQueue();
-      }
-    
-      function mergeSort(arr, left, right) {
-  if (left < right) {
-    var mid = left + Math.floor((right - left) / 2);
-    mergeSort(arr, left, mid);
-    mergeSort(arr, mid + 1, right);
-    merge(arr, left, mid, right);
-  }
-}
-
-function merge(arr, left, mid, right) {
-  var i = left;
-  var j = mid + 1;
-  var temp = [];
-
-  while (i <= mid && j <= right) {
-    var key = arr[i] + '-' + arr[j];
-    if (comparisons[key]) {
-      if (comparisons[key] === arr[i]) {
-        temp.push(arr[i++]);
-      } else {
-        temp.push(arr[j++]);
-      }
+      var names = [
+       "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
+      "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO", "NAKANISHI ARUNO",
+      "OKAMOTO HINA"
+    ];
+    // "ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI", "SATO KAEDE",
+    // "NAKAMURA RENO","MUKAI HAZUKI", "YAMASHITA MIZUKI", "YOSHIDA AYANO CHRISTIE", "YODA YUKI",
+    // "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",  "SATO RIKA", "SHIBATA YUNA",
+    //  "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",  "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA",
+    //  "MATSUO MIYU", "YAKUBO MIO", "YUMIKI NAO",
+    var comparisons = {};
+  
+  async function compare(name1, name2) {
+    var key = name1 + '-' + name2;
+    if (!comparisons[key]) {
+      return new Promise((resolve) => {
+        document.getElementById('button1').textContent = name1;
+        document.getElementById('button2').textContent = name2;
+        document.getElementById('button1').style.display = "block";
+        document.getElementById('button2').style.display = "block";
+        document.getElementById('button1').onclick = function() {
+          comparisons[key] = name1;
+          comparisons[name2 + '-' + name1] = name1;
+          resolve(name1);
+        }
+        document.getElementById('button2').onclick = function() {
+          comparisons[key] = name2;
+          comparisons[name2 + '-' + name1] = name2;
+          resolve(name2);
+        }
+      });
     } else {
-      comparisons[key] = null;
-      queue.push([arr[i], arr[j], temp, arr, i, j, mid, right]);
-      return;
+      return Promise.resolve(comparisons[key]);
+    }
+  }
+  
+  async function mergeSort(arr) {
+    if (arr.length < 2) return arr;
+    var mid = Math.floor(arr.length / 2);
+    var left = await mergeSort(arr.slice(0, mid));
+    var right = await mergeSort(arr.slice(mid));
+  
+    var merged = [];
+    while (left.length && right.length) {
+      var winner = await compare(left[0], right[0]);
+      if (winner === left[0]) {
+        merged.push(left.shift());
+      } else {
+        merged.push(right.shift());
+      }
+    }
+    
+    return [...merged, ...left, ...right];
+  }
+
+  async function startSorting() {
+    document.getElementById('start').style.display = "none";
+    var sorted = await mergeSort(names);
+    document.getElementById('names').innerHTML = sorted.map((name, index) => {
+      return `${index + 1}. ${name}`;
+    }).join("<br>");
+    document.getElementById('retry').style.display = "block";
+  }
+
+  function initialize() {
+    document.getElementById('start').style.display = "block";
+    document.getElementById('button1').style.display = "none";
+    document.getElementById('button2').style.display = "none";
+    document.getElementById('retry').style.display = "none";
+    document.getElementById('names').innerHTML = "";
+    comparisons = {};
+
+    // Fisher-Yates shuffle algorithm
+    for (var i = names.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = names[i];
+      names[i] = names[j];
+      names[j] = temp;
     }
   }
 
-  while (i <= mid) {
-    temp.push(arr[i++]);
-  }
-  while (j <= right) {
-    temp.push(arr[j++]);
-  }
+  initialize();
 
-  for (var k = left; k <= right; k++) {
-    arr[k] = temp[k - left];
-  }
-  
-  processQueue();
-}
+  document.body.addEventListener('keydown', function (event) {
+    if (event.key === 'a' || event.key === 'A') {
+      document.getElementById('button1').onclick();
+    } else if (event.key === 'd' || event.key === 'D') {
+      document.getElementById('button2').onclick();
+    }
+  });
 
-function processQueue() {
-  if (queue.length > 0) {
-    activePair = queue.shift();
-    document.getElementById('button1').style.display = "block";
-    document.getElementById('button1').textContent = activePair[0];
-    document.getElementById('button2').style.display = "block";
-    document.getElementById('button2').textContent = activePair[1];
-  } else {
-    finishSorting();
-  }
-}
-      function choose(index) {
-    var name1 = document.getElementById('button1').textContent;
-    var name2 = document.getElementById('button2').textContent;
-    var winner = index === 1 ? name1 : name2;
-    comparisons[name1 + '-' + name2] = winner;
-    comparisons[name2 + '-' + name1] = winner;
-    document.getElementById('button1').style.display = "none";
-    document.getElementById('button2').style.display = "none";
-    merge(activePair[3], activePair[4], activePair[6], activePair[7]);
-    processQueue();
-  }
-      function finishSorting() {
-        var result = names.map((name, index) => {
-          var rank = index + 1;
-          if (rank === 1) {
-            return `<span style="color:blue;">${rank}. ${name}</span>`;
-          } else if (rank === 2) {
-            return `<span style="color:blue;">${rank}. ${name}</span>`;
-          } else if (rank === 3) {
-            return `<span style="color:blue;">${rank}. ${name}</span>`;
-          } else {
-            return `${rank}. ${name}`;
-          }
-        }).join("<br>");
-        document.getElementById('names').innerHTML = result;
-        document.getElementById('retry').style.display = "block";
-        document.getElementById('counter').textContent = "100%"; // Set the counter to 100% after completion.
-      }
-
-      function initialize() {
-        document.getElementById('start').style.display = "block";
-        document.getElementById('button1').style.display = "none";
-        document.getElementById('button2').style.display = "none";
-        document.getElementById('retry').style.display = "none";
-        document.getElementById('names').innerHTML = "";
-        comparisons = {};
-        queue = [];
-        activePair = null;
-
-        // Fisher-Yates shuffle algorithm
-        for (var i = names.length - 1; i > 0; i--) {
-          var j = Math.floor(Math.random() * (i + 1));
-          var temp = names[i];
-          names[i] = names[j];
-          names[j] = temp;
-        }
-      }
-
-      initialize();
-
-      document.body.addEventListener('keydown', function (event) {
-        if (event.key === 'a' || event.key === 'A') {
-          choose(1);
-        } else if (event.key === 'd' || event.key === 'D') {
-          choose(2);
-        }
-      });
-
-    </script>
-
+</script>
