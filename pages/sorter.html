@@ -62,6 +62,16 @@ title: 乃木坂46 Sorter
     </div>
     <br>
     <div class="tag-grid">
+      <select name="name-list" id="name-list">
+        <option value="active-members">Active Members</option>
+        <option value="first-gen">1st Generation</option>
+        <option value="second-gen">2nd Generation</option>
+        <option value="third-gen">3rd Generation</option>
+        <option value="fourth-gen">4th Generation</option>
+        <option value="fifth-gen">5th Generation</option>
+        <option value="all-gen">All Generations</option>
+        <!-- Add more options as needed -->
+      </select>
       <button id="start" onclick="startSorting()">Start Sorting</button>
       <button id="button1" onclick="choose(1)">Loading...</button>
       <button id="button2" onclick="choose(2)">Loading...</button>
@@ -73,17 +83,51 @@ title: 乃木坂46 Sorter
     {% include license.html %}
 
     <script>
-      var names = [
-       "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
-      "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO", "NAKANISHI ARUNO",
-      "OKAMOTO HINA"
-    ];
-    // "ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI", "SATO KAEDE",
-    // "NAKAMURA RENO","MUKAI HAZUKI", "YAMASHITA MIZUKI", "YOSHIDA AYANO CHRISTIE", "YODA YUKI",
-    // "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",  "SATO RIKA", "SHIBATA YUNA",
-    //  "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",  "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA",
-    //  "MATSUO MIYU", "YAKUBO MIO", "YUMIKI NAO",
-    var comparisons = {};
+
+    var lists = {
+        'active-members': [
+          "ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI", "SATO KAEDE",
+          "NAKAMURA RENO","MUKAI HAZUKI", "YAMASHITA MIZUKI", "YOSHIDA AYANO CHRISTIE", "YODA YUKI",
+          "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",  "SATO RIKA", "SHIBATA YUNA",
+          "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",  "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA",
+          "MATSUO MIYU", "YAKUBO MIO", "YUMIKI NAO","IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
+          "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO", "NAKANISHI ARUNO",
+          "OKAMOTO HINA"
+        ],
+        'first-gen': [ "AKIMOTO MANATSU", "SAITO ASUKA", "WADA MAYA", "HIGUCHI HINA", "HOSHINO MINAMI", "IKUTA ERIKA", "TAKAYAMA KAZUMI", "MATSUMURA SAYURI", "SHIRAISHI MAI", "NAKADA KANA", "INOUE SAYURI", "SAKURAI REIKA", "SAITO YURI", "ETO MISA", "NISHINO NANASE", "KAWAGO HINA", "NOJO AMI", "WAKATSUKI YUMI", "SAITO CHIHARU", "IKOMA RINA", "KAWAMURA MAHIRO", "NAKAMOTO HIMEKA", "ITO MARIKA", "HASHIMOTO NANAMI", "FUKAGAWA MAI", "NAGASHIMA SEIRA", "HATANAKA SEIRA", "YAMATO RINA", "ITO NENE", "ICHIKI RENA", "MIYAZAWA SEIRA", "KASHIWA YUKINA", "ANDO MIKUMO", "IWASE YUMIKO"
+        ],
+        'second-gen': ["SUZUKI AYANE", "YAMAZAKI RENA", "KITANO HINAKO", "SHINUCHI MAI", "TERADA RANZE", "WATANABE MIRIA", "ITO JUNNA", "HORI MIONA", "SASAKI KOTOKO", "ITO KARIN", "SAGARA IORI", "YONETOKU KYOKA", "YADA RISAKO", "NISHIKAWA NANAMI",
+        ],
+        'third-gen': [
+          "ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI", "SATO KAEDE",
+          "NAKAMURA RENO","MUKAI HAZUKI", "YAMASHITA MIZUKI", "YOSHIDA AYANO CHRISTIE", "YODA YUKI",
+        ],
+        'fourth-gen': [
+          "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",  "SATO RIKA", "SHIBATA YUNA",
+          "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",  "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA",
+          "MATSUO MIYU", "YAKUBO MIO", "YUMIKI NAO",
+        ],
+        'fifth-gen': [
+          "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
+          "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO", "NAKANISHI ARUNO",
+          "OKAMOTO HINA"
+        ],
+        'all-gens': [
+          "MATSUI RENA", "AKIMOTO MANATSU", "SAITO ASUKA", "WADA MAYA", "HIGUCHI HINA", "HOSHINO MINAMI", "IKUTA ERIKA", "TAKAYAMA KAZUMI", "MATSUMURA SAYURI", "SHIRAISHI MAI", "NAKADA KANA", "INOUE SAYURI", "SAKURAI REIKA", "SAITO YURI", "ETO MISA", "NISHINO NANASE", "KAWAGO HINA", "NOJO AMI", "WAKATSUKI YUMI", "SAITO CHIHARU", "IKOMA RINA", "KAWAMURA MAHIRO", "NAKAMOTO HIMEKA", "ITO MARIKA", "HASHIMOTO NANAMI", "FUKAGAWA MAI", "NAGASHIMA SEIRA", "HATANAKA SEIRA", "YAMATO RINA", "ITO NENE", "ICHIKI RENA", "MIYAZAWA SEIRA", "KASHIWA YUKINA", "ANDO MIKUMO", "IWASE YUMIKO",
+          "SUZUKI AYANE", "YAMAZAKI RENA", "KITANO HINAKO", "SHINUCHI MAI", "TERADA RANZE", "WATANABE MIRIA", "ITO JUNNA", "HORI MIONA", "SASAKI KOTOKO", "ITO KARIN", "SAGARA IORI", "YONETOKU KYOKA", "YADA RISAKO", "NISHIKAWA NANAMI",
+          "ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI", "SATO KAEDE",
+          "NAKAMURA RENO","MUKAI HAZUKI", "YAMASHITA MIZUKI", "YOSHIDA AYANO CHRISTIE", "YODA YUKI",
+          "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",  "SATO RIKA", "SHIBATA YUNA",
+          "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",  "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA",
+          "MATSUO MIYU", "YAKUBO MIO", "YUMIKI NAO",
+          "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
+          "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO", "NAKANISHI ARUNO",
+          "OKAMOTO HINA"
+        ]
+      };
+      
+      var names = [];
+      var comparisons = {};
   
   async function compare(name1, name2) {
     var key = name1 + '-' + name2;
@@ -129,6 +173,12 @@ title: 乃木坂46 Sorter
   }
 
   async function startSorting() {
+    var selectedList = document.getElementById('name-list').value;
+    names = lists[selectedList];
+    if (!names) {
+      alert("Please select a valid name list.");
+      return;
+    }
     document.getElementById('start').style.display = "none";
     var sorted = await mergeSort(names);
     document.getElementById('names').innerHTML = sorted.map((name, index) => {
@@ -145,13 +195,10 @@ title: 乃木坂46 Sorter
     document.getElementById('names').innerHTML = "";
     comparisons = {};
 
-    // Fisher-Yates shuffle algorithm
-    for (var i = names.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var temp = names[i];
-      names[i] = names[j];
-      names[j] = temp;
-    }
+    document.getElementById('button1').style.marginRight = '10px';
+    document.getElementById('button2').style.marginLeft = '10px';
+
+    // names will be shuffled at the start of sorting
   }
 
   initialize();
