@@ -198,19 +198,25 @@ title: 乃木坂46 Sorter
   }
 
   async function startSorting() {
-    var selectedList = document.getElementById('name-list').value;
-    names = lists[selectedList];
-    if (!names) {
-      alert("Please select a valid name list.");
-      return;
-    }
-    document.getElementById('start').style.display = "none";
-    var sorted = await mergeSort(names);
-    document.getElementById('names').innerHTML = sorted.map((name, index) => {
-      return `${index + 1}. ${name}`;
-    }).join("<br>");
-    document.getElementById('retry').style.display = "block";
+  var selectedList = document.getElementById('name-list').value;
+  names = lists[selectedList];
+  if (!names) {
+    alert("Please select a valid name list.");
+    return;
   }
+  document.getElementById('start').style.display = "none";
+  var sorted = await mergeSort(names);
+      document.getElementById('names').innerHTML = sorted.map((name, index) => {
+        const ranking = index + 1;
+        if (ranking <= 3) {
+          return `<p style="color:blue">${ranking}. ${name}</p>`;
+        }
+        return `<p>${ranking}. ${name}</p>`;
+      }).join('');
+      document.getElementById('retry').style.display = "block";
+      document.getElementById('button1').style.display = "none";
+      document.getElementById('button2').style.display = "none";
+    }
 
   function initialize() {
     document.getElementById('start').style.display = "block";
