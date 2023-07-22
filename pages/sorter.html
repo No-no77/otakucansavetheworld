@@ -56,34 +56,45 @@ title: 乃木坂46 Sorter
 </div>
 
 <div class="midcolumn">
-<div class="index-card">
-<br>
-<div class="side-card">
-</div>
-<br>
-<div class="tag-grid">
-  <button id="start" onclick="startSorting()">Start Sorting</button>
-  <button id="button1" onclick="choose(1)">Loading...</button>
-  <button id="button2" onclick="choose(2)">Loading...</button>
-  <button id="retry" style="display: none;" onclick="initialize()">Try Again</button>
-</div>
+  <div class="index-card">
+    <br>
+    <div class="side-card">
+    </div>
+    <br>
+    <div class="tag-grid">
+      <button id="start" onclick="startSorting()">Start Sorting</button>
+      <div id="counter" style="font-weight: bold; margin: 10px 0;">0%</div>
+      <button id="button1" onclick="choose(1)">Loading...</button>
+      <button id="button2" onclick="choose(2)">Loading...</button>
+      <button id="retry" style="display: none;" onclick="initialize()">Try Again</button>
+    </div>
 
-<div id="names"></div>
+    <div id="names"></div>
 
-{% include license.html %}
+    {% include license.html %}
 
 <script>
   var names = ["ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI",
-  "SATO KAEDE", "NAKAMURA RENO", "MUKAI HAZUKI", "YAMASHITA MIZUKI", "YOSHIDA AYANO CHRISTIE",
-  "YUKI YODA"];
+    "SATO KAEDE", "NAKAMURA RENO", "MUKAI HAZUKI", "YAMASHITA MIZUKI", "YOSHIDA AYANO CHRISTIE",
+    "YUKI YODA", "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",
+    "SATO RIKA", "SHIBATA YUNA", "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",
+    "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA", "MATSUO MIYU", "YAKUBO MIO",
+    "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
+    "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO",
+    "NAKANISHI ARUNO", "OKAMOTO HINA"];
 
   var comparisons = {};
   var queue = [];
   var activePair = null;
+  var totalPairs = 0;
 
   function startSorting() {
     document.getElementById('start').style.display = "none";
     mergeSort(names, 0, names.length - 1);
+
+    // Calculate the total number of pairs
+    totalPairs = names.length * (names.length - 1) / 2;
+
     processQueue();
   }
 
@@ -130,6 +141,12 @@ title: 乃木坂46 Sorter
       document.getElementById('button1').textContent = activePair[0];
       document.getElementById('button2').style.cssText = "display: block; margin-left: 10px;";
       document.getElementById('button2').textContent = activePair[1];
+
+      // Update the counter
+      var completedPairs = totalPairs - queue.length;
+      var percentage = Math.round((completedPairs / totalPairs) * 100);
+      document.getElementById('counter').textContent = percentage + "%";
+
     } else {
       finishSorting();
     }
@@ -157,21 +174,22 @@ title: 乃木坂46 Sorter
 
   function finishSorting() {
     var result = names.map((name, index) => {
-        var rank = index + 1;
-        if (rank === 1) {
-            return `<span style="color:blue;">${rank}. ${name}</span>`;
-        } else if (rank === 2) {
-            return `<span style="color:blue;">${rank}. ${name}</span>`;
-        } else if (rank === 3) {
-            return `<span style="color:blue;">${rank}. ${name}</span>`;
-        } else {
-            return `${rank}. ${name}`;
-        }
+      var rank = index + 1;
+      if (rank === 1) {
+        return `<span style="color:blue;">${rank}. ${name}</span>`;
+      } else if (rank === 2) {
+        return `<span style="color:blue;">${rank}. ${name}</span>`;
+      } else if (rank === 3) {
+        return `<span style="color:blue;">${rank}. ${name}</span>`;
+      } else {
+        return `${rank}. ${name}`;
+      }
     }).join("<br>");
     document.getElementById('names').innerHTML = result;
     document.getElementById('retry').style.display = "block";
+    document.getElementById('counter').textContent = "100%"; // Set the counter to 100% after completion.
   }
-  
+
   function initialize() {
     document.getElementById('start').style.display = "block";
     document.getElementById('button1').style.display = "none";
@@ -193,7 +211,7 @@ title: 乃木坂46 Sorter
 
   initialize();
 
-  document.body.addEventListener('keydown', function(event) {
+  document.body.addEventListener('keydown', function (event) {
     if (event.key === 'a' || event.key === 'A') {
       choose(1);
     } else if (event.key === 'd' || event.key === 'D') {
