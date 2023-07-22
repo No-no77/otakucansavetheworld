@@ -78,12 +78,13 @@ title: 乃木坂46 Sorter
   "YODA YUKI", "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",
   "SATO RIKA", "SHIBATA YUNA", "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",
   "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA", "MATSUO MIYU", "YAKUBO MIO",
-  "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
+  "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIYU", "INOUE NAGI",
   "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO",
   "NAKANISHI ARUNO", "OKAMOTO HINA"];
 
   var stack = [];
   var i, j, k, L, R, right;
+  var decisions = {};
 
   function startSorting() {
     document.getElementById('start').style.display = "none";
@@ -106,16 +107,16 @@ title: 乃木坂46 Sorter
         if (rank === 1) {
             return `<span style="color:blue;">${rank}. ${name}</span>`;
         } else if (rank === 2) {
-            return `<span style="color:blue;">${rank}. ${name}</span>`;
+            return `<span style="color:red;">${rank}. ${name}</span>`;
         } else if (rank === 3) {
-            return `<span style="color:blue;">${rank}. ${name}</span>`;
+            return `<span style="color:gold;">${rank}. ${name}</span>`;
         } else {
             return `${rank}. ${name}`;
         }
     }).join("<br>");
     document.getElementById('names').innerHTML = result;
     document.getElementById('retry').style.display = "block";
-}
+  }
 
   function mergeSort(arr, left, right) {
     if (left < right) {
@@ -153,10 +154,23 @@ title: 乃木坂46 Sorter
 
   function proceed() {
     if (i < L.length && j < R.length) {
-      document.getElementById('button1').style.cssText = "display: block; margin-right: 10px;";
+      if (decisions[L[i] + '-' + R[j]]) {
+        if (decisions[L[i] + '-' + R[j]] === L[i]) {
+          names[k++] = L[i++];
+        } else {
+          names[k++] = R[j++];
+        }
+        if (k <= right) {
+          proceed();
+        } else {
+          processStack();
+        }
+      } else {
+        document.getElementById('button1').style.cssText = "display: block; margin-right: 10px;";
         document.getElementById('button1').textContent = L[i];
         document.getElementById('button2').style.cssText = "display: block; margin-left: 10px;";
         document.getElementById('button2').textContent = R[j];
+      }
     } else {
         if (i < L.length)
             names[k++] = L[i++];
@@ -172,9 +186,11 @@ title: 乃木坂46 Sorter
 
   function choose(index) {
     if (index === 1) {
+        decisions[document.getElementById('button1').textContent + '-' + document.getElementById('button2').textContent] = document.getElementById('button1').textContent;
         names[k] = document.getElementById('button1').textContent;
         i++;
     } else {
+        decisions[document.getElementById('button1').textContent + '-' + document.getElementById('button2').textContent] = document.getElementById('button2').textContent;
         names[k] = document.getElementById('button2').textContent;
         j++;
     }
@@ -187,15 +203,14 @@ title: 乃木坂46 Sorter
   }
 
   function initialize() {
-  names.sort(() => Math.random() - 0.5);
-  document.getElementById('start').style.display = "block";
-  document.getElementById('button1').style.display = "none";
-  document.getElementById('button2').style.display = "none";
-  document.getElementById('retry').style.display = "none";
-  document.getElementById('names').innerHTML = "";
-  stack = [];
+    document.getElementById('start').style.display = "block";
+    document.getElementById('button1').style.display = "none";
+    document.getElementById('button2').style.display = "none";
+    document.getElementById('retry').style.display = "none";
+    document.getElementById('names').innerHTML = "";
+    stack = [];
+    decisions = {};
   }
 
   initialize();
 </script>
-
