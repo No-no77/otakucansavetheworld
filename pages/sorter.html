@@ -187,12 +187,13 @@ title: 乃木坂46 Sorter
   }
 
   function initialize() {
-    document.getElementById('start').style.display = "block";
-    document.getElementById('button1').style.display = "none";
-    document.getElementById('button2').style.display = "none";
-    document.getElementById('retry').style.display = "none";
-    document.getElementById('names').innerHTML = "";
-    stack = [];
+  names.sort(() => Math.random() - 0.5);
+  document.getElementById('start').style.display = "block";
+  document.getElementById('button1').style.display = "none";
+  document.getElementById('button2').style.display = "none";
+  document.getElementById('retry').style.display = "none";
+  document.getElementById('names').innerHTML = "";
+  stack = [];
   }
 
   initialize();
