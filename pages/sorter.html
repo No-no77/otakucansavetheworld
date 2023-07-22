@@ -68,12 +68,16 @@ title: 乃木坂46 Sorter
       }
 
       var middle = Math.floor((range[0] + range[1]) / 2);
+      if (middle === range[0]) middle++;  // Ensure the middle index is different from start
+      if (middle === range[1]) middle--;  // Ensure the middle index is different from end
+
       sortingStack.push(['merge', range[0], middle, range[1]]);
       sortingStack.push([middle + 1, range[1]]);
       sortingStack.push([range[0], middle]);
       nextComparison();
     }
   }
+
 
   function merge(start, middle, end) {
     if (start === end) {
