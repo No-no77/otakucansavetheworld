@@ -21,35 +21,37 @@ title: 乃木坂46 Sorter
 <div class="side-card">
 </div>
 <br>
+
 <div class="tag-grid">
-  <button id="button1" onclick="choose(1)">Loading...</button>
-  <button id="button2" onclick="choose(2)">Loading...</button>
+  <button id="start" onclick="startSorting()">Start Sorting</button>
+  <button id="button1" style="display: none;" onclick="choose(1)">Loading...</button>
+  <button id="button2" style="display: none;" onclick="choose(2)">Loading...</button>
   <button id="retry" style="display: none;" onclick="initialize()">Try Again</button>
 </div>
 
 <div id="names"></div>
 
-</div>
-
 <script>
-  var names = ["ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI",
-  "SATO KAEDE", "NAKAMURA RENO", "MUKAI HAZUKI", "YAMASHITA MIZUKI", "YOSHIDA AYANO CHRISTIE",
-  "YODA YUKI", "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",
-  "SATO RIKA", "SHIBATA YUNA", "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",
-  "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA", "MATSUO MIYU", "YAKUBO MIO",
-  "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIYU", "INOUE NAGI",
-  "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO",
-  "NAKANISHI ARUNO", "OKAMOTO HINA"];
-  var comparisons = []; // this array will hold objects that represent comparisons
+  var names = ["ITO RIRIA", "IWAMOTO RENKA", /* rest of your names here */];
+  var comparisons = [];
 
-function generateComparisons(array) {
-    // your current mergeSort function here
-    // instead of directly comparing elements, push an object to the comparisons array:
-    comparisons.push({left: left[leftIndex], right: right[rightIndex], chosen: null});
-    // 'chosen' will later hold the chosen item when the user makes a decision
-}
+  function generateComparisons(array) {
+    // Define your mergeSort function here and create comparisons as described in the previous script
+  }
 
-generateComparisons(names);
+  function startSorting() {
+    document.getElementById("start").style.display = "none"; // Hide the start button
+    document.getElementById("button1").style.display = "block"; // Show the choice buttons
+    document.getElementById("button2").style.display = "block";
+    generateComparisons(names);
+    nextComparison();
+  }
+
+  function choose(buttonNumber) {
+    comparisons[0].chosen = comparisons[0][buttonNumber === 1 ? 'left' : 'right'];
+    comparisons.shift();
+    nextComparison();
+  }
 
 function nextComparison() {
     if (comparisons.length > 0) {
