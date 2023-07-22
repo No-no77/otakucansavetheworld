@@ -95,60 +95,59 @@ title: 乃木坂46 Sorter
       }
     
       function mergeSort(arr, left, right) {
-        if (left < right) {
-          var mid = left + Math.floor((right - left) / 2);
-          mergeSort(arr, left, mid);
-          mergeSort(arr, mid + 1, right);
-          merge(arr, left, mid, right);
-        }
+  if (left < right) {
+    var mid = left + Math.floor((right - left) / 2);
+    mergeSort(arr, left, mid);
+    mergeSort(arr, mid + 1, right);
+    merge(arr, left, mid, right);
+  }
+}
+
+function merge(arr, left, mid, right) {
+  var i = left;
+  var j = mid + 1;
+  var temp = [];
+
+  while (i <= mid && j <= right) {
+    var key = arr[i] + '-' + arr[j];
+    if (comparisons[key]) {
+      if (comparisons[key] === arr[i]) {
+        temp.push(arr[i++]);
+      } else {
+        temp.push(arr[j++]);
       }
-    
-      function merge(arr, left, mid, right) {
-        var i = left;
-        var j = mid + 1;
-        var temp = [];
-        
-        while (i <= mid && j <= right) {
-          if (comparisons[arr[i] + '-' + arr[j]]) {
-            if (comparisons[arr[i] + '-' + arr[j]] === arr[i]) {
-              temp.push(arr[i++]);
-            } else {
-              temp.push(arr[j++]);
-            }
-          } else {
-            queue.push([arr[i], arr[j], temp, arr, i, j, mid, right]);
-            return;
-          }
-          
-          pairsProcessed++; // Increment the counter for each pair processed.
-        }
-        while (i <= mid) {
-          temp.push(arr[i++]);
-        }
-        while (j <= right) {
-          temp.push(arr[j++]);
-        }
-        for (var k = left; k <= right; k++) {
-          arr[k] = temp[k - left];
-        }
-      }
-    
-      function processQueue() {
-        if (queue.length > 0) {
-          activePair = queue.shift();
-          document.getElementById('button1').style.cssText = "display: block; margin-right: 10px;";
-          document.getElementById('button1').textContent = activePair[0];
-          document.getElementById('button2').style.cssText = "display: block; margin-left: 10px;";
-          document.getElementById('button2').textContent = activePair[1];
-    
-          // Update the counter
-          var completedPairs = pairsProcessed; // Use the global pairsProcessed
-          var percentage = Math.round((completedPairs / totalPairs) * 100);
-          document.getElementById('counter').textContent = percentage + "%";
-        } else {
-          finishSorting();
-        }
-      }
+    } else {
+      comparisons[key] = null;
+      queue.push([arr[i], arr[j], temp, arr, i, j, mid, right]);
+      return;
+    }
+  }
+
+  while (i <= mid) {
+    temp.push(arr[i++]);
+  }
+  while (j <= right) {
+    temp.push(arr[j++]);
+  }
+
+  for (var k = left; k <= right; k++) {
+    arr[k] = temp[k - left];
+  }
+  
+  processQueue();
+}
+
+function processQueue() {
+  if (queue.length > 0) {
+    activePair = queue.shift();
+    document.getElementById('button1').style.display = "block";
+    document.getElementById('button1').textContent = activePair[0];
+    document.getElementById('button2').style.display = "block";
+    document.getElementById('button2').textContent = activePair[1];
+  } else {
+    finishSorting();
+  }
+}
       function choose(index) {
     var name1 = document.getElementById('button1').textContent;
     var name2 = document.getElementById('button2').textContent;
