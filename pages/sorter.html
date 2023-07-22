@@ -10,6 +10,11 @@ title: 乃木坂46 Sorter
   margin: center;
 }
 
+.names {
+  margin-top: 3em;
+  margin-bottom: 1rem;
+}
+
 </style>
 
 <div class="leftcolumn">
@@ -26,11 +31,14 @@ title: 乃木坂46 Sorter
   <button id="button1" style="display: none;" onclick="choose(1)">Loading...</button>
   <button id="button2" style="display: none;" onclick="choose(2)">Loading...</button>
   <button id="retry" style="display: none;" onclick="initialize()">Try Again</button>
+  <div id="progress"></div>
 </div>
 
 <div id="names"></div>
 
+{% include license.html %}
 </div>
+
 
 <script>
   var names = ["ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI",
@@ -38,111 +46,101 @@ title: 乃木坂46 Sorter
   "YODA YUKI", "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",
   "SATO RIKA", "SHIBATA YUNA", "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",
   "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA", "MATSUO MIYU", "YAKUBO MIO",
-  "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIYU", "INOUE NAGI",
+  "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
   "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO",
   "NAKANISHI ARUNO", "OKAMOTO HINA"];
-
+  
   var stack = [];
-  var i, j, k, L, R, right;
+  var decisions = [];
 
-  function startSorting() {
-    document.getElementById('start').style.display = "none";
-    stack.push(() => mergeSort(names, 0, names.length - 1));
-    processStack();
-  }
-
-  function processStack() {
-    if (stack.length === 0) {
-        finishSorting();
-        return;
+  function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (currentIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
+        temporaryValue = array[currentIndex];
+        array[currentIndex] = array[randomIndex];
+        array[randomIndex] = temporaryValue;
     }
-    var action = stack.pop();
-    action();
-  }
-
-  function finishSorting() {
-    document.getElementById('names').innerHTML = names.join("<br>");
-    document.getElementById('retry').style.display = "block";
-  }
-
-  function mergeSort(arr, left, right) {
-    if (left < right) {
-      var mid = left + Math.floor((right - left) / 2);
-      stack.push(() => merge(arr, left, mid, right));
-      stack.push(() => mergeSort(arr, left, mid));
-      stack.push(() => mergeSort(arr, mid + 1, right));
-    }
-    processStack();
-  }
-
-  function merge(arr, left, mid, right) {
-    i = 0;
-    j = 0;
-    k = left;
-    right = right;
-    
-    var n1 = mid - left + 1;
-    var n2 = right - mid;
-
-    L = new Array(n1);
-    R = new Array(n2);
-
-    for (i = 0; i < n1; i++)
-      L[i] = arr[left + i];
-    for (j = 0; j < n2; j++)
-      R[j] = arr[mid + 1 + j];
-
-    i = 0;
-    j = 0;
-    
-    stack.push(proceed);
-    processStack();
-  }
-
-  function proceed() {
-    if (i < L.length && j < R.length) {
-        document.getElementById('button1').style.display = "block";
-        document.getElementById('button1').textContent = L[i];
-        document.getElementById('button2').style.display = "block";
-        document.getElementById('button2').textContent = R[j];
-    } else {
-        if (i < L.length)
-            names[k++] = L[i++];
-        else
-            names[k++] = R[j++];
-        
-        if (k <= right)
-            proceed();
-        else
-            processStack();
-    }
-  }
-
-  function choose(index) {
-    if (index === 1) {
-        names[k] = document.getElementById('button1').textContent;
-        i++;
-    } else {
-        names[k] = document.getElementById('button2').textContent;
-        j++;
-    }
-    k++;
-    document.getElementById('button1').style.display = "none";
-    document.getElementById('button2').style.display = "none";
-    if (k <= right)
-        stack.push(proceed);
-    processStack();
+    return array;
   }
 
   function initialize() {
-    document.getElementById('start').style.display = "block";
-    document.getElementById('button1').style.display = "none";
-    document.getElementById('button2').style.display = "none";
-    document.getElementById('retry').style.display = "none";
-    document.getElementById('names').innerHTML = "";
-    stack = [];
+    names = shuffle(names);
+    stack.push([names, decisions]);
+    processStack();
+    updateProgress();
   }
 
-  initialize();
-</script>
+  function startSorting() {
+    document.getElementById('start').style.display = "none";
+    document.getElementById('button1').style.display = "block";
+    document.getElementById('button2').style.display = "block";
+    initialize();
+  }
 
+  function updateProgress() {
+    var totalComparisons = names.length - 1; 
+    var completedComparisons = decisions.length;
+    var progress = (completedComparisons / totalComparisons) * 100;
+    document.getElementById('progress').innerHTML = "Progress: " + progress.toFixed(2) + "%";
+  }
+
+  function processStack() {
+    if (stack.length == 0) {
+      finishSorting();
+    } else {
+      var frame = stack.pop();
+      mergeSort(frame[0], frame[1]);
+    }
+  }
+
+  function mergeSort(names, decisions) {
+    if (names.length <= 1) {
+      stack.push([names, decisions]);
+      processStack();
+    } else {
+      var mid = Math.floor(names.length / 2);
+      var left = names.slice(0, mid);
+      var right = names.slice(mid);
+      stack.push([right, decisions.slice(mid).concat(decisions.slice(0, mid))]);
+      stack.push([left, decisions.slice(0, mid)]);
+      processStack();
+    }
+  }
+
+  function choose(option) {
+    var frame = stack.pop();
+    var names = frame[0];
+    var decisions = frame[1];
+    var mid = Math.floor(names.length / 2);
+    var left = names.slice(0, mid);
+    var right = names.slice(mid);
+    if (option === 1) {
+      decisions.push(left[0]);
+      stack.push([left.slice(1).concat(right), decisions]);
+    } else {
+      decisions.push(right[0]);
+      stack.push([right.slice(1).concat(left), decisions]);
+    }
+    updateProgress();
+    processStack();
+  }
+
+  function finishSorting() {
+    var result = names.map((name, index) => {
+        var rank = index + 1;
+        if (rank === 1) {
+            return `<span style="color:blue;">${rank}. ${name}</span>`;
+        } else if (rank === 2) {
+            return `<span style="color:red;">${rank}. ${name}</span>`;
+        } else if (rank === 3) {
+            return `<span style="color:gold;">${rank}. ${name}</span>`;
+        } else {
+            return `${rank}. ${name}`;
+        }
+    }).join("<br>");
+    document.getElementById('names').innerHTML = result;
+    document.getElementById('retry').style.display = "block";
+  }
+</script>
