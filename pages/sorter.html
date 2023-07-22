@@ -82,26 +82,47 @@ title: 乃木坂46 Sorter
   "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO",
   "NAKANISHI ARUNO", "OKAMOTO HINA"];
 
-  var stack = [];
-  var i, j, k, L, R, right;
-  var decisions = {};
+  var comparisons = {};
 
   function startSorting() {
     document.getElementById('start').style.display = "none";
-    stack.push(() => mergeSort(names, 0, names.length - 1));
-    processStack();
+    makeComparisons();
   }
 
-  function processStack() {
-    if (stack.length === 0) {
-        finishSorting();
-        return;
+  function makeComparisons() {
+    for (var i = 0; i < names.length; i++) {
+      for (var j = i + 1; j < names.length; j++) {
+        if (!comparisons[names[i] + '-' + names[j]]) {
+          document.getElementById('button1').style.cssText = "display: block; margin-right: 10px;";
+          document.getElementById('button1').textContent = names[i];
+          document.getElementById('button2').style.cssText = "display: block; margin-left: 10px;";
+          document.getElementById('button2').textContent = names[j];
+          return;
+        }
+      }
     }
-    var action = stack.pop();
-    action();
+    finishSorting();
+  }
+
+  function choose(index) {
+    var name1 = document.getElementById('button1').textContent;
+    var name2 = document.getElementById('button2').textContent;
+    if (index === 1) {
+      comparisons[name1 + '-' + name2] = name1;
+      comparisons[name2 + '-' + name1] = name1;
+    } else {
+      comparisons[name1 + '-' + name2] = name2;
+      comparisons[name2 + '-' + name1] = name2;
+    }
+    document.getElementById('button1').style.display = "none";
+    document.getElementById('button2').style.display = "none";
+    makeComparisons();
   }
 
   function finishSorting() {
+    names.sort((a, b) => {
+      return comparisons[a + '-' + b] === a ? -1 : 1;
+    });
     var result = names.map((name, index) => {
         var rank = index + 1;
         if (rank === 1) {
@@ -118,95 +139,13 @@ title: 乃木坂46 Sorter
     document.getElementById('retry').style.display = "block";
   }
 
-  function mergeSort(arr, left, right) {
-    if (left < right) {
-      var mid = left + Math.floor((right - left) / 2);
-      stack.push(() => merge(arr, left, mid, right));
-      stack.push(() => mergeSort(arr, left, mid));
-      stack.push(() => mergeSort(arr, mid + 1, right));
-    }
-    processStack();
-  }
-
-  function merge(arr, left, mid, right) {
-    i = 0;
-    j = 0;
-    k = left;
-    right = right;
-    
-    var n1 = mid - left + 1;
-    var n2 = right - mid;
-
-    L = new Array(n1);
-    R = new Array(n2);
-
-    for (i = 0; i < n1; i++)
-      L[i] = arr[left + i];
-    for (j = 0; j < n2; j++)
-      R[j] = arr[mid + 1 + j];
-
-    i = 0;
-    j = 0;
-    
-    proceed();
-  }
-
-  function proceed() {
-    if (i < L.length && j < R.length) {
-      if (decisions[L[i] + '-' + R[j]]) {
-        if (decisions[L[i] + '-' + R[j]] === L[i]) {
-          names[k++] = L[i++];
-        } else {
-          names[k++] = R[j++];
-        }
-        if (k <= right) {
-          proceed();
-        } else {
-          processStack();
-        }
-      } else {
-        document.getElementById('button1').style.cssText = "display: block; margin-right: 10px;";
-        document.getElementById('button1').textContent = L[i];
-        document.getElementById('button2').style.cssText = "display: block; margin-left: 10px;";
-        document.getElementById('button2').textContent = R[j];
-      }
-    } else {
-        if (i < L.length)
-            names[k++] = L[i++];
-        else
-            names[k++] = R[j++];
-        
-        if (k <= right)
-            proceed();
-        else
-            processStack();
-    }
-  }
-
-  function choose(index) {
-    if (index === 1) {
-        decisions[document.getElementById('button1').textContent + '-' + document.getElementById('button2').textContent] = document.getElementById('button1').textContent;
-        names[k] = L[i++];
-    } else {
-        decisions[document.getElementById('button1').textContent + '-' + document.getElementById('button2').textContent] = document.getElementById('button2').textContent;
-        names[k] = R[j++];
-    }
-    document.getElementById('button1').style.display = "none";
-    document.getElementById('button2').style.display = "none";
-    if (k <= right)
-        proceed();
-    else
-        processStack();
-  }
-
   function initialize() {
     document.getElementById('start').style.display = "block";
     document.getElementById('button1').style.display = "none";
     document.getElementById('button2').style.display = "none";
     document.getElementById('retry').style.display = "none";
     document.getElementById('names').innerHTML = "";
-    stack = [];
-    decisions = {};
+    comparisons = {};
   }
 
   initialize();
