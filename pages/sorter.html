@@ -6,8 +6,8 @@ title: 乃木坂46 Sorter
 
 <style>
 
-.button_sorter {
-  align-items: center;
+.button1 {
+  margin: center;
 }
 
 </style>
@@ -40,59 +40,49 @@ title: 乃木坂46 Sorter
   "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIYU", "INOUE NAGI",
   "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO",
   "NAKANISHI ARUNO", "OKAMOTO HINA"];
-  var sortedNames = [];
-    var leftStack = [], rightStack = [];
-    var leftName, rightName;
+  function mergeSort(array) {
+    // Base case: if the list is empty or has one item, it's already sorted.
+    if (array.length <= 1) return array;
 
-    function personalMergeSort(array) {
-        if (array.length <= 1) return array;
+    const mid = Math.floor(array.length / 2);
+    const left = array.slice(0, mid);
+    const right = array.slice(mid);
 
-        const middle = Math.floor(array.length / 2);
-        const left = array.slice(0, middle);
-        const right = array.slice(middle);
+    return merge(mergeSort(left), mergeSort(right));
+}
 
-        return merge(personalMergeSort(left), personalMergeSort(right));
-    }
+function merge(left, right) {
+    let resultArray = [], leftIndex = 0, rightIndex = 0;
 
-    function merge(left, right) {
-        leftStack.push(...left);
-        rightStack.push(...right);
-        return [];
-    }
-
-    function choose(option) {
-        if (option === 1) {
-            sortedNames.push(leftName);
-        } else {
-            sortedNames.push(rightName);
-        }
+    // We will concatenate values into the resultArray in order
+    while (leftIndex < left.length && rightIndex < right.length) {
+        document.getElementById("button1").textContent = left[leftIndex];
+        document.getElementById("button2").textContent = right[rightIndex];
         
-        if (leftStack.length === 0 && rightStack.length === 0) {
-            document.getElementById("names").innerHTML = "<ol><li>" + sortedNames.join("</li><li>") + "</li></ol>";
-            document.getElementById("button1").style.display = "none";
-            document.getElementById("button2").style.display = "none";
-            document.getElementById("retry").style.display = "block";
-        } else {
-            getNextPair();
-        }
+        // Here instead of input from user we will listen to button click
+        // Attach an event listener to your buttons
+        document.getElementById("button1").addEventListener("click", function() {
+            resultArray.push(left[leftIndex]);
+            leftIndex++; // move to the next item in the left array
+        });
+
+        document.getElementById("button2").addEventListener("click", function() {
+            resultArray.push(right[rightIndex]);
+            rightIndex++; // move to the next item in the right array
+        });
     }
 
-    function getNextPair() {
-        leftName = leftStack.pop() || "";
-        rightName = rightStack.pop() || "";
-        document.getElementById("button1").textContent = leftName;
-        document.getElementById("button2").textContent = rightName;
-    }
+    // We need to concatenate here because there will be one element remaining
+    // from either left OR the right
+    return resultArray
+            .concat(left.slice(leftIndex))
+            .concat(right.slice(rightIndex));
+}
 
-    function initialize() {
-        sortedNames = [];
-        personalMergeSort(names.slice());  // use slice to create a copy
-        getNextPair();
-        document.getElementById("button1").style.display = "block";
-        document.getElementById("button2").style.display = "block";
-        document.getElementById("retry").style.display = "none";
-        document.getElementById("names").innerHTML = "";
-    }
+function initialize() {
+    let sortedNames = mergeSort(names);
+    document.getElementById("names").innerHTML = "<ol><li>" + sortedNames.join("</li><li>") + "</li></ol>";
+}
 
-    initialize();
+initialize();
 </script>
