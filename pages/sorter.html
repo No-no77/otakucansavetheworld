@@ -16,6 +16,7 @@ title: 乃木坂46 Sorter
 
   <button id="button1" onclick="choose(1)">Loading...</button>
   <button id="button2" onclick="choose(2)">Loading...</button>
+  <button id="retry" style="display: none;" onclick="initialize()">Try Again</button>
 
   <div id="names"></div>
 
@@ -31,59 +32,59 @@ title: 乃木坂46 Sorter
   "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIYU", "INOUE NAGI",
   "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO",
   "NAKANISHI ARUNO", "OKAMOTO HINA"];
-  var scores = new Map(names.map(name => [name, 0]));
-  var leftNames = [...names];
-  var rightNames = [];
+  var sortedNames = [];
+    var leftStack = [], rightStack = [];
+    var leftName, rightName;
 
-  function choose(option) {
-    var winner, loser;
-    if (option === 1) {
-      winner = leftNames[0];
-      loser = rightNames[0];
-      leftNames.shift();
-    } else if (option === 2) {
-      winner = rightNames[0];
-      loser = leftNames[0];
-      rightNames.shift();
+    function personalMergeSort(array) {
+        if (array.length <= 1) return array;
+
+        const middle = Math.floor(array.length / 2);
+        const left = array.slice(0, middle);
+        const right = array.slice(middle);
+
+        return merge(personalMergeSort(left), personalMergeSort(right));
     }
 
-    updateScores(winner, loser);
-
-    if (leftNames.length === 0 && rightNames.length > 0) {
-      leftNames = [...rightNames];
-      rightNames = [];
+    function merge(left, right) {
+        leftStack.push(...left);
+        rightStack.push(...right);
+        return [];
     }
 
-    if (rightNames.length === 0 && leftNames.length > 1) {
-      rightNames = [leftNames.pop()];
+    function choose(option) {
+        if (option === 1) {
+            sortedNames.push(leftName);
+        } else {
+            sortedNames.push(rightName);
+        }
+        
+        if (leftStack.length === 0 && rightStack.length === 0) {
+            document.getElementById("names").innerHTML = "<ol><li>" + sortedNames.join("</li><li>") + "</li></ol>";
+            document.getElementById("button1").style.display = "none";
+            document.getElementById("button2").style.display = "none";
+            document.getElementById("retry").style.display = "block";
+        } else {
+            getNextPair();
+        }
     }
 
-    updateDOM();
-  }
+    function getNextPair() {
+        leftName = leftStack.pop() || "";
+        rightName = rightStack.pop() || "";
+        document.getElementById("button1").textContent = leftName;
+        document.getElementById("button2").textContent = rightName;
+    }
 
-  function updateScores(winner, loser) {
-    var winnerScore = scores.get(winner);
-    var loserScore = scores.get(loser);
-    var winnerExpected = 1 / (1 + Math.pow(10, (loserScore - winnerScore) / 400));
-    var loserExpected = 1 / (1 + Math.pow(10, (winnerScore - loserScore) / 400));
+    function initialize() {
+        sortedNames = [];
+        personalMergeSort(names.slice());  // use slice to create a copy
+        getNextPair();
+        document.getElementById("button1").style.display = "block";
+        document.getElementById("button2").style.display = "block";
+        document.getElementById("retry").style.display = "none";
+        document.getElementById("names").innerHTML = "";
+    }
 
-    scores.set(winner, winnerScore + 20 * (1 - winnerExpected));
-    scores.set(loser, loserScore + 20 * (0 - loserExpected));
-  }
-
-  function updateDOM() {
-    document.getElementById("button1").innerHTML = leftNames[0] || "";
-    document.getElementById("button2").innerHTML = rightNames[0] || "";
-
-    var sortedNames = [...scores.keys()].sort((a, b) => scores.get(b) - scores.get(a));
-    var namesList = sortedNames.map(function(name, index) {
-      return "<li>" + (index + 1) + ". " + name + "</li>";
-    }).join("");
-
-    document.getElementById("names").innerHTML = "<ol>" + namesList + "</ol>";
-  }
-
-  // Initialize the sorter
-  rightNames = [leftNames.pop()];
-  updateDOM();
+    initialize();
 </script>
