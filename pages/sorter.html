@@ -14,7 +14,76 @@ title: 乃木坂46 Sorter
 <br>
 <div class="tag-grid">
 
-  <p>Hello World</p>
+  <button id="button1" onclick="choose(1)">Loading...</button>
+  <button id="button2" onclick="choose(2)">Loading...</button>
+
+  <div id="names"></div>
 
 </div>
 </div>
+
+<script>
+  var names = ["ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI",
+  "SATO KAEDE", "NAKAMURA RENO", "MUKAI HAZUKI", "YAMASHITA MIZUKI", "YOSHIDA AYANO CHRISTIE",
+  "YODA YUKI", "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",
+  "SATO RIKA", "SHIBATA YUNA", "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",
+  "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA", "MATSUO MIYU", "YAKUBO MIO",
+  "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIYU", "INOUE NAGI",
+  "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO",
+  "NAKANISHI ARUNO", "OKAMOTO HINA"];
+  var sortedNames = [];
+  var leftNames = mergeSort(names);
+  var rightNames = [];
+
+  function mergeSort(names) {
+    if (names.length <= 1) {
+        return names;
+    }
+
+    var mid = Math.floor(names.length / 2);
+    var left = names.slice(0, mid);
+    var right = names.slice(mid);
+
+    return merge(mergeSort(left), mergeSort(right));
+  }
+
+  function merge(left, right) {
+    return left.concat(right);
+  }
+
+  function choose(option) {
+    if (option === 1) {
+      sortedNames.push(leftNames[0]);
+      leftNames.shift();
+    } else if (option === 2) {
+      sortedNames.push(rightNames[0]);
+      rightNames.shift();
+    }
+
+    if (leftNames.length === 0) {
+      leftNames = mergeSort(rightNames);
+      rightNames = [];
+    }
+
+    if (rightNames.length === 0 && leftNames.length === 1) {
+      sortedNames.push(leftNames[0]);
+      leftNames = [];
+    }
+
+    updateDOM();
+  }
+
+  function updateDOM() {
+    document.getElementById("button1").innerHTML = leftNames[0] || "";
+    document.getElementById("button2").innerHTML = rightNames[0] || "";
+
+    var namesList = sortedNames.map(function(name, index) {
+      return "<li>" + (index + 1) + ". " + name + "</li>";
+    }).join("");
+
+    document.getElementById("names").innerHTML = "<ol>" + namesList + "</ol>";
+  }
+
+  // Initialize the sorter
+  updateDOM();
+</script>
