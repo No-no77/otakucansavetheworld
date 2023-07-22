@@ -38,7 +38,7 @@ title: 乃木坂46 Sorter
   "YODA YUKI", "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",
   "SATO RIKA", "SHIBATA YUNA", "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",
   "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA", "MATSUO MIYU", "YAKUBO MIO",
-  "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
+  "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIYU", "INOUE NAGI",
   "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO",
   "NAKANISHI ARUNO", "OKAMOTO HINA"];
 
@@ -50,7 +50,7 @@ title: 乃木坂46 Sorter
     document.getElementById('start').style.display = 'none';
     document.getElementById('button1').style.display = 'inline';
     document.getElementById('button2').style.display = 'inline';
-    nextComparison();
+    setTimeout(nextComparison, 0);
   }
 
   function nextComparison() {
@@ -62,7 +62,7 @@ title: 乃木坂46 Sorter
     var range = sortingStack[sortingStack.length - 1];
     if (range[1] - range[0] < 1) {
       sortingStack.pop();
-      nextComparison();
+      setTimeout(nextComparison, 0);
       return;
     }
 
@@ -72,7 +72,7 @@ title: 乃木坂46 Sorter
     sortingStack.push(['merge', range[0], middle, range[1]]);
     sortingStack.pop();
 
-    nextComparison();
+    setTimeout(nextComparison, 0);
   }
 
   function choose(buttonNumber) {
@@ -80,7 +80,7 @@ title: 乃木坂46 Sorter
       sortedNames.splice(secondElement, 1);
       sortedNames.splice(firstElement, 0, names[secondElement]);
     }
-    nextComparison();
+    setTimeout(nextComparison, 0);
   }
 
   function finishSorting() {
@@ -98,4 +98,3 @@ title: 乃木坂46 Sorter
     startSorting();
   }
 </script>
-
