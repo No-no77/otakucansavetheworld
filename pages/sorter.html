@@ -48,6 +48,23 @@ title: 乃木坂46 Sorter
     color: black;
     margin-left: 30px;
   }
+
+  .name-list {
+    width: auto;
+    height: auto;
+    margin: 20px auto;
+    color: blue;
+    font-family: "MS PGothic", "Courier", "Lucida Console", "Menlo Regular", "IBM Plex Mono", "Fira Code", "Fira Mono","Roboto Mono","Droid Sans Mono", Monaco, Consolas, Courier, monospace;;
+    text-align: left;
+    padding: 3px;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    border-color: blue;
+    border-style: solid;
+    border-width: thin;
+    background-color: white;
+    cursor: pointer;
+  }
   
   </style>
 
@@ -60,9 +77,11 @@ title: 乃木坂46 Sorter
     <br>
     <div class="side-card">
     </div>
+    
     <br>
-    <div class="tag-grid">
-      <select name="name-list" id="name-list">
+
+    <div class="dropdown-list">
+      <select name="name-list" id="name-list" class="name-list">
         <option value="active-members">Active Members</option>
         <option value="first-gen">1st Generation</option>
         <option value="second-gen">2nd Generation</option>
@@ -72,6 +91,11 @@ title: 乃木坂46 Sorter
         <option value="all-gen">All Generations</option>
         <!-- Add more options as needed -->
       </select>
+    </div>
+
+    <br>
+
+    <div class="tag-grid">
       <button id="start" onclick="startSorting()">Start Sorting</button>
       <button id="button1" onclick="choose(1)">Loading...</button>
       <button id="button2" onclick="choose(2)">Loading...</button>
