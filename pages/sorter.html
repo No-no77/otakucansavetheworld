@@ -78,144 +78,79 @@ title: 乃木坂46 Sorter
     "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO",
     "NAKANISHI ARUNO", "OKAMOTO HINA"];
 
-  var comparisons = {};
-  var queue = [];
-  var activePair = null;
-  var totalPairs = 0;
+    var comparisons = {};
 
-  function startSorting() {
+function startSorting() {
+    comparisons = {};
     document.getElementById('start').style.display = "none";
-    mergeSort(names, 0, names.length - 1);
+    askQuestion();
+}
 
-    // Calculate the total number of pairs
-    totalPairs = names.length * (names.length - 1) / 2;
-
-    processQueue();
-  }
-
-  function mergeSort(arr, left, right) {
-    if (left < right) {
-      var mid = left + Math.floor((right - left) / 2);
-      mergeSort(arr, left, mid);
-      mergeSort(arr, mid + 1, right);
-      merge(arr, left, mid, right);
-    }
-  }
-
-  function merge(arr, left, mid, right) {
-    var i = left;
-    var j = mid + 1;
-    var temp = [];
-    var pairsProcessed = 0; // Added a variable to keep track of pairs processed in this merge operation.
-    
-    while (i <= mid && j <= right) {
-      if (comparisons[arr[i] + '-' + arr[j]]) {
-        if (comparisons[arr[i] + '-' + arr[j]] === arr[i]) {
-          temp.push(arr[i++]);
-        } else {
-          temp.push(arr[j++]);
+function askQuestion() {
+    for (let i = 0; i < names.length; i++) {
+        for (let j = i + 1; j < names.length; j++) {
+            let key = `${names[i]}-${names[j]}`;
+            let reverseKey = `${names[j]}-${names[i]}`;
+            if (!comparisons[key] && !comparisons[reverseKey]) {
+                // If we haven't decided this comparison yet
+                showButtons(names[i], names[j]);
+                return;
+            }
         }
-      } else {
-        queue.push([arr[i], arr[j], temp, arr, i, j, mid, right]);
-        return;
-      }
-      
-      pairsProcessed++; // Increment the counter for each pair processed.
     }
-    while (i <= mid) {
-      temp.push(arr[i++]);
-    }
-    while (j <= right) {
-      temp.push(arr[j++]);
-    }
-    for (var k = left; k <= right; k++) {
-      arr[k] = temp[k - left];
-    }
-  }
 
-  function processQueue() {
-    if (queue.length > 0) {
-      activePair = queue.shift();
-      document.getElementById('button1').style.cssText = "display: block; margin-right: 10px;";
-      document.getElementById('button1').textContent = activePair[0];
-      document.getElementById('button2').style.cssText = "display: block; margin-left: 10px;";
-      document.getElementById('button2').textContent = activePair[1];
+    // If we've asked all questions, finish
+    finishSorting();
+}
 
-      // Update the counter
-      var completedPairs = totalPairs - queue.length + pairsProcessed;
-      var percentage = Math.round((completedPairs / totalPairs) * 100);
-      document.getElementById('counter').textContent = percentage + "%";
-    } else {
-      finishSorting();
+function showButtons(name1, name2) {
+    document.getElementById('button1').textContent = name1;
+    document.getElementById('button1').onclick = function () {
+        decideOrder(name1, name2);
+    };
+
+    document.getElementById('button2').textContent = name2;
+    document.getElementById('button2').onclick = function () {
+        decideOrder(name2, name1);
+    };
+}
+
+function decideOrder(winner, loser) {
+    comparisons[`${winner}-${loser}`] = true;
+    propagateDecision(winner, loser);
+    askQuestion();
+}
+
+function propagateDecision(winner, loser) {
+    for (let i = 0; i < names.length; i++) {
+        let otherName = names[i];
+        if (otherName !== winner && otherName !== loser) {
+            if (comparisons[`${winner}-${otherName}`]) {
+                // If winner > otherName, then loser < otherName
+                comparisons[`${loser}-${otherName}`] = true;
+            }
+            if (comparisons[`${otherName}-${winner}`]) {
+                // If otherName < winner, then otherName < loser
+                comparisons[`${otherName}-${loser}`] = true;
+            }
+        }
     }
-  }
+}
 
-  function choose(index) {
-    var name1 = document.getElementById('button1').textContent;
-    var name2 = document.getElementById('button2').textContent;
-    if (index === 1) {
-      comparisons[name1 + '-' + name2] = name1;
-      comparisons[name2 + '-' + name1] = name1;
-      activePair[2].push(activePair[0]);
-      activePair[4]++;
-    } else {
-      comparisons[name1 + '-' + name2] = name2;
-      comparisons[name2 + '-' + name1] = name2;
-      activePair[2].push(activePair[1]);
-      activePair[5]++;
-    }
-    document.getElementById('button1').style.display = "none";
-    document.getElementById('button2').style.display = "none";
-    merge(activePair[3], activePair[4], activePair[6], activePair[7]);
-    processQueue();
-  }
+function finishSorting() {
+    // The sort algorithm using the comparisons data
+    names.sort((a, b) => {
+        if (comparisons[`${a}-${b}`]) return -1;
+        if (comparisons[`${b}-${a}`]) return 1;
+        return 0;
+    });
 
-  function finishSorting() {
+    displayResults();
+}
+
+function displayResults() {
     var result = names.map((name, index) => {
-      var rank = index + 1;
-      if (rank === 1) {
-        return `<span style="color:blue;">${rank}. ${name}</span>`;
-      } else if (rank === 2) {
-        return `<span style="color:blue;">${rank}. ${name}</span>`;
-      } else if (rank === 3) {
-        return `<span style="color:blue;">${rank}. ${name}</span>`;
-      } else {
-        return `${rank}. ${name}`;
-      }
+        return `${index + 1}. ${name}`;
     }).join("<br>");
     document.getElementById('names').innerHTML = result;
-    document.getElementById('retry').style.display = "block";
-    document.getElementById('counter').textContent = "100%"; // Set the counter to 100% after completion.
-  }
-
-  function initialize() {
-    document.getElementById('start').style.display = "block";
-    document.getElementById('button1').style.display = "none";
-    document.getElementById('button2').style.display = "none";
-    document.getElementById('retry').style.display = "none";
-    document.getElementById('names').innerHTML = "";
-    comparisons = {};
-    queue = [];
-    activePair = null;
-
-    // Fisher-Yates shuffle algorithm
-    for (var i = names.length - 1; i > 0; i--) {
-      var j = Math.floor(Math.random() * (i + 1));
-      var temp = names[i];
-      names[i] = names[j];
-      names[j] = temp;
-    }
-  }
-
-  initialize();
-
-  document.body.addEventListener('keydown', function (event) {
-    if (event.key === 'a' || event.key === 'A') {
-      choose(1);
-    } else if (event.key === 'd' || event.key === 'D') {
-      choose(2);
-    }
-  });
-
-</script>
-
+}
