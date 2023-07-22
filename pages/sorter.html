@@ -22,8 +22,9 @@ title: 乃木坂46 Sorter
 </div>
 <br>
 <div class="tag-grid">
-  <button id="button1" onclick="choose(1)">Loading...</button>
-  <button id="button2" onclick="choose(2)">Loading...</button>
+  <button id="start" onclick="startSorting()">Start Sorting</button>
+  <button id="button1" style="display: none;" onclick="choose(1)">Loading...</button>
+  <button id="button2" style="display: none;" onclick="choose(2)">Loading...</button>
   <button id="retry" style="display: none;" onclick="initialize()">Try Again</button>
 </div>
 
@@ -37,58 +38,64 @@ title: 乃木坂46 Sorter
   "YODA YUKI", "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",
   "SATO RIKA", "SHIBATA YUNA", "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",
   "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA", "MATSUO MIYU", "YAKUBO MIO",
-  "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIYU", "INOUE NAGI",
+  "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
   "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO",
   "NAKANISHI ARUNO", "OKAMOTO HINA"];
-  var comparisons = []; // this array will hold objects that represent comparisons
 
-function generateComparisons(array) {
-    // your current mergeSort function here
-    // instead of directly comparing elements, push an object to the comparisons array:
-    comparisons.push({left: left[leftIndex], right: right[rightIndex], chosen: null});
-    // 'chosen' will later hold the chosen item when the user makes a decision
-}
+  var firstElement, secondElement;
+  var sortedNames = [...names];
+  var sortingStack = [[0, sortedNames.length - 1]];
 
-generateComparisons(names);
+  function startSorting() {
+    document.getElementById('start').style.display = 'none';
+    document.getElementById('button1').style.display = 'inline';
+    document.getElementById('button2').style.display = 'inline';
+    nextComparison();
+  }
 
-function nextComparison() {
-    if (comparisons.length > 0) {
-        var comparison = comparisons[0]; // get the first comparison
-        document.getElementById("button1").textContent = comparison.left;
-        document.getElementById("button2").textContent = comparison.right;
-    } else {
-        // all comparisons have been made
-        sortNames();
+  function nextComparison() {
+    if (sortingStack.length === 0) {
+      finishSorting();
+      return;
     }
-}
 
-// add event listeners to your buttons
-document.getElementById("button1").addEventListener("click", function() {
-    comparisons[0].chosen = comparisons[0].left;
-    comparisons.shift(); // remove the first comparison from the array
-    nextComparison(); // show the next comparison
-});
-// do the same for button2
+    var range = sortingStack[sortingStack.length - 1];
+    if (range[1] - range[0] < 1) {
+      sortingStack.pop();
+      nextComparison();
+      return;
+    }
 
-function sortNames() {
-    names.sort(function(a, b) {
-        var comparison = comparisons.find(c => (c.left === a && c.right === b) || (c.left === b && c.right === a));
-        if (comparison) {
-            if (comparison.chosen === a) {
-                return -1;
-            } else if (comparison.chosen === b) {
-                return 1;
-            } else {
-                return 0;
-            }
-        } else {
-            return 0;
-        }
-    });
+    var middle = Math.floor((range[0] + range[1]) / 2);
+    sortingStack.push([range[0], middle]);
+    sortingStack.push([middle + 1, range[1]]);
+    sortingStack.push(['merge', range[0], middle, range[1]]);
+    sortingStack.pop();
 
-    document.getElementById("names").innerHTML = "<ol><li>" + names.join("</li><li>") + "</li></ol>";
-}
+    nextComparison();
+  }
 
-// start the comparisons
-nextComparison();
+  function choose(buttonNumber) {
+    if (buttonNumber === 1) {
+      sortedNames.splice(secondElement, 1);
+      sortedNames.splice(firstElement, 0, names[secondElement]);
+    }
+    nextComparison();
+  }
+
+  function finishSorting() {
+    document.getElementById('names').textContent = sortedNames.join(', ');
+    document.getElementById('button1').style.display = 'none';
+    document.getElementById('button2').style.display = 'none';
+    document.getElementById('retry').style.display = 'inline';
+  }
+
+  function initialize() {
+    sortedNames = [...names];
+    sortingStack = [[0, sortedNames.length - 1]];
+    document.getElementById('names').textContent = '';
+    document.getElementById('retry').style.display = 'none';
+    startSorting();
+  }
 </script>
+
