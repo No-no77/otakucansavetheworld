@@ -41,60 +41,99 @@ title: 乃木坂46 Sorter
   "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIYU", "INOUE NAGI",
   "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO",
   "NAKANISHI ARUNO", "OKAMOTO HINA"];
-  var leftNames, rightNames, sortedNames = [];
+
+  var stack = [];
 
   function startSorting() {
-    sortedNames = mergeSort(names.slice());
-    nextBattle();
+    document.getElementById('start').style.display = "none";
+    stack.push(['mergeSort', names, 0, names.length - 1]);
+    processStack();
   }
 
-  function nextBattle() {
-    if (leftNames.length && rightNames.length) {
-      document.getElementById('button1').textContent = leftNames[0];
-      document.getElementById('button1').style.display = "block";
-      document.getElementById('button2').textContent = rightNames[0];
-      document.getElementById('button2').style.display = "block";
-    } else if (leftNames.length) {
-      sortedNames.push(leftNames.shift());
-      nextBattle();
-    } else if (rightNames.length) {
-      sortedNames.push(rightNames.shift());
-      nextBattle();
-    } else {
-      document.getElementById('names').innerHTML = sortedNames.join("<br>");
-      document.getElementById('retry').style.display = "block";
+  function processStack() {
+    if (stack.length === 0) {
+        finishSorting();
+        return;
     }
+    var call = stack.pop();
+    window[call[0]].apply(null, call.slice(1));
+  }
+
+  function finishSorting() {
+    document.getElementById('names').innerHTML = names.join("<br>");
+    document.getElementById('retry').style.display = "block";
+  }
+
+  function mergeSort(arr, left, right) {
+    if (left < right) {
+      var mid = left + Math.floor((right - left) / 2);
+      stack.push(['merge', arr, left, mid, right]);
+      stack.push(['mergeSort', arr, left, mid]);
+      stack.push(['mergeSort', arr, mid + 1, right]);
+    }
+    processStack();
+  }
+
+  function merge(arr, left, mid, right) {
+    var i, j, k;
+    var n1 = mid - left + 1;
+    var n2 = right - mid;
+
+    var L = new Array(n1);
+    var R = new Array(n2);
+
+    for (i = 0; i < n1; i++)
+      L[i] = arr[left + i];
+    for (j = 0; j < n2; j++)
+      R[j] = arr[mid + 1 + j];
+
+    i = 0;
+    j = 0;
+    k = left;
+    
+    function proceed() {
+        if (i < n1 && j < n2) {
+            document.getElementById('button1').style.display = "block";
+            document.getElementById('button1').textContent = L[i];
+            document.getElementById('button2').style.display = "block";
+            document.getElementById('button2').textContent = R[j];
+        } else {
+            if (i < n1)
+                arr[k++] = L[i++];
+            else
+                arr[k++] = R[j++];
+            
+            if (k <= right)
+                proceed();
+            else
+                processStack();
+        }
+    }
+    stack.push(['proceed']);
+    processStack();
   }
 
   function choose(index) {
+    var call = stack.pop();
+    var i, j, k, L, R;
     if (index === 1) {
-      sortedNames.push(leftNames.shift());
+        names[call[1]] = document.getElementById('button1').textContent;
+        i = call[2] + 1;
+        j = call[3];
+        k = call[1] + 1;
     } else {
-      sortedNames.push(rightNames.shift());
+        names[call[1]] = document.getElementById('button2').textContent;
+        i = call[2];
+        j = call[3] + 1;
+        k = call[1] + 1;
     }
-    nextBattle();
-  }
-
-  function mergeSort(array) {
-    if (array.length <= 1) {
-      return array;
+    L = call[4];
+    R = call[5];
+    if (k <= call[6]) {
+        stack.push(['choose', k, i, j, L, R, call[6]]);
+        stack.push(['proceed']);
     }
-    var mid = Math.floor(array.length / 2);
-    var left = mergeSort(array.slice(0, mid));
-    var right = mergeSort(array.slice(mid));
-    return merge(left, right);
-  }
-
-  function merge(left, right) {
-    var result = [], leftIndex = 0, rightIndex = 0;
-    while (leftIndex < left.length && rightIndex < right.length) {
-      if (left[leftIndex] < right[rightIndex]) {
-        result.push(left[leftIndex++]);
-      } else {
-        result.push(right[rightIndex++]);
-      }
-    }
-    return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+    processStack();
   }
 
   function initialize() {
@@ -103,11 +142,10 @@ title: 乃木坂46 Sorter
     document.getElementById('button2').style.display = "none";
     document.getElementById('retry').style.display = "none";
     document.getElementById('names').innerHTML = "";
-    leftNames = [];
-    rightNames = [];
-    sortedNames = [];
+    stack = [];
   }
 
   initialize();
 
 </script>
+
