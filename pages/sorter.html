@@ -150,25 +150,16 @@ title: 乃木坂46 Sorter
         }
       }
       function choose(index) {
-        var name1 = document.getElementById('button1').textContent;
-        var name2 = document.getElementById('button2').textContent;
-        if (index === 1) {
-          comparisons[name1 + '-' + name2] = name1;
-          comparisons[name2 + '-' + name1] = name1;
-          activePair[2].push(activePair[0]);
-          activePair[4]++;
-        } else {
-          comparisons[name1 + '-' + name2] = name2;
-          comparisons[name2 + '-' + name1] = name2;
-          activePair[2].push(activePair[1]);
-          activePair[5]++;
-        }
-        document.getElementById('button1').style.display = "none";
-        document.getElementById('button2').style.display = "none";
-        merge(activePair[3], activePair[4], activePair[6], activePair[7]);
-        processQueue();
-      }
-
+    var name1 = document.getElementById('button1').textContent;
+    var name2 = document.getElementById('button2').textContent;
+    var winner = index === 1 ? name1 : name2;
+    comparisons[name1 + '-' + name2] = winner;
+    comparisons[name2 + '-' + name1] = winner;
+    document.getElementById('button1').style.display = "none";
+    document.getElementById('button2').style.display = "none";
+    merge(activePair[3], activePair[4], activePair[6], activePair[7]);
+    processQueue();
+  }
       function finishSorting() {
         var result = names.map((name, index) => {
           var rank = index + 1;
