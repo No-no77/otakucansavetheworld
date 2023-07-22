@@ -72,13 +72,22 @@ title: 乃木坂46 Sorter
     sortingStack.push(['merge', range[0], middle, range[1]]);
     sortingStack.pop();
 
-    setTimeout(nextComparison, 0);
+    firstElement = sortedNames[range[0]];
+    secondElement = sortedNames[range[1]];
+    document.getElementById('button1').textContent = firstElement;
+    document.getElementById('button2').textContent = secondElement;
   }
 
   function choose(buttonNumber) {
+    var index1 = sortedNames.indexOf(firstElement);
+    var index2 = sortedNames.indexOf(secondElement);
+
     if (buttonNumber === 1) {
-      sortedNames.splice(secondElement, 1);
-      sortedNames.splice(firstElement, 0, names[secondElement]);
+      sortedNames.splice(index2, 1);
+      sortedNames.splice(index1, 0, secondElement);
+    } else if (buttonNumber === 2) {
+      sortedNames.splice(index1, 1);
+      sortedNames.splice(index2, 0, firstElement);
     }
     setTimeout(nextComparison, 0);
   }
