@@ -17,13 +17,14 @@ title: 乃木坂46 Sorter
     padding: 15px;
     transition-duration: 0.4s;
     overflow: hidden;
-    border: 1px thin blue;
+    border-style: 1px thin blue;
+    background-color: white;
     cursor: pointer;
     font-size: 20px;
   }
   
   .button1:hover, .tag-grid button:hover {
-    background-color: purple;
+    border-style: 1px thin purple;
   }
   
   .names {
@@ -45,7 +46,7 @@ title: 乃木坂46 Sorter
 <div class="side-card">
 </div>
 <br>
-<main>
+<main class="midcolumn">
 <div class="tag-grid">
   <button id="start" onclick="startSorting()">Start Sorting</button>
   <button id="button1" style="display: none;" onclick="choose(1)">Loading...</button>
@@ -55,10 +56,11 @@ title: 乃木坂46 Sorter
 
 <div id="names"></div>
 
-</div>
-<section class="container-lg">
 {% include license.html %}
-</section>
+</main>
+
+
+
 </main>
 <script>
   var names = ["ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI",
