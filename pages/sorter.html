@@ -6,16 +6,42 @@ title: 乃木坂46 Sorter
 
 <style>
 
-.button1 {
-  margin: center;
-}
-
-.names {
-  margin-top: 3em;
-  margin-bottom: 1rem;
-}
-
-</style>
+  .button1, .tag-grid button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    margin: 20px auto;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    border-radius: 10px;
+    padding: 15px;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  .button1:hover, .tag-grid button:hover {
+    background-color: #45a049;
+  }
+  
+  .leftcolumn, .midcolumn {
+    float: left;
+    width: 50%;
+  }
+  
+  .names {
+    clear: both;
+    margin-top: 3em;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  </style>
 
 <div class="leftcolumn">
   {% include profile-card.html %}
@@ -26,6 +52,7 @@ title: 乃木坂46 Sorter
 <div class="side-card">
 </div>
 <br>
+<main>
 <div class="tag-grid">
   <button id="start" onclick="startSorting()">Start Sorting</button>
   <button id="button1" style="display: none;" onclick="choose(1)">Loading...</button>
@@ -36,8 +63,10 @@ title: 乃木坂46 Sorter
 <div id="names"></div>
 
 </div>
+<section>
 {% include license.html %}
-
+</section>
+</main>
 <script>
   var names = ["ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI",
   "SATO KAEDE", "NAKAMURA RENO", "MUKAI HAZUKI", "YAMASHITA MIZUKI", "YOSHIDA AYANO CHRISTIE",
