@@ -41,86 +41,73 @@ title: 乃木坂46 Sorter
   "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIYU", "INOUE NAGI",
   "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO",
   "NAKANISHI ARUNO", "OKAMOTO HINA"];
-
-  var sortedNames = [];
-  var left = [], right = [];
-  var indexLeft = 0, indexRight = 0;
+  var leftNames, rightNames, sortedNames = [];
 
   function startSorting() {
-    document.getElementById("start").style.display = "none";
-    sortedNames = mergeSort(names.slice()); // clone array to prevent mutation
+    sortedNames = mergeSort(names.slice());
     nextBattle();
-  }
-
-  function mergeSort(arr) {
-    if(arr.length <= 1) {
-      return arr;
-    }
-
-    let middle = Math.floor(arr.length / 2);
-    let left = arr.slice(0, middle);
-    let right = arr.slice(middle);
-
-    return merge(mergeSort(left), mergeSort(right));
-  }
-
-  function merge(leftArr, rightArr) {
-    let result = [];
-    let iLeft = 0, iRight = 0;
-
-    while(iLeft < leftArr.length && iRight < rightArr.length) {
-      result.push(leftArr[iLeft] < rightArr[iRight] ? leftArr[iLeft++] : rightArr[iRight++]);
-    }
-
-    return result.concat(leftArr.slice(iLeft)).concat(rightArr.slice(iRight));
   }
 
   function nextBattle() {
-    if (indexLeft >= left.length || indexRight >= right.length) {
-      if (left.length > 0 && right.length > 0) {
-        left = mergeSort(left);
-        right = mergeSort(right);
-      }
-      else if (left.length > 0) {
-        sortedNames = sortedNames.concat(left);
-        left = [];
-      }
-      else if (right.length > 0) {
-        sortedNames = sortedNames.concat(right);
-        right = [];
-      }
-      else {
-        endSorting();
-        return;
-      }
-      indexLeft = 0;
-      indexRight = 0;
+    if (leftNames.length && rightNames.length) {
+      document.getElementById('button1').textContent = leftNames[0];
+      document.getElementById('button1').style.display = "block";
+      document.getElementById('button2').textContent = rightNames[0];
+      document.getElementById('button2').style.display = "block";
+    } else if (leftNames.length) {
+      sortedNames.push(leftNames.shift());
+      nextBattle();
+    } else if (rightNames.length) {
+      sortedNames.push(rightNames.shift());
+      nextBattle();
+    } else {
+      document.getElementById('names').innerHTML = sortedNames.join("<br>");
+      document.getElementById('retry').style.display = "block";
     }
-    
-    document.getElementById("button1").innerHTML = left[indexLeft];
-    document.getElementById("button1").style.display = "inline-block";
-    document.getElementById("button2").innerHTML = right[indexRight];
-    document.getElementById("button2").style.display = "inline-block";
   }
 
   function choose(index) {
-    if(index === 1) {
-      sortedNames.push(left[indexLeft]);
-      indexLeft++;
+    if (index === 1) {
+      sortedNames.push(leftNames.shift());
     } else {
-      sortedNames.push(right[indexRight]);
-      indexRight++;
+      sortedNames.push(rightNames.shift());
     }
     nextBattle();
   }
 
-  function endSorting() {
-    document.getElementById("button1").style.display = "none";
-    document.getElementById("button2").style.display = "none";
-    document.getElementById("names").innerHTML = sortedNames.join("<br>");
+  function mergeSort(array) {
+    if (array.length <= 1) {
+      return array;
+    }
+    var mid = Math.floor(array.length / 2);
+    var left = mergeSort(array.slice(0, mid));
+    var right = mergeSort(array.slice(mid));
+    return merge(left, right);
+  }
+
+  function merge(left, right) {
+    var result = [], leftIndex = 0, rightIndex = 0;
+    while (leftIndex < left.length && rightIndex < right.length) {
+      if (left[leftIndex] < right[rightIndex]) {
+        result.push(left[leftIndex++]);
+      } else {
+        result.push(right[rightIndex++]);
+      }
+    }
+    return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
   }
 
   function initialize() {
-    document.location.reload();
+    document.getElementById('start').style.display = "block";
+    document.getElementById('button1').style.display = "none";
+    document.getElementById('button2').style.display = "none";
+    document.getElementById('retry').style.display = "none";
+    document.getElementById('names').innerHTML = "";
+    leftNames = [];
+    rightNames = [];
+    sortedNames = [];
   }
+
+  initialize();
+
 </script>
