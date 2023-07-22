@@ -12,25 +12,14 @@ title: 乃木坂46 Sorter
   }
 
   .button1 {
-    display: block;
-    width: 200px;
-    height: auto;
-    margin: 20px auto;
-    color: black;
-    font-family: "MS PGothic", "Courier", "Lucida Console", "Menlo Regular", "IBM Plex Mono", "Fira Code", "Fira Mono","Roboto Mono","Droid Sans Mono", Monaco, Consolas, Courier, monospace;;
-    text-align: center;
-    padding: 15px;
-    transition-duration: 0.4s;
-    overflow: hidden;
-    border-color: blue;
-    border-style: solid;
-    border-width: thin;
-    background-color: white;
-    cursor: pointer;
     margin-right: 10px;
   }
 
   .button2 {
+    margin-left: 10px;
+  }
+
+  .button1, .tag-grid button {
     display: block;
     width: 200px;
     height: auto;
@@ -46,10 +35,9 @@ title: 乃木坂46 Sorter
     border-width: thin;
     background-color: white;
     cursor: pointer;
-    margin-left: 10px;
   }
   
-  .tag-grid button:hover {
+  .button1:hover, .tag-grid button:hover {
     border-style: 1px thin purple;
   }
   
@@ -165,9 +153,9 @@ title: 乃木坂46 Sorter
 
   function proceed() {
     if (i < L.length && j < R.length) {
-        document.getElementById('button1').style.display = "block";
+      document.getElementById('button1').style.cssText = "display: block; margin-right: 10px;";
         document.getElementById('button1').textContent = L[i];
-        document.getElementById('button2').style.display = "block";
+        document.getElementById('button2').style.cssText = "display: block; margin-left: 10px;";
         document.getElementById('button2').textContent = R[j];
     } else {
         if (i < L.length)
