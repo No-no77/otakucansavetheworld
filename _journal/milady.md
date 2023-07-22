@@ -8,7 +8,7 @@ foam_template:
   name: Journal Entry
 ---
 
-#  milady
+#  Milady
 
 
 milady operates the whole world
