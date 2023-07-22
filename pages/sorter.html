@@ -43,6 +43,7 @@ title: 乃木坂46 Sorter
   "NAKANISHI ARUNO", "OKAMOTO HINA"];
 
   var stack = [];
+  var i, j, k, L, R, right;
 
   function startSorting() {
     document.getElementById('start').style.display = "none";
@@ -75,12 +76,16 @@ title: 乃木坂46 Sorter
   }
 
   function merge(arr, left, mid, right) {
-    var i, j, k;
+    i = 0;
+    j = 0;
+    k = left;
+    right = right;
+    
     var n1 = mid - left + 1;
     var n2 = right - mid;
 
-    var L = new Array(n1);
-    var R = new Array(n2);
+    L = new Array(n1);
+    R = new Array(n2);
 
     for (i = 0; i < n1; i++)
       L[i] = arr[left + i];
@@ -89,50 +94,43 @@ title: 乃木坂46 Sorter
 
     i = 0;
     j = 0;
-    k = left;
     
-    function proceed() {
-        if (i < n1 && j < n2) {
-            document.getElementById('button1').style.display = "block";
-            document.getElementById('button1').textContent = L[i];
-            document.getElementById('button2').style.display = "block";
-            document.getElementById('button2').textContent = R[j];
-        } else {
-            if (i < n1)
-                arr[k++] = L[i++];
-            else
-                arr[k++] = R[j++];
-            
-            if (k <= right)
-                proceed();
-            else
-                processStack();
-        }
-    }
     stack.push(proceed);
     processStack();
   }
 
-  function choose(index) {
-    var i, j, k, L, R;
-    var call = stack.pop();
-    if (index === 1) {
-        names[call[1]] = document.getElementById('button1').textContent;
-        i = call[2] + 1;
-        j = call[3];
-        k = call[1] + 1;
+  function proceed() {
+    if (i < L.length && j < R.length) {
+        document.getElementById('button1').style.display = "block";
+        document.getElementById('button1').textContent = L[i];
+        document.getElementById('button2').style.display = "block";
+        document.getElementById('button2').textContent = R[j];
     } else {
-        names[call[1]] = document.getElementById('button2').textContent;
-        i = call[2];
-        j = call[3] + 1;
-        k = call[1] + 1;
+        if (i < L.length)
+            names[k++] = L[i++];
+        else
+            names[k++] = R[j++];
+        
+        if (k <= right)
+            proceed();
+        else
+            processStack();
     }
-    L = call[4];
-    R = call[5];
-    if (k <= call[6]) {
-        stack.push(() => choose(k, i, j, L, R, call[6]));
+  }
+
+  function choose(index) {
+    if (index === 1) {
+        names[k] = document.getElementById('button1').textContent;
+        i++;
+    } else {
+        names[k] = document.getElementById('button2').textContent;
+        j++;
+    }
+    k++;
+    document.getElementById('button1').style.display = "none";
+    document.getElementById('button2').style.display = "none";
+    if (k <= right)
         stack.push(proceed);
-    }
     processStack();
   }
 
@@ -146,5 +144,5 @@ title: 乃木坂46 Sorter
   }
 
   initialize();
-
 </script>
+
