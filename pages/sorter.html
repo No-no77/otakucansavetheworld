@@ -41,8 +41,6 @@ title: 乃木坂46 Sorter
   "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIYU", "INOUE NAGI",
   "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO",
   "NAKANISHI ARUNO", "OKAMOTO HINA"];
-
-  var firstElement, secondElement;
   var sortedNames = [...names];
   var sortingStack = [[0, sortedNames.length - 1]];
 
@@ -50,7 +48,7 @@ title: 乃木坂46 Sorter
     document.getElementById('start').style.display = 'none';
     document.getElementById('button1').style.display = 'inline';
     document.getElementById('button2').style.display = 'inline';
-    setTimeout(nextComparison, 0);
+    nextComparison();
   }
 
   function nextComparison() {
@@ -59,37 +57,64 @@ title: 乃木坂46 Sorter
       return;
     }
 
-    var range = sortingStack[sortingStack.length - 1];
-    if (range[1] - range[0] < 1) {
-      sortingStack.pop();
-      setTimeout(nextComparison, 0);
+    var command = sortingStack.pop();
+    if (command[0] === 'merge') {
+      merge(command[1], command[2], command[3]);
+    } else {
+      var range = command;
+      if (range[1] - range[0] < 1) {
+        nextComparison();
+        return;
+      }
+
+      var middle = Math.floor((range[0] + range[1]) / 2);
+      sortingStack.push(['merge', range[0], middle, range[1]]);
+      sortingStack.push([middle + 1, range[1]]);
+      sortingStack.push([range[0], middle]);
+      nextComparison();
+    }
+  }
+
+  function merge(start, middle, end) {
+    if (start === end) {
+      nextComparison();
       return;
     }
 
-    var middle = Math.floor((range[0] + range[1]) / 2);
-    sortingStack.push([range[0], middle]);
-    sortingStack.push([middle + 1, range[1]]);
-    sortingStack.push(['merge', range[0], middle, range[1]]);
-    sortingStack.pop();
+    document.getElementById('button1').textContent = sortedNames[start];
+    document.getElementById('button2').textContent = sortedNames[middle + 1];
+    sortingStack.push(['mergeDecision', start, middle, end]);
+  }
 
-    firstElement = sortedNames[range[0]];
-    secondElement = sortedNames[range[1]];
-    document.getElementById('button1').textContent = firstElement;
-    document.getElementById('button2').textContent = secondElement;
+  function mergeDecision(buttonNumber) {
+    var command = sortingStack.pop();
+    var start = command[1];
+    var middle = command[2];
+    var end = command[3];
+
+    if (buttonNumber === 1) {
+      sortedNames.splice(middle + 1, 1);
+      sortedNames.splice(start, 0, sortedNames[middle]);
+      middle--;
+    } else {
+      sortedNames.splice(start, 1);
+      sortedNames.splice(middle + 1, 0, sortedNames[start]);
+      start++;
+    }
+
+    if (start > middle || middle + 1 > end) {
+      nextComparison();
+    } else {
+      sortingStack.push(['mergeDecision', start, middle, end]);
+      merge(start, middle, end);
+    }
   }
 
   function choose(buttonNumber) {
-    var index1 = sortedNames.indexOf(firstElement);
-    var index2 = sortedNames.indexOf(secondElement);
-
-    if (buttonNumber === 1) {
-      sortedNames.splice(index2, 1);
-      sortedNames.splice(index1, 0, secondElement);
-    } else if (buttonNumber === 2) {
-      sortedNames.splice(index1, 1);
-      sortedNames.splice(index2, 0, firstElement);
+    var command = sortingStack[sortingStack.length - 1];
+    if (command[0] === 'mergeDecision') {
+      mergeDecision(buttonNumber);
     }
-    setTimeout(nextComparison, 0);
   }
 
   function finishSorting() {
