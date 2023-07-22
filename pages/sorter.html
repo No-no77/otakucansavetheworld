@@ -176,7 +176,7 @@ title: 乃木坂46 Sorter
     document.getElementById('names').innerHTML = result;
     document.getElementById('retry').style.display = "block";
   }
-
+  
   function initialize() {
     document.getElementById('start').style.display = "block";
     document.getElementById('button1').style.display = "none";
@@ -186,7 +186,17 @@ title: 乃木坂46 Sorter
     comparisons = {};
     queue = [];
     activePair = null;
+
+    // Fisher-Yates shuffle algorithm
+    for (var i = names.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var temp = names[i];
+      names[i] = names[j];
+      names[j] = temp;
+    }
   }
+
+  initialize();
 
   initialize();
 </script>
