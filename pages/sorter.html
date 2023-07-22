@@ -40,49 +40,55 @@ title: 乃木坂46 Sorter
   "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIYU", "INOUE NAGI",
   "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO",
   "NAKANISHI ARUNO", "OKAMOTO HINA"];
-  function mergeSort(array) {
-    // Base case: if the list is empty or has one item, it's already sorted.
-    if (array.length <= 1) return array;
+  var comparisons = []; // this array will hold objects that represent comparisons
 
-    const mid = Math.floor(array.length / 2);
-    const left = array.slice(0, mid);
-    const right = array.slice(mid);
-
-    return merge(mergeSort(left), mergeSort(right));
+function generateComparisons(array) {
+    // your current mergeSort function here
+    // instead of directly comparing elements, push an object to the comparisons array:
+    comparisons.push({left: left[leftIndex], right: right[rightIndex], chosen: null});
+    // 'chosen' will later hold the chosen item when the user makes a decision
 }
 
-function merge(left, right) {
-    let resultArray = [], leftIndex = 0, rightIndex = 0;
+generateComparisons(names);
 
-    // We will concatenate values into the resultArray in order
-    while (leftIndex < left.length && rightIndex < right.length) {
-        document.getElementById("button1").textContent = left[leftIndex];
-        document.getElementById("button2").textContent = right[rightIndex];
-        
-        // Here instead of input from user we will listen to button click
-        // Attach an event listener to your buttons
-        document.getElementById("button1").addEventListener("click", function() {
-            resultArray.push(left[leftIndex]);
-            leftIndex++; // move to the next item in the left array
-        });
-
-        document.getElementById("button2").addEventListener("click", function() {
-            resultArray.push(right[rightIndex]);
-            rightIndex++; // move to the next item in the right array
-        });
+function nextComparison() {
+    if (comparisons.length > 0) {
+        var comparison = comparisons[0]; // get the first comparison
+        document.getElementById("button1").textContent = comparison.left;
+        document.getElementById("button2").textContent = comparison.right;
+    } else {
+        // all comparisons have been made
+        sortNames();
     }
-
-    // We need to concatenate here because there will be one element remaining
-    // from either left OR the right
-    return resultArray
-            .concat(left.slice(leftIndex))
-            .concat(right.slice(rightIndex));
 }
 
-function initialize() {
-    let sortedNames = mergeSort(names);
-    document.getElementById("names").innerHTML = "<ol><li>" + sortedNames.join("</li><li>") + "</li></ol>";
+// add event listeners to your buttons
+document.getElementById("button1").addEventListener("click", function() {
+    comparisons[0].chosen = comparisons[0].left;
+    comparisons.shift(); // remove the first comparison from the array
+    nextComparison(); // show the next comparison
+});
+// do the same for button2
+
+function sortNames() {
+    names.sort(function(a, b) {
+        var comparison = comparisons.find(c => (c.left === a && c.right === b) || (c.left === b && c.right === a));
+        if (comparison) {
+            if (comparison.chosen === a) {
+                return -1;
+            } else if (comparison.chosen === b) {
+                return 1;
+            } else {
+                return 0;
+            }
+        } else {
+            return 0;
+        }
+    });
+
+    document.getElementById("names").innerHTML = "<ol><li>" + names.join("</li><li>") + "</li></ol>";
 }
 
-initialize();
+// start the comparisons
+nextComparison();
 </script>
