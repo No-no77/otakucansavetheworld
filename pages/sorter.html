@@ -31,52 +31,51 @@ title: 乃木坂46 Sorter
   "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIYU", "INOUE NAGI",
   "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO",
   "NAKANISHI ARUNO", "OKAMOTO HINA"];
-  var sortedNames = [];
-  var leftNames = mergeSort(names);
+  var scores = new Map(names.map(name => [name, 0]));
+  var leftNames = [...names];
   var rightNames = [];
 
-  function mergeSort(names) {
-    if (names.length <= 1) {
-        return names;
-    }
-
-    var mid = Math.floor(names.length / 2);
-    var left = names.slice(0, mid);
-    var right = names.slice(mid);
-
-    return merge(mergeSort(left), mergeSort(right));
-  }
-
-  function merge(left, right) {
-    return left.concat(right);
-  }
-
   function choose(option) {
+    var winner, loser;
     if (option === 1) {
-      sortedNames.push(leftNames[0]);
+      winner = leftNames[0];
+      loser = rightNames[0];
       leftNames.shift();
     } else if (option === 2) {
-      sortedNames.push(rightNames[0]);
+      winner = rightNames[0];
+      loser = leftNames[0];
       rightNames.shift();
     }
 
-    if (leftNames.length === 0) {
-      leftNames = mergeSort(rightNames);
+    updateScores(winner, loser);
+
+    if (leftNames.length === 0 && rightNames.length > 0) {
+      leftNames = [...rightNames];
       rightNames = [];
     }
 
-    if (rightNames.length === 0 && leftNames.length === 1) {
-      sortedNames.push(leftNames[0]);
-      leftNames = [];
+    if (rightNames.length === 0 && leftNames.length > 1) {
+      rightNames = [leftNames.pop()];
     }
 
     updateDOM();
+  }
+
+  function updateScores(winner, loser) {
+    var winnerScore = scores.get(winner);
+    var loserScore = scores.get(loser);
+    var winnerExpected = 1 / (1 + Math.pow(10, (loserScore - winnerScore) / 400));
+    var loserExpected = 1 / (1 + Math.pow(10, (winnerScore - loserScore) / 400));
+
+    scores.set(winner, winnerScore + 20 * (1 - winnerExpected));
+    scores.set(loser, loserScore + 20 * (0 - loserExpected));
   }
 
   function updateDOM() {
     document.getElementById("button1").innerHTML = leftNames[0] || "";
     document.getElementById("button2").innerHTML = rightNames[0] || "";
 
+    var sortedNames = [...scores.keys()].sort((a, b) => scores.get(b) - scores.get(a));
     var namesList = sortedNames.map(function(name, index) {
       return "<li>" + (index + 1) + ". " + name + "</li>";
     }).join("");
@@ -85,5 +84,6 @@ title: 乃木坂46 Sorter
   }
 
   // Initialize the sorter
+  rightNames = [leftNames.pop()];
   updateDOM();
 </script>
