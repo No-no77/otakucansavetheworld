@@ -78,30 +78,37 @@ title: 乃木坂46 Sorter
   "YODA YUKI", "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",
   "SATO RIKA", "SHIBATA YUNA", "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",
   "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA", "MATSUO MIYU", "YAKUBO MIO",
-  "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
+  "YUMIKI NAO", "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIYU", "INOUE NAGI",
   "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO",
   "NAKANISHI ARUNO", "OKAMOTO HINA"];
 
   var comparisons = {};
+  var comparisonsNeeded = [];
+  var currentIndex = 0;
 
   function startSorting() {
     document.getElementById('start').style.display = "none";
-    makeComparisons();
+    prepareComparisons();
   }
 
-  function makeComparisons() {
+  function prepareComparisons() {
     for (var i = 0; i < names.length; i++) {
       for (var j = i + 1; j < names.length; j++) {
-        if (!comparisons[names[i] + '-' + names[j]]) {
-          document.getElementById('button1').style.cssText = "display: block; margin-right: 10px;";
-          document.getElementById('button1').textContent = names[i];
-          document.getElementById('button2').style.cssText = "display: block; margin-left: 10px;";
-          document.getElementById('button2').textContent = names[j];
-          return;
-        }
+        comparisonsNeeded.push([names[i], names[j]]);
       }
     }
-    finishSorting();
+    askComparison();
+  }
+
+  function askComparison() {
+    if (currentIndex < comparisonsNeeded.length) {
+      document.getElementById('button1').style.cssText = "display: block; margin-right: 10px;";
+      document.getElementById('button1').textContent = comparisonsNeeded[currentIndex][0];
+      document.getElementById('button2').style.cssText = "display: block; margin-left: 10px;";
+      document.getElementById('button2').textContent = comparisonsNeeded[currentIndex][1];
+    } else {
+      finishSorting();
+    }
   }
 
   function choose(index) {
@@ -114,9 +121,10 @@ title: 乃木坂46 Sorter
       comparisons[name1 + '-' + name2] = name2;
       comparisons[name2 + '-' + name1] = name2;
     }
+    currentIndex++;
     document.getElementById('button1').style.display = "none";
     document.getElementById('button2').style.display = "none";
-    makeComparisons();
+    askComparison();
   }
 
   function finishSorting() {
@@ -146,6 +154,8 @@ title: 乃木坂46 Sorter
     document.getElementById('retry').style.display = "none";
     document.getElementById('names').innerHTML = "";
     comparisons = {};
+    comparisonsNeeded = [];
+    currentIndex = 0;
   }
 
   initialize();
