@@ -83,29 +83,58 @@ title: 乃木坂46 Sorter
   "NAKANISHI ARUNO", "OKAMOTO HINA"];
 
   var comparisons = {};
-  var comparisonsNeeded = [];
-  var currentIndex = 0;
+  var queue = [];
+  var activePair = null;
 
   function startSorting() {
     document.getElementById('start').style.display = "none";
-    prepareComparisons();
+    mergeSort(names, 0, names.length - 1);
+    processQueue();
   }
 
-  function prepareComparisons() {
-    for (var i = 0; i < names.length; i++) {
-      for (var j = i + 1; j < names.length; j++) {
-        comparisonsNeeded.push([names[i], names[j]]);
+  function mergeSort(arr, left, right) {
+    if (left < right) {
+      var mid = left + Math.floor((right - left) / 2);
+      mergeSort(arr, left, mid);
+      mergeSort(arr, mid + 1, right);
+      merge(arr, left, mid, right);
+    }
+  }
+
+  function merge(arr, left, mid, right) {
+    var i = left;
+    var j = mid + 1;
+    var temp = [];
+    while (i <= mid && j <= right) {
+      if (comparisons[arr[i] + '-' + arr[j]]) {
+        if (comparisons[arr[i] + '-' + arr[j]] === arr[i]) {
+          temp.push(arr[i++]);
+        } else {
+          temp.push(arr[j++]);
+        }
+      } else {
+        queue.push([arr[i], arr[j], temp, arr, i, j, mid, right]);
+        return;
       }
     }
-    askComparison();
+    while (i <= mid) {
+      temp.push(arr[i++]);
+    }
+    while (j <= right) {
+      temp.push(arr[j++]);
+    }
+    for (var k = left; k <= right; k++) {
+      arr[k] = temp[k - left];
+    }
   }
 
-  function askComparison() {
-    if (currentIndex < comparisonsNeeded.length) {
+  function processQueue() {
+    if (queue.length > 0) {
+      activePair = queue.shift();
       document.getElementById('button1').style.cssText = "display: block; margin-right: 10px;";
-      document.getElementById('button1').textContent = comparisonsNeeded[currentIndex][0];
+      document.getElementById('button1').textContent = activePair[0];
       document.getElementById('button2').style.cssText = "display: block; margin-left: 10px;";
-      document.getElementById('button2').textContent = comparisonsNeeded[currentIndex][1];
+      document.getElementById('button2').textContent = activePair[1];
     } else {
       finishSorting();
     }
@@ -117,20 +146,21 @@ title: 乃木坂46 Sorter
     if (index === 1) {
       comparisons[name1 + '-' + name2] = name1;
       comparisons[name2 + '-' + name1] = name1;
+      activePair[2].push(activePair[0]);
+      activePair[4]++;
     } else {
       comparisons[name1 + '-' + name2] = name2;
       comparisons[name2 + '-' + name1] = name2;
+      activePair[2].push(activePair[1]);
+      activePair[5]++;
     }
-    currentIndex++;
     document.getElementById('button1').style.display = "none";
     document.getElementById('button2').style.display = "none";
-    askComparison();
+    merge(activePair[3], activePair[4], activePair[6], activePair[7]);
+    processQueue();
   }
 
   function finishSorting() {
-    names.sort((a, b) => {
-      return comparisons[a + '-' + b] === a ? -1 : 1;
-    });
     var result = names.map((name, index) => {
         var rank = index + 1;
         if (rank === 1) {
@@ -154,9 +184,10 @@ title: 乃木坂46 Sorter
     document.getElementById('retry').style.display = "none";
     document.getElementById('names').innerHTML = "";
     comparisons = {};
-    comparisonsNeeded = [];
-    currentIndex = 0;
+    queue = [];
+    activePair = null;
   }
 
   initialize();
 </script>
+
