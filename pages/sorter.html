@@ -235,29 +235,37 @@ title: 乃木坂46 Sorter
       var names = [];
       var comparisons = {};
   
-  async function compare(name1, name2) {
-    var key = name1 + '-' + name2;
-    if (!comparisons[key]) {
-      return new Promise((resolve) => {
-        document.getElementById('button1').textContent = name1;
-        document.getElementById('button2').textContent = name2;
-        document.getElementById('button1').style.display = "block";
-        document.getElementById('button2').style.display = "block";
-        document.getElementById('button1').onclick = function() {
-          comparisons[key] = name1;
-          comparisons[name2 + '-' + name1] = name1;
-          resolve(name1);
-        }
-        document.getElementById('button2').onclick = function() {
-          comparisons[key] = name2;
-          comparisons[name2 + '-' + name1] = name2;
-          resolve(name2);
-        }
-      });
-    } else {
-      return Promise.resolve(comparisons[key]);
-    }
+      async function compare(name1, name2) {
+  var key = name1 + '-' + name2;
+  if (!comparisons[key]) {
+    return new Promise((resolve) => {
+      document.getElementById('button1').textContent = name1;
+      document.getElementById('button2').textContent = name2;
+
+      // Update the image sources and descriptions according to the idol names
+      document.querySelector('#button1 + .dropdown-content img').src = imagePaths[name1];
+      document.querySelector('#button1 + .dropdown-content .desc').textContent = `${name1}`;
+      document.querySelector('#button2 + .dropdown-content img').src = imagePaths[name2];
+      document.querySelector('#button2 + .dropdown-content .desc').textContent = `${name2}`;
+
+      document.getElementById('button1').style.display = "block";
+      document.getElementById('button2').style.display = "block";
+      document.getElementById('button1').onclick = function() {
+        comparisons[key] = name1;
+        comparisons[name2 + '-' + name1] = name1;
+        resolve(name1);
+      }
+      document.getElementById('button2').onclick = function() {
+        comparisons[key] = name2;
+        comparisons[name2 + '-' + name1] = name2;
+        resolve(name2);
+      }
+    });
+  } else {
+    return Promise.resolve(comparisons[key]);
   }
+}
+
   
   async function mergeSort(arr) {
     if (arr.length < 2) return arr;
