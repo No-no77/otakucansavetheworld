@@ -8,7 +8,7 @@ foam_template:
   name: Journal Entry
 ---
 
-# omg
+# Milady Village Alts
 
 {% graphviz %}
 
