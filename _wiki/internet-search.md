@@ -6,7 +6,7 @@ foam_template:
   filepath: '_wiki/internet-search.md'
   name: Wiki Note
 ---
-# ee7269
+# Internet Surfing
 
 ## Google Search Tips
 
