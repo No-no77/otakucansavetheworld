@@ -4,6 +4,9 @@ category: archive
 title: 乃木坂46 Senbatsu Maker
 ---
 
+<style>
+</style>
+
 <div class="leftcolumn">
   {% include profile-card.html %}
 </div>
@@ -11,15 +14,212 @@ title: 乃木坂46 Senbatsu Maker
 <div class="midcolumn">
   <div class="index-card">
     <br>
-    <h1 class="index-title">乃木坂46 Senbatsu Maker</h1>    
+      <h1 class="index-title"> Senbatsu Maker</h1>    
     <div class="side-card">
     </div>
+  </div>
 
-    <div class="tag-grid">
-      
+  <div class="tag-grid">
+
+    <div id="selectionCount">Total Slots Left: 25</div>
+
+    <div id="distributionForm">
+      <label for="center">Center:</label><br>
+      <input type="number" id="center" name="center" min="1" max="2" value="1" onchange="updateCount()" class="quantity"><br>
+      <label for="firstRow">First Row:</label><br>
+      <input type="number" id="firstRow" name="firstRow" min="2" max="24" onchange="updateCount()" class="quantity"><br>
+      <label for="secondRow">Second Row:</label><br>
+      <input type="number" id="secondRow" name="secondRow" min="3" max="23" onchange="updateCount()" class="quantity"><br>
+      <label for="thirdRow">Third Row:</label><br>
+      <input type="number" id="thirdRow" name="thirdRow" min="4" max="22" onchange="updateCount()" class="quantity"><br>
+      <div id="error" style="color: red;"></div><br>
+      <input type="button" value="Confirm" id="confirmButton" onclick="confirmDistribution()" style="display: none;">
+      <input type="button" value="Reset" onclick="resetDistribution()">
+    </div>
+
+    <div id="memberSelection" style="display: none;">
+      <div id="dropdowns"></div>
+      <input type="button" value="Confirm" id="confirmSelectionButton" onclick="confirmSelection()" style="display: none;">
+      <input type="button" value="Reset" id="resetSelectionButton" onclick="resetSelection()" style="display: none;">
+      <input type="button" value="Reset Selections" id="resetSelectionsButton" onclick="resetSelections()" style="display: none;">
     </div>
     
 
-    <div id="names"></div>
+  </div>
 
-    {% include license.html %}
+  {% include license.html %}
+
+<script>
+let totalSlots = 25;
+let members = [ "ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI", "SATO KAEDE",
+          "NAKAMURA RENO","MUKAI HAZUKI", "YAMASHITA MIZUKI", "YOSHIDA AYANO CHRISTIE", "YODA YUKI",
+          "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",  "SATO RIKA", "SHIBATA YUNA",
+          "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",  "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA",
+          "MATSUO MIYU", "YAKUBO MIO", "YUMIKI NAO","IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
+          "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO", "NAKANISHI ARUNO",
+          "OKAMOTO HINA"];
+
+// Set initial values
+document.getElementById('center').value = "1";
+document.getElementById('firstRow').value = "2";
+document.getElementById('secondRow').value = "3";
+document.getElementById('thirdRow').value = "4";
+
+updateCount();  // Call this once to initialize the counter
+
+function updateCount() {
+    let center = parseInt(document.getElementById('center').value);
+    let firstRow = parseInt(document.getElementById('firstRow').value);
+    let secondRow = parseInt(document.getElementById('secondRow').value);
+    let thirdRow = parseInt(document.getElementById('thirdRow').value);
+
+    let totalSelected = center + firstRow + secondRow + thirdRow;
+
+    // Prevent the counter from going negative
+    let slotsLeft = totalSlots - totalSelected;
+    if (slotsLeft < 0) {
+        slotsLeft = 0;
+    }
+
+    document.getElementById('selectionCount').innerText = "Total Slots Left: " + slotsLeft;
+
+    // Validation for the rows
+    if (center >= firstRow || firstRow >= secondRow || secondRow >= thirdRow || totalSelected > totalSlots) {
+        document.getElementById('error').innerText = "Invalid distribution. Please check the conditions again.";
+        document.getElementById('confirmButton').style.display = 'none';
+    } else {
+        document.getElementById('error').innerText = '';
+        document.getElementById('confirmButton').style.display = 'inline';
+    }
+}
+
+function resetDistribution() {
+    document.getElementById('center').value = "1";
+    document.getElementById('firstRow').value = "2";
+    document.getElementById('secondRow').value = "3";
+    document.getElementById('thirdRow').value = "4";
+    updateCount();
+}
+
+function generateDropdowns() {
+    let center = parseInt(document.getElementById('center').value);
+    let firstRow = parseInt(document.getElementById('firstRow').value);
+    let secondRow = parseInt(document.getElementById('secondRow').value);
+    let thirdRow = parseInt(document.getElementById('thirdRow').value);
+
+    let dropdownsDiv = document.getElementById('dropdowns');
+    dropdownsDiv.innerHTML = '';
+
+    let availableMembers = [...members];
+
+    let createDropdownRow = function(numDropdowns, rowName) {
+        let rowDiv = document.createElement('div');
+        rowDiv.innerHTML = '<h2>' + rowName + '</h2>';
+        for (let i = 0; i < numDropdowns; i++) {
+            let select = document.createElement('select');
+            select.onchange = function() {
+                updateAvailableMembers();
+            };
+            // Start with an empty option
+            let defaultOption = document.createElement('option');
+            defaultOption.value = '';
+            defaultOption.text = '';
+            select.appendChild(defaultOption);
+            // Add the available members
+            availableMembers.forEach(member => {
+                let option = document.createElement('option');
+                option.value = member;
+                option.text = member;
+                select.appendChild(option);
+            });
+            rowDiv.appendChild(select);
+        }
+        dropdownsDiv.appendChild(rowDiv);
+    };
+
+    createDropdownRow(center, 'Center');
+    createDropdownRow(firstRow, 'First Row');
+    createDropdownRow(secondRow, 'Second Row');
+    createDropdownRow(thirdRow, 'Third Row');
+}
+
+function updateAvailableMembers() {
+    let selectedMembers = [];
+    let selects = document.querySelectorAll('#dropdowns select');
+    selects.forEach(select => {
+        if (select.value) {
+            selectedMembers.push(select.value);
+        }
+    });
+    
+    selects.forEach(select => {
+        let currentValue = select.value;
+        let options = Array.from(select.options);
+        options.forEach(option => {
+            if (selectedMembers.includes(option.value) && currentValue !== option.value) {
+                option.disabled = true;
+            } else {
+                option.disabled = false;
+            }
+        });
+    });
+}
+
+function confirmDistribution() {
+    let center = parseInt(document.getElementById('center').value);
+    let firstRow = parseInt(document.getElementById('firstRow').value);
+    let secondRow = parseInt(document.getElementById('secondRow').value);
+    let thirdRow = parseInt(document.getElementById('thirdRow').value);
+
+    let totalSelected = center + firstRow + secondRow + thirdRow;
+
+    if (totalSelected <= totalSlots) {
+        generateDropdowns();
+        document.getElementById('distributionForm').style.display = 'none';  // Hide distribution form
+        document.getElementById('memberSelection').style.display = 'block'; // Show member selection form
+        document.getElementById('confirmSelectionButton').style.display = 'inline'; // Show confirm button for member selection
+        document.getElementById('resetSelectionButton').style.display = 'inline'; // Show reset button for member selection
+        document.getElementById('resetSelectionsButton').style.display = 'inline'; // Show reset selections button
+    } else {
+        document.getElementById('error').innerText = "Total selected exceeds the total slots.";
+        document.getElementById('confirmButton').style.display = 'none';
+    }
+}
+
+function resetSelections() {
+    let dropdownsDiv = document.getElementById('dropdowns');
+    let selects = dropdownsDiv.querySelectorAll('select');
+    selects.forEach(select => {
+        select.selectedIndex = 0;  // Reset the selected index to the first option (the empty option)
+    });
+    updateAvailableMembers();  // Update the available members after resetting the selections
+}
+
+function confirmSelection() {
+    let dropdownsDiv = document.getElementById('dropdowns');
+    let selects = dropdownsDiv.querySelectorAll('select');
+    let selections = Array.from(selects).map(select => select.value);
+
+    let center = selections.slice(0, parseInt(document.getElementById('center').value));
+    let firstRow = selections.slice(center.length, center.length + parseInt(document.getElementById('firstRow').value));
+    let secondRow = selections.slice(center.length + firstRow.length, center.length + firstRow.length + parseInt(document.getElementById('secondRow').value));
+    let thirdRow = selections.slice(center.length + firstRow.length + secondRow.length);
+
+    let namelistDiv = document.createElement('div');
+    namelistDiv.innerHTML = `
+        <h2>Center: ${center.join(', ')}</h2>
+        <h2>First Row: ${firstRow.join(', ')}</h2>
+        <h2>Second Row: ${secondRow.join(', ')}</h2>
+        <h2>Third Row: ${thirdRow.join(', ')}</h2>
+    `;
+
+    dropdownsDiv.innerHTML = '';
+    dropdownsDiv.appendChild(namelistDiv);
+    document.getElementById('confirmSelectionButton').style.display = 'none'; // Hide confirm button after confirming selection
+    document.getElementById('resetSelectionButton').style.display = 'none'; // Hide reset button after confirming selection
+    document.getElementById('confirmSelectionButton').style.display = 'none'; // Hide confirm button after confirming selection
+    document.getElementById('resetSelectionButton').style.display = 'none'; // Hide reset button after confirming selection
+    document.getElementById('resetSelectionsButton').style.display = 'none'; // Hide reset selections button after confirming selection
+}
+
+</script>
