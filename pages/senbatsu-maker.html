@@ -177,7 +177,6 @@ function confirmDistribution() {
         document.getElementById('distributionForm').style.display = 'none';  // Hide distribution form
         document.getElementById('memberSelection').style.display = 'block'; // Show member selection form
         document.getElementById('confirmSelectionButton').style.display = 'inline'; // Show confirm button for member selection
-        document.getElementById('resetSelectionButton').style.display = 'inline'; // Show reset button for member selection
         document.getElementById('resetSelectionsButton').style.display = 'inline'; // Show reset selections button
     } else {
         document.getElementById('error').innerText = "Total selected exceeds the total slots.";
@@ -219,6 +218,8 @@ function confirmSelection() {
     document.getElementById('confirmSelectionButton').style.display = 'none'; // Hide confirm button after confirming selection
     document.getElementById('resetSelectionButton').style.display = 'none'; // Hide reset button after confirming selection
     document.getElementById('resetSelectionsButton').style.display = 'none'; // Hide reset selections button after confirming selection
-}
+    document.getElementById('confirmSelectionButton').style.display = 'none'; // Hide confirm button after confirming selection
+
+  }
 
 </script>
