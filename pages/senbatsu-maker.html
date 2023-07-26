@@ -103,9 +103,11 @@ title: 乃木坂46 Senbatsu Maker
       <!-- PART 2 -->
       <div class="selection" id="selection" style="display: none;">
         <div id="dropdowns"></div>
-        <input type="button" value="Confirm" id="confirmSelectionButton" onclick="confirmSelection()" style="display: none;" class="button">
-        <input type="button" value="Reset Selections" id="resetSelectionsButton" onclick="resetSelections()" style="display: none;" class="button">
-        <div id="memberSelection" style="display: none;">
+        <div id="button-container" style="display: flex; justify-content: space-between;">
+          <input type="button" value="Confirm" id="confirmSelectionButton" onclick="confirmSelection()" style="display: none;" class="button">
+          <input type="button" value="Reset Selections" id="resetSelectionsButton" onclick="resetSelections()" style="display: none;" class="button">
+        </div>
+          <div id="memberSelection" style="display: none;">
     </div>
       <input type="button" value="Try Again" id="tryAgainButton" onclick="resetEverything()" style="display: none;" class="button">
     <br>
