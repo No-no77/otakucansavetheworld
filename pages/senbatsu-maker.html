@@ -46,6 +46,10 @@ title: 乃木坂46 Senbatsu Maker
     width: 70px;
   }
 
+  .counter {
+    padding: 0.5em 1em;
+  }
+
 </style>
 
 <div class="leftcolumn">
@@ -60,7 +64,7 @@ title: 乃木坂46 Senbatsu Maker
     </div>
   </div>
 
-  <div id="selectionCount">Total Slots Left: 22</div>
+  <div id="selectionCount" class="counter">Total Slots Left: 22</div>
   <br>
 
     <div id="distributionForm" class="distributionForm">
@@ -88,11 +92,8 @@ title: 乃木坂46 Senbatsu Maker
   </div>
   
   <input type="button" value="Try Again" id="tryAgainButton" onclick="resetEverything()" style="display: none;" class="button">
-  
-  </div> 
-
-
   {% include license.html %}
+  </div> 
 </div>
 
 <script>
