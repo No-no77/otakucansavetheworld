@@ -5,6 +5,46 @@ title: 乃木坂46 Senbatsu Maker
 ---
 
 <style>
+* {
+  font-family: "MS PGothic", "Courier", "Lucida Console", "Menlo Regular", "IBM Plex Mono", "Fira Code", "Fira Mono","Roboto Mono","Droid Sans Mono", Monaco, Consolas, Courier, monospace;
+}
+.distributionForm {
+  border: solid;
+  border-width: thin;
+  padding: 10px;
+  border-color: blue;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.form-grid {
+  white-space-collapse: preserve-breaks;
+}
+
+.button {
+    display: block;
+    width: 200px;
+    height: auto;
+    margin: 20px auto;
+    color: blue;
+    font-family: "MS PGothic", "Courier", "Lucida Console", "Menlo Regular", "IBM Plex Mono", "Fira Code", "Fira Mono","Roboto Mono","Droid Sans Mono", Monaco, Consolas, Courier, monospace;;
+    text-align: center;
+    padding: 15px;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    border-color: blue;
+    border-style: solid;
+    border-width: thin;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  .quantity {
+    margin-top: 15px;
+    padding: 5px;
+    width: 70px;
+  }
+
 </style>
 
 <div class="leftcolumn">
@@ -14,32 +54,40 @@ title: 乃木坂46 Senbatsu Maker
 <div class="midcolumn">
   <div class="index-card">
     <br>
-      <h1 class="index-title"> Senbatsu Maker</h1>    
+      <h1 class="index-title"> 乃木坂46 Senbatsu Maker</h1>    
     <div class="side-card">
     </div>
   </div>
 
-  <div id="selectionCount">Total Slots Left: 25</div>
+  <div id="selectionCount">Total Slots Left: 22</div>
+  <br>
 
-    <div id="distributionForm">
-      <label for="center">Center:</label><br>
-      <input type="number" id="center" name="center" min="1" max="2" value="1" onchange="updateCount()" class="quantity"><br>
-      <label for="firstRow">First Row:</label><br>
-      <input type="number" id="firstRow" name="firstRow" min="2" max="24" onchange="updateCount()" class="quantity"><br>
-      <label for="secondRow">Second Row:</label><br>
-      <input type="number" id="secondRow" name="secondRow" min="3" max="23" onchange="updateCount()" class="quantity"><br>
-      <label for="thirdRow">Third Row:</label><br>
-      <input type="number" id="thirdRow" name="thirdRow" min="4" max="22" onchange="updateCount()" class="quantity"><br>
-      <div id="error" style="color: red;"></div><br>
-      <input type="button" value="Confirm" id="confirmButton" onclick="confirmDistribution()" style="display: none;">
-      <input type="button" value="Reset" onclick="resetDistribution()">
+    <div id="distributionForm" class="distributionForm">
+
+      <div class="form-grid">
+        <label for="center">Center:</label>
+        <input type="number" id="center" name="center" min="1" max="2" value="1" onchange="updateCount()" class="quantity"><br>
+        <label for="firstRow">First Row:</label>
+        <input type="number" id="firstRow" name="firstRow" min="2" max="24" onchange="updateCount()" class="quantity"><br>
+        <label for="secondRow">Second Row:</label>
+        <input type="number" id="secondRow" name="secondRow" min="3" max="23" onchange="updateCount()" class="quantity"><br>
+        <label for="thirdRow">Third Row:</label>
+        <input type="number" id="thirdRow" name="thirdRow" min="4" max="22" onchange="updateCount()" class="quantity"><br>
+      </div> 
+      
+      <div id="error" style="color: red;"></div>
+      <input type="button" value="Confirm" id="confirmButton" onclick="confirmDistribution()" style="display: none;" class="button">
+      <input type="button" value="Reset" onclick="resetDistribution()" class="button">
     </div>
 
     <div id="memberSelection" style="display: none;">
       <div id="dropdowns"></div>
-      <input type="button" value="Confirm" id="confirmSelectionButton" onclick="confirmSelection()" style="display: none;">
-      <input type="button" value="Reset Selections" id="resetSelectionsButton" onclick="resetSelections()" style="display: none;">
-    </div>
+      <input type="button" value="Confirm" id="confirmSelectionButton" onclick="confirmSelection()" style="display: none;" class="button">
+      <input type="button" value="Reset Selections" id="resetSelectionsButton" onclick="resetSelections()" style="display: none;" class="button">
+  </div>
+  
+  <input type="button" value="Try Again" id="tryAgainButton" onclick="resetEverything()" style="display: none;" class="button">
+  
   </div> 
 </div>
 
@@ -81,7 +129,7 @@ function updateCount() {
 
     // Validation for the rows
     if (center >= firstRow || firstRow >= secondRow || secondRow >= thirdRow || totalSelected > totalSlots) {
-        document.getElementById('error').innerText = "Invalid distribution. Please check the conditions again.";
+        document.getElementById('error').innerText = "Invalid distribution. Please keep the size of each row coherent.";
         document.getElementById('confirmButton').style.display = 'none';
     } else {
         document.getElementById('error').innerText = '';
@@ -139,6 +187,19 @@ function generateDropdowns() {
     createDropdownRow(thirdRow, 'Third Row');
 }
 
+function checkSelections() {
+    let selects = document.querySelectorAll('#dropdowns select');
+    let allFilled = Array.from(selects).every(select => select.value);
+    let errorMessageDiv = document.getElementById('error');
+    if (allFilled) {
+        errorMessageDiv.innerText = '';
+        document.getElementById('confirmSelectionButton').style.display = 'inline';
+    } else {
+        errorMessageDiv.innerText = "Please select all members before confirming.";
+        document.getElementById('confirmSelectionButton').style.display = 'none';
+    }
+}
+
 function updateAvailableMembers() {
     let selectedMembers = [];
     let selects = document.querySelectorAll('#dropdowns select');
@@ -147,7 +208,7 @@ function updateAvailableMembers() {
             selectedMembers.push(select.value);
         }
     });
-    
+
     selects.forEach(select => {
         let currentValue = select.value;
         let options = Array.from(select.options);
@@ -159,6 +220,7 @@ function updateAvailableMembers() {
             }
         });
     });
+    checkSelections();
 }
 
 function confirmDistribution() {
@@ -173,21 +235,13 @@ function confirmDistribution() {
         generateDropdowns();
         document.getElementById('distributionForm').style.display = 'none';  // Hide distribution form
         document.getElementById('memberSelection').style.display = 'block'; // Show member selection form
-        document.getElementById('confirmSelectionButton').style.display = 'inline'; // Show confirm button for member selection
+        document.getElementById('confirmSelectionButton').style.display = 'none'; // Show confirm button for member selection
         document.getElementById('resetSelectionsButton').style.display = 'inline'; // Show reset selections button
+        document.getElementById('selectionCount').innerText = '';  // Empty the 'Total Slots Left' text
     } else {
         document.getElementById('error').innerText = "Total selected exceeds the total slots.";
         document.getElementById('confirmButton').style.display = 'none';
     }
-}
-
-function resetSelections() {
-    let dropdownsDiv = document.getElementById('dropdowns');
-    let selects = dropdownsDiv.querySelectorAll('select');
-    selects.forEach(select => {
-        select.selectedIndex = 0;  // Reset the selected index to the first option (the empty option)
-    });
-    updateAvailableMembers();  // Update the available members after resetting the selections
 }
 
 function confirmSelection() {
@@ -211,12 +265,20 @@ function confirmSelection() {
     dropdownsDiv.innerHTML = '';
     dropdownsDiv.appendChild(namelistDiv);
     document.getElementById('confirmSelectionButton').style.display = 'none'; // Hide confirm button after confirming selection
-    document.getElementById('resetSelectionButton').style.display = 'none'; // Hide reset button after confirming selection
-    document.getElementById('confirmSelectionButton').style.display = 'none'; // Hide confirm button after confirming selection
-    document.getElementById('resetSelectionButton').style.display = 'none'; // Hide reset button after confirming selection
-    document.getElementById('resetSelectionsButton').style.display = 'none'; // Hide reset selections button after confirming selection
-    document.getElementById('confirmSelectionButton').style.display = 'none'; // Hide confirm button after confirming selection
+    document.getElementById('resetSelectionsButton').style.display = 'none'; // Hide reset button after confirming selection
+    document.getElementById('tryAgainButton').style.display = 'inline'; // Show "Try Again" button after confirming selection
+}
 
-  }
+function resetEverything() {
+    document.getElementById('dropdowns').innerHTML = '';
+    document.getElementById('distributionForm').style.display = 'block';
+    document.getElementById('memberSelection').style.display = 'none';
+    document.getElementById('tryAgainButton').style.display = 'none';
+    document.getElementById('selectionCount').style.display = 'block';
+    document.getElementById('confirmButton').style.display = 'none'; // Hide the confirm button
+    resetDistribution();
+}
+
+
 
 </script>
