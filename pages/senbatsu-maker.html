@@ -22,6 +22,11 @@ title: 乃木坂46 Senbatsu Maker
   margin-bottom: 20px;
 }
 
+.select {
+  border-color: blue;
+  height: 1.5rem;
+}
+
 .form-grid {
   white-space-collapse: preserve-breaks;
 }
@@ -258,7 +263,7 @@ function confirmDistribution() {
         document.getElementById('confirmSelectionButton').style.display = 'none'; // Show confirm button for member selection
         document.getElementById('resetSelectionsButton').style.display = 'inline'; // Show reset selections button
         document.getElementById('selectionCount').innerText = '';  // Empty the 'Total Slots Left' text
-        document.getElementById('selection').style.display = 'inline';
+        document.getElementById('selection').style.display = 'flow-root';
     } else {
         document.getElementById('error').innerText = "Total selected exceeds the total slots.";
         document.getElementById('confirmButton').style.display = 'none';
