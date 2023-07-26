@@ -77,11 +77,9 @@ title: 乃木坂46 Senbatsu Maker
 
   <div id="selectionCount" class="counter">Total Slots Left: 22</div>
   <br>
-
-    <div id="distributionForm" class="distributionForm">
-      
       <!-- PART 1 -->
-      
+    <div id="distributionForm" class="distributionForm">
+
       <div class="form-grid">
         <label for="center">Center:</label>
         <input type="number" id="center" name="center" min="1" max="2" value="1" onchange="updateCount()" class="quantity"><br>
@@ -101,14 +99,14 @@ title: 乃木坂46 Senbatsu Maker
     </div>
 
       <!-- PART 2 -->
-      <div class="selection" id="selection" style="display: none;">
+    <div class="selection" id="selection" style="display: none;">
         <div id="dropdowns"></div>
         <div id="button-container" style="display: flex; justify-content: space-between;">
           <input type="button" value="Confirm" id="confirmSelectionButton" onclick="confirmSelection()" style="display: none;" class="button">
           <input type="button" value="Reset Selections" id="resetSelectionsButton" onclick="resetSelections()" style="display: none;" class="button">
         </div>
-          <div id="memberSelection" style="display: none;">
-    </div>
+
+      <div id="memberSelection" style="display: none;"></div>  
       <input type="button" value="Try Again" id="tryAgainButton" onclick="resetEverything()" style="display: none;" class="button">
     <br>
   </div> 
@@ -294,7 +292,7 @@ function confirmSelection() {
     document.getElementById('confirmSelectionButton').style.display = 'none'; // Hide confirm button after confirming selection
     document.getElementById('resetSelectionsButton').style.display = 'none'; // Hide reset button after confirming selection
     document.getElementById('tryAgainButton').style.display = 'inline'; // Show "Try Again" button after confirming selection
-    document.getElementById('selection').style.display = 'inline'; // Show "Try Again" button after confirming selection
+    document.getElementById('selection').style.display = 'flow-root'; // Show "Try Again" button after confirming selection
 }
 
 function resetEverything() {
