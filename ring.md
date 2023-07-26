@@ -21,7 +21,8 @@ title: Webring
 | [Don's Directory](http://dons.directory/) | شارع بدون تبخير ساخن |
 | [Charlotte Fang](https://goldenlight.mirror.xyz/) | 恋人 ♡ GODS FAVORITE NFT MAVERICK ♡ @REMILIACORP CEO ♡ SCION OF THE NEW WAVE ♡ |
 | [Renn of White Oath](https://whiteoath.net/) | Emptiness and Omnipresence |
-| [Homer](https://homer.reisen/) | |
+| [Homer](https://homer.reisen/) | Coverage of news, culture, art, and more, through articles, journals, and daily notes. |
+| [Sprite](https://spritecore.netlify.app/) | When You Hear, Say, and Read Anything, Say Nothing and Write It Down. |
 
 ### Wota-sphere
 
