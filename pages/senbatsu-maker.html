@@ -183,6 +183,7 @@ function generateDropdowns() {
         let select = document.createElement('select');
         select.style.borderColor = 'blue';
         select.style.height = '1.5rem';
+        select.style.margin = '10px';
         select.onchange = function() {
             updateAvailableMembers();
         };
@@ -280,10 +281,10 @@ function confirmSelection() {
 
     let namelistDiv = document.createElement('div');
     namelistDiv.innerHTML = `
-        <p style="color=blue">Center: ${center.join(', ')}</p>
-        <p style="color=blue">First Row: ${firstRow.join(', ')}</p>
-        <p style="color=blue">Second Row: ${secondRow.join(', ')}</p>
-        <p style="color=blue">Third Row: ${thirdRow.join(', ')}</p>
+        <p style="color=blue">CENTER: ${center.join(', ')}</p>
+        <p style="color=blue">FIRST ROW: ${firstRow.join(', ')}</p>
+        <p style="color=blue">SECOND ROW: ${secondRow.join(', ')}</p>
+        <p style="color=blue">THIRD ROW: ${thirdRow.join(', ')}</p>
     `;
 
     dropdownsDiv.innerHTML = '';
