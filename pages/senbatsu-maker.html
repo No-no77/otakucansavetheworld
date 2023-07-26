@@ -18,6 +18,10 @@ title: 乃木坂46 Senbatsu Maker
   margin-bottom: 20px;
 }
 
+.selection {
+  margin-bottom: 20px;
+}
+
 .form-grid {
   white-space-collapse: preserve-breaks;
 }
@@ -97,7 +101,7 @@ title: 乃木坂46 Senbatsu Maker
     </div>
 
       <!-- PART 2 -->
-      <div class="selection">
+      <div class="selection" id="selection" style="display: none;">
         <div id="dropdowns"></div>
         <input type="button" value="Confirm" id="confirmSelectionButton" onclick="confirmSelection()" style="display: none;" class="button">
         <input type="button" value="Reset Selections" id="resetSelectionsButton" onclick="resetSelections()" style="display: none;" class="button">
@@ -283,6 +287,7 @@ function confirmSelection() {
     document.getElementById('confirmSelectionButton').style.display = 'none'; // Hide confirm button after confirming selection
     document.getElementById('resetSelectionsButton').style.display = 'none'; // Hide reset button after confirming selection
     document.getElementById('tryAgainButton').style.display = 'inline'; // Show "Try Again" button after confirming selection
+    document.getElementById('selection').style.display = 'inline'; // Show "Try Again" button after confirming selection
 }
 
 function resetEverything() {
