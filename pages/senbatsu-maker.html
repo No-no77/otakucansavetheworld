@@ -50,6 +50,13 @@ title: 乃木坂46 Senbatsu Maker
     padding: 0.5em 1em;
   }
 
+  .input {
+    overflow: visible;
+    border-color: blue;
+    border-style: solid;
+    border-width: thin;
+  }
+
 </style>
 
 <div class="leftcolumn">
@@ -68,7 +75,9 @@ title: 乃木坂46 Senbatsu Maker
   <br>
 
     <div id="distributionForm" class="distributionForm">
-
+      
+      <!-- PART 1 -->
+      
       <div class="form-grid">
         <label for="center">Center:</label>
         <input type="number" id="center" name="center" min="1" max="2" value="1" onchange="updateCount()" class="quantity"><br>
@@ -87,14 +96,18 @@ title: 乃木坂46 Senbatsu Maker
       </div>
     </div>
 
+      <!-- PART 2 -->
+      <div class="form-grid">
+        <div id="dropdowns"></div>
+        <input type="button" value="Confirm" id="confirmSelectionButton" onclick="confirmSelection()" style="display: none;" class="button">
+        <input type="button" value="Reset Selections" id="resetSelectionsButton" onclick="resetSelections()" style="display: none;" class="button">
+        </div>
+    </div>
+      <!-- PART 3 -->
     <div id="memberSelection" style="display: none;">
-      <div id="dropdowns"></div>
-      <input type="button" value="Confirm" id="confirmSelectionButton" onclick="confirmSelection()" style="display: none;" class="button">
-      <input type="button" value="Reset Selections" id="resetSelectionsButton" onclick="resetSelections()" style="display: none;" class="button">
-  </div>
-  
-  <input type="button" value="Try Again" id="tryAgainButton" onclick="resetEverything()" style="display: none;" class="button">
-  {% include license.html %}
+    <input type="button" value="Try Again" id="tryAgainButton" onclick="resetEverything()" style="display: none;" class="button">
+
+    {% include license.html %}
   </div> 
 </div>
 
