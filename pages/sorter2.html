@@ -102,14 +102,18 @@ title: 乃木坂46 Sorter
 }
 
 .button-image {
-  display: none; 
-  margin-bottom: 10px;
-  padding: 2em;
+    display: none;
+    margin-bottom: 10px;
+    margin: 2em;
+    border-style: solid;
+    border-width: thin;
+    border-color: blue;
+    padding: 0.2em;
 }
 
 
 .desc {
-  margin-bottom: 10px;
+  display: none;
 }
 
 .button1, .button2 {
@@ -151,13 +155,13 @@ title: 乃木坂46 Sorter
       <button id="start" onclick="startSorting()">Start Sorting</button>
     
       <div class="button-container">
-        <img id="image1" src="i_love_milady.jpg" alt="milady loves me" width="300" height="300" class="button-image">
+        <img id="image1" src="i_love_milady.jpg" alt="milady loves me" width="300" height="300" class="button-image" style="display: none;">
         <div id="desc1" class="desc">Beautiful Cinque Terre</div>
         <button id="button1" onclick="choose(1)">Loading...</button>
       </div>
     
       <div class="button-container">
-        <img id="image2" src="i_love_milady.jpg" alt="milady loves me" width="300" height="300" class="button-image">
+        <img id="image2" src="i_love_milady.jpg" alt="milady loves me" width="300" height="300" class="button-image" style="display: none;">
         <div id="desc2" class="desc">Beautiful Cinque Terre</div>
         <button id="button2" onclick="choose(2)">Loading...</button>
       </div>
