@@ -120,6 +120,28 @@ title: 乃木坂46 Sorter
   margin-top: 10px;
 }
 
+.retry {
+  display: grid;
+  justify-content: center;
+}
+
+.retry-button {
+  width: 200px;
+  height: auto;
+  margin: 20px auto;
+  color: blue;
+  font-family: "MS PGothic", "Courier", "Lucida Console", "Menlo Regular", "IBM Plex Mono", "Fira Code", "Fira Mono","Roboto Mono","Droid Sans Mono", Monaco, Consolas, Courier, monospace;;
+  text-align: center;
+  padding: 15px;
+  transition-duration: 0.4s;
+  overflow: hidden;
+  border-color: blue;
+  border-style: solid;
+  border-width: thin;
+  background-color: white;
+  cursor: pointer;
+}
+
     
   </style>
 
@@ -169,7 +191,7 @@ title: 乃木坂46 Sorter
       <span style="color:ligthgrey">Use A or D to select Left and Right button respectively.</span>
     </div>
     <div class="retry">
-      <button id="retry" style="display: none;" onclick="initialize()">Try Again</button>
+      <button id="retry" style="display: none;" class="retry-button" onclick="initialize()">Try Again</button>
     </div>
     
 
