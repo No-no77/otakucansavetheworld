@@ -8,7 +8,7 @@ title: 乃木坂46 Senbatsu Maker
 * {
   font-family: "MS PGothic", "Courier", "Lucida Console", "Menlo Regular", "IBM Plex Mono", "Fira Code", "Fira Mono","Roboto Mono","Droid Sans Mono", Monaco, Consolas, Courier, monospace;
 }
-.distributionForm {
+.distributionForm, .selection {
   border: solid;
   border-width: thin;
   padding: 10px;
@@ -97,16 +97,14 @@ title: 乃木坂46 Senbatsu Maker
     </div>
 
       <!-- PART 2 -->
-      <div class="form-grid">
+      <div class="selection">
         <div id="dropdowns"></div>
         <input type="button" value="Confirm" id="confirmSelectionButton" onclick="confirmSelection()" style="display: none;" class="button">
         <input type="button" value="Reset Selections" id="resetSelectionsButton" onclick="resetSelections()" style="display: none;" class="button">
-        </div>
+        <div id="memberSelection" style="display: none;">
     </div>
-      <!-- PART 3 -->
-    <div id="memberSelection" style="display: none;">
-    <input type="button" value="Try Again" id="tryAgainButton" onclick="resetEverything()" style="display: none;" class="button">
-
+      <input type="button" value="Try Again" id="tryAgainButton" onclick="resetEverything()" style="display: none;" class="button">
+    <br>
     {% include license.html %}
   </div> 
 </div>
