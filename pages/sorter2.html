@@ -1,0 +1,356 @@
+---
+layout: default
+category: archive
+title: 乃木坂46 Sorter
+---
+
+<style>
+
+  .tag-grid {
+    justify-content: center;
+    grid-template-columns: auto auto;
+  }
+
+  .button1 {
+    margin-right: 10px;
+  }
+
+  .button2 {
+    margin-left: 10px;
+  }
+
+  .button1, .tag-grid button {
+    display: block;
+    width: 200px;
+    height: auto;
+    margin: 20px auto;
+    color: blue;
+    font-family: "MS PGothic", "Courier", "Lucida Console", "Menlo Regular", "IBM Plex Mono", "Fira Code", "Fira Mono","Roboto Mono","Droid Sans Mono", Monaco, Consolas, Courier, monospace;;
+    text-align: center;
+    padding: 15px;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    border-color: blue;
+    border-style: solid;
+    border-width: thin;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  .button1:hover, .tag-grid button:hover {
+    border-style: 1px thin purple;
+  }
+  
+  .names {
+    clear: both;
+    margin-top: 3em;
+    margin-bottom: 1rem;
+    color: black;
+    margin-left: 30px;
+  }
+
+  .name-list {
+    width: auto;
+    height: auto;
+    margin: 20px auto;
+    color: blue;
+    font-family: "MS PGothic", "Courier", "Lucida Console", "Menlo Regular", "IBM Plex Mono", "Fira Code", "Fira Mono","Roboto Mono","Droid Sans Mono", Monaco, Consolas, Courier, monospace;;
+    text-align: left;
+    padding: 3px;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    border-color: blue;
+    border-style: solid;
+    border-width: thin;
+    background-color: white;
+    cursor: pointer;
+  }
+
+  .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  border: 1px solid blue;
+  background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.desc {
+  text-align: center;
+  padding: 10px;
+  color: black;
+}
+
+.dropdown-image {
+    border-bottom: solid;
+    border-color: blue;
+    border-width: thin;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-image {
+  margin-bottom: 10px;
+}
+
+.desc {
+  margin-bottom: 10px;
+}
+
+.button1, .button2 {
+  margin-top: 10px;
+}
+
+    
+  </style>
+
+<div class="leftcolumn">
+  {% include profile-card.html %}
+</div>
+
+<div class="midcolumn">
+  <div class="index-card">
+    <br>
+    <h1 class="index-title">乃木坂46 Sorter</h1>    
+    <div class="side-card">
+    </div>
+    
+    <br>
+
+    <div class="dropdown-list">
+      <select name="name-list" id="name-list" class="name-list">
+        <option value="active-members">Active Members</option>
+        <option value="first-gen">1st Generation</option>
+        <option value="second-gen">2nd Generation</option>
+        <option value="third-gen">3rd Generation</option>
+        <option value="fourth-gen">4th Generation</option>
+        <option value="fifth-gen">5th Generation</option>
+        <option value="all-gens">All Generations</option>
+        <!-- Add more options as needed -->
+      </select>
+    </div>
+
+    <br>
+
+    <div class="tag-grid">
+      <button id="start" onclick="startSorting()">Start Sorting</button>
+    
+      <div class="button-container">
+        <img id="image1" src="i_love_milady.jpg" alt="milady loves me" width="300" height="200" class="button-image">
+        <div id="desc1" class="desc">Beautiful Cinque Terre</div>
+        <button id="button1" onclick="choose(1)">Loading...</button>
+      </div>
+    
+      <div class="button-container">
+        <img id="image2" src="i_love_milady.jpg" alt="milady loves me" width="300" height="200" class="button-image">
+        <div id="desc2" class="desc">Beautiful Cinque Terre</div>
+        <button id="button2" onclick="choose(2)">Loading...</button>
+      </div>
+    
+      <button id="retry" style="display: none;" onclick="initialize()">Try Again</button>
+    </div>
+    
+    
+
+    <div id="names"></div>
+
+    {% include license.html %}
+
+    <script>
+    
+    var imagePaths = {
+      "ITO RIRIA":'/images/sorter_pics/ririan.jpg',
+      "IWAMOTO RENKA":'/images/sorter_pics/renka.jpg',
+      "UMEZAWA MINAMI":'/images/sorter_pics/ume.jpg',
+      "KUBO SHIORI":'/images/sorter_pics/kubo.jpg',
+      "SAKAGUCHI TAMAMI":'/images/sorter_pics/tamami.jpg',
+      "SATO KAEDE":'/images/sorter_pics/kaede.jpg',
+      "NAKAMURA RENO":'/images/sorter_pics/reno.jpg',
+      "MUKAI HAZUKI":'/images/sorter_pics/mukai.jpg',
+      "YAMASHITA MIZUKI":'/images/sorter_pics/mizuki.jpg',
+      "YOSHIDA AYANO CHRISTIE":'/images/sorter_pics/yac.jpg',
+      "YODA YUKI":'/images/sorter_pics/yoda.jpg',
+      "ENDO SAKURA":'/images/sorter_pics/enpii.jpg',
+      "KAKI HARUKA":'/images/sorter_pics/falseflag.jpg',
+      "KANAGAWA SAYA":'/images/sorter_pics/saya.jpg',
+      "KUROMI HARUKA":'/images/sorter_pics/kuruminha.jpg',
+      "SATO RIKA":'/images/sorter_pics/rika.jpg',
+      "SHIBATA YUNA":'/images/sorter_pics/shibata.jpg',
+      "SEIMIYA REI":'/images/sorter_pics/rei.jpg',
+      "KAKEHASHI SAYAKA":'/images/sorter_pics/kakehashi.jpg',
+      "TAMURA MAYU":'/images/sorter_pics/mayutan.jpg',
+      "TSUTSUI AYAME":'/images/sorter_pics/ayamen.jpg',
+      "HAYAKAWA SEIRA":'/images/sorter_pics/normalbros.jpg',
+      "HAYASHI RUNA":'/images/sorter_pics/runa.jpg',
+      "MATSUO MIYU":'/images/sorter_pics/miyu.jpg',
+      "YAKUBO MIO":'/images/sorter_pics/yakubo.jpg',
+      "YUMIKI NAO":'/images/sorter_pics/yumiki.jpg',
+      "IOKI MAO":'/images/sorter_pics/mao.jpg',
+      "IKEDA TERESA":'/images/sorter_pics/terepan.jpg',
+      "ICHINOSE MIKU":'/images/sorter_pics/miku.jpg',
+      "INOUE NAGI": '/images/sorter_pics/nyagi.jpg',
+      "OGAWA AYA":'/images/sorter_pics/aya.jpg',
+      "OKUDA IROHA":'/images/sorter_pics/iroha.jpg',
+      "KAWASAKI SAKURA":'/images/sorter_pics/sprite.jpg',
+      "SUGAWARA SATSUKI":'/images/sorter_pics/satsuki.jpg',
+      "TOMISATO NAO":'/images/sorter_pics/nao.jpg',
+      "NAKANISHI ARUNO":'/images/sorter_pics/arno.jpg',
+      "OKAMOTO HINA":'/images/sorter_pics/hina.jpg',
+    };
+
+
+    var lists = {
+        'active-members': [
+          "ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI", "SATO KAEDE",
+          "NAKAMURA RENO","MUKAI HAZUKI", "YAMASHITA MIZUKI", "YOSHIDA AYANO CHRISTIE", "YODA YUKI",
+          "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",  "SATO RIKA", "SHIBATA YUNA",
+          "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",  "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA",
+          "MATSUO MIYU", "YAKUBO MIO", "YUMIKI NAO","IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
+          "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO", "NAKANISHI ARUNO",
+          "OKAMOTO HINA"
+        ],
+        'first-gen': [ "AKIMOTO MANATSU", "SAITO ASUKA", "WADA MAYA", "HIGUCHI HINA", "HOSHINO MINAMI", "IKUTA ERIKA", "TAKAYAMA KAZUMI", "MATSUMURA SAYURI", "SHIRAISHI MAI", "NAKADA KANA", "INOUE SAYURI", "SAKURAI REIKA", "SAITO YURI", "ETO MISA", "NISHINO NANASE", "KAWAGO HINA", "NOJO AMI", "WAKATSUKI YUMI", "SAITO CHIHARU", "IKOMA RINA", "KAWAMURA MAHIRO", "NAKAMOTO HIMEKA", "ITO MARIKA", "HASHIMOTO NANAMI", "FUKAGAWA MAI", "NAGASHIMA SEIRA", "HATANAKA SEIRA", "YAMATO RINA", "ITO NENE", "ICHIKI RENA", "MIYAZAWA SEIRA", "KASHIWA YUKINA", "ANDO MIKUMO", "IWASE YUMIKO"
+        ],
+        'second-gen': ["SUZUKI AYANE", "YAMAZAKI RENA", "KITANO HINAKO", "SHINUCHI MAI", "TERADA RANZE", "WATANABE MIRIA", "ITO JUNNA", "HORI MIONA", "SASAKI KOTOKO", "ITO KARIN", "SAGARA IORI", "YONETOKU KYOKA", "YADA RISAKO", "NISHIKAWA NANAMI",
+        ],
+        'third-gen': [
+          "ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI", "SATO KAEDE",
+          "NAKAMURA RENO","MUKAI HAZUKI", "YAMASHITA MIZUKI", "YOSHIDA AYANO CHRISTIE", "YODA YUKI",
+        ],
+        'fourth-gen': [
+          "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",  "SATO RIKA", "SHIBATA YUNA",
+          "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",  "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA",
+          "MATSUO MIYU", "YAKUBO MIO", "YUMIKI NAO",
+        ],
+        'fifth-gen': [
+          "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
+          "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO", "NAKANISHI ARUNO",
+          "OKAMOTO HINA"
+        ],
+        'all-gens': [
+          "MATSUI RENA", "AKIMOTO MANATSU", "SAITO ASUKA", "WADA MAYA", "HIGUCHI HINA", "HOSHINO MINAMI", "IKUTA ERIKA", "TAKAYAMA KAZUMI", "MATSUMURA SAYURI", "SHIRAISHI MAI", "NAKADA KANA", "INOUE SAYURI", "SAKURAI REIKA", "SAITO YURI", "ETO MISA", "NISHINO NANASE", "KAWAGO HINA", "NOJO AMI", "WAKATSUKI YUMI", "SAITO CHIHARU", "IKOMA RINA", "KAWAMURA MAHIRO", "NAKAMOTO HIMEKA", "ITO MARIKA", "HASHIMOTO NANAMI", "FUKAGAWA MAI", "NAGASHIMA SEIRA", "HATANAKA SEIRA", "YAMATO RINA", "ITO NENE", "ICHIKI RENA", "MIYAZAWA SEIRA", "KASHIWA YUKINA", "ANDO MIKUMO", "IWASE YUMIKO",
+          "SUZUKI AYANE", "YAMAZAKI RENA", "KITANO HINAKO", "SHINUCHI MAI", "TERADA RANZE", "WATANABE MIRIA", "ITO JUNNA", "HORI MIONA", "SASAKI KOTOKO", "ITO KARIN", "SAGARA IORI", "YONETOKU KYOKA", "YADA RISAKO", "NISHIKAWA NANAMI",
+          "ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI", "SATO KAEDE",
+          "NAKAMURA RENO","MUKAI HAZUKI", "YAMASHITA MIZUKI", "YOSHIDA AYANO CHRISTIE", "YODA YUKI",
+          "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",  "SATO RIKA", "SHIBATA YUNA",
+          "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",  "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA",
+          "MATSUO MIYU", "YAKUBO MIO", "YUMIKI NAO",
+          "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
+          "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO", "NAKANISHI ARUNO",
+          "OKAMOTO HINA"
+        ]
+      };
+      
+      var names = [];
+      var comparisons = {};
+  
+      async function compare(name1, name2) {
+  var key = name1 + '-' + name2;
+  if (!comparisons[key]) {
+    return new Promise((resolve) => {
+      document.getElementById('button1').textContent = name1;
+      document.getElementById('button2').textContent = name2;
+
+      // Update the image sources and descriptions according to the idol names
+      document.getElementById('image1').src = imagePaths[name1];
+document.getElementById('desc1').textContent = `${name1}`;
+document.getElementById('image2').src = imagePaths[name2];
+document.getElementById('desc2').textContent = `${name2}`;
+
+
+      document.getElementById('button1').style.display = "block";
+      document.getElementById('button2').style.display = "block";
+      document.getElementById('button1').onclick = function() {
+        comparisons[key] = name1;
+        comparisons[name2 + '-' + name1] = name1;
+        resolve(name1);
+      }
+      document.getElementById('button2').onclick = function() {
+        comparisons[key] = name2;
+        comparisons[name2 + '-' + name1] = name2;
+        resolve(name2);
+      }
+    });
+  } else {
+    return Promise.resolve(comparisons[key]);
+  }
+}
+
+  
+  async function mergeSort(arr) {
+    if (arr.length < 2) return arr;
+    var mid = Math.floor(arr.length / 2);
+    var left = await mergeSort(arr.slice(0, mid));
+    var right = await mergeSort(arr.slice(mid));
+  
+    var merged = [];
+    while (left.length && right.length) {
+      var winner = await compare(left[0], right[0]);
+      if (winner === left[0]) {
+        merged.push(left.shift());
+      } else {
+        merged.push(right.shift());
+      }
+    }
+    
+    return [...merged, ...left, ...right];
+  }
+
+  async function startSorting() {
+  var selectedList = document.getElementById('name-list').value;
+  names = lists[selectedList];
+  if (!names) {
+    alert("Please select a valid name list.");
+    return;
+  }
+  document.getElementById('start').style.display = "none";
+  var sorted = await mergeSort(names);
+      document.getElementById('names').innerHTML = sorted.map((name, index) => {
+        const ranking = index + 1;
+        if (ranking <= 3) {
+          return `<p style="color:blue">${ranking}. ${name}</p>`;
+        }
+        return `<p>${ranking}. ${name}</p>`;
+      }).join('');
+      document.getElementById('retry').style.display = "block";
+      document.getElementById('button1').style.display = "none";
+      document.getElementById('button2').style.display = "none";
+    }
+
+  function initialize() {
+    document.getElementById('start').style.display = "block";
+    document.getElementById('button1').style.display = "none";
+    document.getElementById('button2').style.display = "none";
+    document.getElementById('retry').style.display = "none";
+    document.getElementById('names').innerHTML = "";
+    comparisons = {};
+
+    document.getElementById('button1').style.marginRight = '10px';
+    document.getElementById('button2').style.marginLeft = '10px';
+
+    // names will be shuffled at the start of sorting
+  }
+
+  initialize();
+
+  document.body.addEventListener('keydown', function (event) {
+    if (event.key === 'a' || event.key === 'A') {
+      document.getElementById('button1').onclick();
+    } else if (event.key === 'd' || event.key === 'D') {
+      document.getElementById('button2').onclick();
+    }
+  });
+
+</script>
