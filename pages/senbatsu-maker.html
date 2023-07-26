@@ -258,10 +258,10 @@ function confirmDistribution() {
         document.getElementById('confirmSelectionButton').style.display = 'none'; // Show confirm button for member selection
         document.getElementById('resetSelectionsButton').style.display = 'inline'; // Show reset selections button
         document.getElementById('selectionCount').innerText = '';  // Empty the 'Total Slots Left' text
+        document.getElementById('selection').style.display = 'inline';
     } else {
         document.getElementById('error').innerText = "Total selected exceeds the total slots.";
         document.getElementById('confirmButton').style.display = 'none';
-        document.getElementById('selection').style.display = 'inline'; // Show "Try Again" button after confirming selection
     }
 }
 
@@ -288,6 +288,7 @@ function confirmSelection() {
     document.getElementById('confirmSelectionButton').style.display = 'none'; // Hide confirm button after confirming selection
     document.getElementById('resetSelectionsButton').style.display = 'none'; // Hide reset button after confirming selection
     document.getElementById('tryAgainButton').style.display = 'inline'; // Show "Try Again" button after confirming selection
+    document.getElementById('selection').style.display = 'inline'; // Show "Try Again" button after confirming selection
 }
 
 function resetEverything() {
