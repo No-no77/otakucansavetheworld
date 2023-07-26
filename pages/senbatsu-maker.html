@@ -22,11 +22,6 @@ title: 乃木坂46 Senbatsu Maker
   margin-bottom: 20px;
 }
 
-.select {
-  border-color: blue;
-  height: 1.5rem;
-}
-
 .form-grid {
   white-space-collapse: preserve-breaks;
 }
@@ -53,6 +48,9 @@ title: 乃木坂46 Senbatsu Maker
     margin-top: 15px;
     padding: 5px;
     width: 70px;
+    border-color: blue;
+    border-style: solid;
+    border-width: thin;
   }
 
   .counter {
@@ -61,9 +59,6 @@ title: 乃木坂46 Senbatsu Maker
 
   .input {
     overflow: visible;
-    border-color: blue;
-    border-style: solid;
-    border-width: thin;
   }
 
 </style>
@@ -182,29 +177,32 @@ function generateDropdowns() {
     let availableMembers = [...members];
 
     let createDropdownRow = function(numDropdowns, rowName) {
-        let rowDiv = document.createElement('div');
-        rowDiv.innerHTML = '<h2>' + rowName + '</h2>';
-        for (let i = 0; i < numDropdowns; i++) {
-            let select = document.createElement('select');
-            select.onchange = function() {
-                updateAvailableMembers();
-            };
-            // Start with an empty option
-            let defaultOption = document.createElement('option');
-            defaultOption.value = '';
-            defaultOption.text = '';
-            select.appendChild(defaultOption);
-            // Add the available members
-            availableMembers.forEach(member => {
-                let option = document.createElement('option');
-                option.value = member;
-                option.text = member;
-                select.appendChild(option);
-            });
-            rowDiv.appendChild(select);
-        }
-        dropdownsDiv.appendChild(rowDiv);
-    };
+    let rowDiv = document.createElement('div');
+    rowDiv.innerHTML = '<h2>' + rowName + '</h2>';
+    for (let i = 0; i < numDropdowns; i++) {
+        let select = document.createElement('select');
+        select.style.borderColor = 'blue';
+        select.style.height = '1.5rem';
+        select.onchange = function() {
+            updateAvailableMembers();
+        };
+        // Start with an empty option
+        let defaultOption = document.createElement('option');
+        defaultOption.value = '';
+        defaultOption.text = '';
+        select.appendChild(defaultOption);
+        // Add the available members
+        availableMembers.forEach(member => {
+            let option = document.createElement('option');
+            option.value = member;
+            option.text = member;
+            select.appendChild(option);
+        });
+        rowDiv.appendChild(select);
+    }
+    dropdownsDiv.appendChild(rowDiv);
+};
+
 
     createDropdownRow(center, 'Center');
     createDropdownRow(firstRow, 'First Row');
@@ -282,10 +280,10 @@ function confirmSelection() {
 
     let namelistDiv = document.createElement('div');
     namelistDiv.innerHTML = `
-        <h2>Center: ${center.join(', ')}</h2>
-        <h2>First Row: ${firstRow.join(', ')}</h2>
-        <h2>Second Row: ${secondRow.join(', ')}</h2>
-        <h2>Third Row: ${thirdRow.join(', ')}</h2>
+        <p style="color=blue">Center: ${center.join(', ')}</p>
+        <p style="color=blue">First Row: ${firstRow.join(', ')}</p>
+        <p style="color=blue">Second Row: ${secondRow.join(', ')}</p>
+        <p style="color=blue">Third Row: ${thirdRow.join(', ')}</p>
     `;
 
     dropdownsDiv.innerHTML = '';
