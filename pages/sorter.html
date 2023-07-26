@@ -94,6 +94,32 @@ title: 乃木坂46 Sorter
     border-color: blue;
     border-width: thin;
 }
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-image {
+    display: none;
+    margin-bottom: 10px;
+    margin: 2em;
+    border-style: solid;
+    border-width: thin;
+    border-color: blue;
+    padding: 0.2em;
+}
+
+
+.desc {
+  display: none;
+}
+
+.button1, .button2 {
+  margin-top: 10px;
+}
+
     
   </style>
 
@@ -128,22 +154,21 @@ title: 乃木坂46 Sorter
     <div class="tag-grid">
       <button id="start" onclick="startSorting()">Start Sorting</button>
     
-      <div class="dropdown">
+      <div class="button-container">
+        <img id="image1" src="i_love_milady.jpg" alt="milady loves me" width="300" height="300" class="button-image" style="display: none;">
+        <div id="desc1" class="desc">Beautiful Cinque Terre</div>
         <button id="button1" onclick="choose(1)">Loading...</button>
-        <div class="dropdown-content">
-          <img src="i_love_milady.jpg" alt="milady loves me" width="300" height="300" class="dropdown-image">
-          <div class="desc">Beautiful Cinque Terre</div>
-        </div>
       </div>
     
-      <div class="dropdown">
+      <div class="button-container">
+        <img id="image2" src="i_love_milady.jpg" alt="milady loves me" width="300" height="300" class="button-image" style="display: none;">
+        <div id="desc2" class="desc">Beautiful Cinque Terre</div>
         <button id="button2" onclick="choose(2)">Loading...</button>
-        <div class="dropdown-content">
-          <img src="i_love_milady.jpg" alt="milady loves me" width="300" height="300" class="dropdown-image">
-          <div class="desc">Beautiful Cinque Terre</div>
-        </div>
       </div>
-    
+      <br>
+      <span></span>
+    </div>
+    <div class="retry">
       <button id="retry" style="display: none;" onclick="initialize()">Try Again</button>
     </div>
     
@@ -248,13 +273,16 @@ title: 乃木坂46 Sorter
       document.getElementById('button2').textContent = name2;
 
       // Update the image sources and descriptions according to the idol names
-      document.querySelector('#button1 + .dropdown-content img').src = imagePaths[name1];
-      document.querySelector('#button1 + .dropdown-content .desc').textContent = `${name1}`;
-      document.querySelector('#button2 + .dropdown-content img').src = imagePaths[name2];
-      document.querySelector('#button2 + .dropdown-content .desc').textContent = `${name2}`;
+      document.getElementById('image1').src = imagePaths[name1];
+      document.getElementById('desc1').textContent = `${name1}`;
+      document.getElementById('image2').src = imagePaths[name2];
+      document.getElementById('desc2').textContent = `${name2}`;
+
 
       document.getElementById('button1').style.display = "block";
       document.getElementById('button2').style.display = "block";
+      document.getElementById('button1').style.borderTopWidth = "thick";
+      document.getElementById('button2').style.borderTopWidth = "thick";
       document.getElementById('button1').onclick = function() {
         comparisons[key] = name1;
         comparisons[name2 + '-' + name1] = name1;
@@ -299,32 +327,39 @@ title: 乃木坂46 Sorter
     return;
   }
   document.getElementById('start').style.display = "none";
+  
+  // Make the images visible
+  document.getElementById('image1').style.display = "block";
+  document.getElementById('image2').style.display = "block";
+  
   var sorted = await mergeSort(names);
-      document.getElementById('names').innerHTML = sorted.map((name, index) => {
-        const ranking = index + 1;
-        if (ranking <= 3) {
-          return `<p style="color:blue">${ranking}. ${name}</p>`;
-        }
-        return `<p>${ranking}. ${name}</p>`;
-      }).join('');
-      document.getElementById('retry').style.display = "block";
-      document.getElementById('button1').style.display = "none";
-      document.getElementById('button2').style.display = "none";
+  document.getElementById('names').innerHTML = sorted.map((name, index) => {
+    const ranking = index + 1;
+    if (ranking <= 3) {
+      return `<p style="color:blue">${ranking}. ${name}</p>`;
     }
+    return `<p>${ranking}. ${name}</p>`;
+  }).join('');
+  document.getElementById('retry').style.display = "block";
+  document.getElementById('button1').style.display = "none";
+  document.getElementById('button2').style.display = "none";
+}
 
-  function initialize() {
-    document.getElementById('start').style.display = "block";
-    document.getElementById('button1').style.display = "none";
-    document.getElementById('button2').style.display = "none";
-    document.getElementById('retry').style.display = "none";
-    document.getElementById('names').innerHTML = "";
-    comparisons = {};
+function initialize() {
+  document.getElementById('start').style.display = "block";
+  document.getElementById('button1').style.display = "none";
+  document.getElementById('button2').style.display = "none";
+  document.getElementById('retry').style.display = "none";
+  document.getElementById('names').innerHTML = "";
+  comparisons = {};
 
-    document.getElementById('button1').style.marginRight = '10px';
-    document.getElementById('button2').style.marginLeft = '10px';
+  // Hide the images again
+  document.getElementById('image1').style.display = "none";
+  document.getElementById('image2').style.display = "none";
 
-    // names will be shuffled at the start of sorting
-  }
+  // names will be shuffled at the start of sorting
+}
+
 
   initialize();
 
