@@ -81,8 +81,10 @@ title: 乃木坂46 Senbatsu Maker
       </div> 
       
       <div id="error" style="color: red;"></div>
-      <input type="button" value="Confirm" id="confirmButton" onclick="confirmDistribution()" style="display: none;" class="button">
-      <input type="button" value="Reset" onclick="resetDistribution()" class="button">
+      <div id="button-container" style="display: flex; justify-content: space-between;">
+        <input type="button" value="Confirm" id="confirmButton" onclick="confirmDistribution()" style="display: none;" class="button">
+        <input type="button" value="Reset" onclick="resetDistribution()" class="button">
+      </div>
     </div>
 
     <div id="memberSelection" style="display: none;">
