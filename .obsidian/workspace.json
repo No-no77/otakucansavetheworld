@@ -4,37 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "178668318cbccc96",
+        "id": "8c678ad191fbb82a",
         "type": "tabs",
         "children": [
           {
-            "id": "41b6345d5bea82eb",
+            "id": "fff357a1b50621f2",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_articles/Nogizaka46 Chronology.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          }
-        ]
-      },
-      {
-        "id": "6b5d3b30af0c93fc",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "fe3d043fe814a04b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_articles/null.md",
-                "mode": "source",
-                "source": true
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -111,7 +89,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_articles/null.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -128,7 +105,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_articles/null.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,9 +126,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "_articles/null.md"
-              }
+              "state": {}
             }
           },
           {
@@ -182,16 +156,24 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fe3d043fe814a04b",
+  "active": "fff357a1b50621f2",
   "lastOpenFiles": [
+    "exocore/_templates/Untitled.md",
+    "exocore/_templates/_wiki.md",
     "_articles/Nogizaka46 Chronology.md",
+    "exocore/_templates/_journal.md",
+    "exocore/_templates/_article.md",
+    "exocore/_templates/_daily.md",
+    "exocore/_templates/_scrapbook.md",
     "_articles/null.md",
+    "_wiki/test2.md",
+    "_wiki/test.md",
+    "assets/templater-scripts/gen_eternal_september.js",
     "_articles/Laws of True D&D.md",
     "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
     "_journal/2023-08 Decoding Idol Otaku Loyalty.md",
     "_journal/Milady.md",
     "_journal/Milady Village Alts.md",
-    "exocore/_templates/_wiki.md",
     "pages/sorter.html",
     "pages/tags copy.html",
     "images/teresa_matilda.png",
@@ -221,15 +203,7 @@
     "Untitled",
     "pages/noginback.html",
     "_journal/Similar Music Discovered by Accident.md",
-    "_wiki/HTTP.md",
-    "_wiki/Data Models.md",
     "library/delta green rpg - targets of opportunity.pdf",
-    "library/delta green rpg - night at the opera.pdf",
-    "_wiki/Hypertext.md",
-    "_daily/2023-07-18.md",
-    "_wiki/3c108f.md",
-    "Untitled.canvas",
-    "_daily/2022-10-29.md",
-    "_daily/2022-10-27.md"
+    "Untitled.canvas"
   ]
 }
