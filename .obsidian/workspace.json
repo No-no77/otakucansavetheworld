@@ -13,26 +13,31 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
-                "mode": "source",
-                "source": true
-              }
-            }
-          },
-          {
-            "id": "ed95ea5e1956e0b9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "_journal/Untitled.md",
+                "file": "_articles/Nogizaka46 Chronology.md",
                 "mode": "source",
                 "source": true
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
+      },
+      {
+        "id": "6b5d3b30af0c93fc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fe3d043fe814a04b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_articles/Untitled.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          }
+        ]
       }
     ],
     "direction": "vertical"
@@ -106,7 +111,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_journal/Untitled.md",
+                "file": "_articles/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -123,7 +128,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_journal/Untitled.md",
+                "file": "_articles/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,7 +151,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_journal/Untitled.md"
+                "file": "_articles/Untitled.md"
               }
             }
           },
@@ -177,10 +182,13 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "ed95ea5e1956e0b9",
+  "active": "fe3d043fe814a04b",
   "lastOpenFiles": [
+    "_articles/Nogizaka46 Chronology.md",
+    "_articles/Untitled.md",
+    "_articles/Laws of True D&D.md",
     "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
-    "_journal/Untitled.md",
+    "_journal/2023-08 Decoding Idol Otaku Loyalty.md",
     "_journal/Milady.md",
     "_journal/Milady Village Alts.md",
     "exocore/_templates/_wiki.md",
@@ -193,7 +201,6 @@
     "_wiki/milady.md",
     "_journal/Similar Music Discovered by Accident copy.md",
     "images/tanasinn.jpg",
-    "_articles/Laws of True D&D.md",
     "assets/favicon/favicon.ico",
     "assets/favicon/favicon-32x32 copy.png",
     "assets/favicon/favicon-32x32.png",
@@ -204,7 +211,6 @@
     "assets/favicon/New Project.png",
     "library/styled-miya-archive.html",
     "library/styled-miya-archive.htm",
-    "_articles/Nogizaka46 Chronology.md",
     "_articles/Hardsubs are Unethical.md",
     "_wiki/Thomas Ligotti.md",
     "library/Notes on the Writing of Horror [Ligotti].pdf",
@@ -224,7 +230,6 @@
     "_wiki/3c108f.md",
     "Untitled.canvas",
     "_daily/2022-10-29.md",
-    "_daily/2022-10-27.md",
-    "_articles/table test.md"
+    "_daily/2022-10-27.md"
   ]
 }
