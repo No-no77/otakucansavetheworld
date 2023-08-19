@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "exocore/_templates/_wiki.md",
+                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
                 "mode": "source",
                 "source": true
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "exocore/_templates/_wiki.md",
+                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "exocore/_templates/_wiki.md",
+                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "exocore/_templates/_wiki.md"
+                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md"
               }
             }
           },
@@ -166,12 +166,15 @@
   },
   "active": "41b6345d5bea82eb",
   "lastOpenFiles": [
+    "_journal/Milady.md",
+    "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
+    "_journal/Milady Village Alts.md",
+    "exocore/_templates/_wiki.md",
     "pages/sorter.html",
     "pages/tags copy.html",
     "images/teresa_matilda.png",
     "images/teresa_rei.png",
     "index.md",
-    "_journal/milady.md",
     "_wiki/MERN Stack.md",
     "_wiki/milady.md",
     "_journal/Similar Music Discovered by Accident copy.md",
@@ -196,14 +199,12 @@
     "Untitled.md",
     "_daily/2023-07-20.md",
     "Untitled",
-    "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
     "pages/noginback.html",
     "_journal/Similar Music Discovered by Accident.md",
     "_wiki/HTTP.md",
     "_wiki/Data Models.md",
     "library/delta green rpg - targets of opportunity.pdf",
     "library/delta green rpg - night at the opera.pdf",
-    "library/delta green rpg - need to know.pdf",
     "_wiki/Hypertext.md",
     "_daily/2023-07-18.md",
     "_wiki/3c108f.md",
@@ -211,7 +212,6 @@
     "_daily/2022-10-29.md",
     "_daily/2022-10-27.md",
     "_articles/table test.md",
-    "_daily/2022-10-25.md",
-    "_articles/Exocore Installation Instructions.md"
+    "_daily/2022-10-25.md"
   ]
 }

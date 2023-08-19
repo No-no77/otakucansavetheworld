@@ -141,8 +141,6 @@ digraph G {
     SNEED -> "!PENGUIN" [color=green]
     RAYOS -> KRUTON [color=orange]
     RAYOS -> SNEED [color=orange]
-    BOMBAGUMBA -> HAF [color=orange]
-    BOMBAGUMBA -> HALFPRINT [color=red]
     FRENZY -> APOCALYPSE [color=orange]
     FRENZY -> PEP [color=red]
     APOCALYPSE -> PEP [color=orange]
