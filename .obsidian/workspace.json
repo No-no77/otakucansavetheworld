@@ -18,8 +18,21 @@
                 "source": true
               }
             }
+          },
+          {
+            "id": "ed95ea5e1956e0b9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "_journal/Untitled.md",
+                "mode": "source",
+                "source": true
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -93,7 +106,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
+                "file": "_journal/Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +123,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
+                "file": "_journal/Untitled.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +146,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md"
+                "file": "_journal/Untitled.md"
               }
             }
           },
@@ -164,10 +177,11 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "41b6345d5bea82eb",
+  "active": "ed95ea5e1956e0b9",
   "lastOpenFiles": [
-    "_journal/Milady.md",
     "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
+    "_journal/Untitled.md",
+    "_journal/Milady.md",
     "_journal/Milady Village Alts.md",
     "exocore/_templates/_wiki.md",
     "pages/sorter.html",
@@ -211,7 +225,6 @@
     "Untitled.canvas",
     "_daily/2022-10-29.md",
     "_daily/2022-10-27.md",
-    "_articles/table test.md",
-    "_daily/2022-10-25.md"
+    "_articles/table test.md"
   ]
 }
