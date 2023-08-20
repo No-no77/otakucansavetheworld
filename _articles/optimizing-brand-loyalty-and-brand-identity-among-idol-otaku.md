@@ -72,33 +72,48 @@ A few insights that we can infer from these results are the following:
 #### AKB48
 
 2006-2009: AKB48 started with a steady growth, with a massive spike in 2009, showing a growth rate of almost 397%.
+
 2010-2011: The group's popularity exploded in 2010 with a growth rate of 468.75%. This momentum continued into 2011 with a growth rate of 107.26%.
+
 2012-2013: AKB48's growth began to stabilize in 2012, with a slight decline, but picked up again in 2013 with a 0.53% growth.
+
 2014-2016: The group faced a decline in 2014, but managed to recover slightly in the subsequent years.
+
 2017-2021: AKB48 saw a significant drop in popularity in 2019 and 2020, with a decline of 70.70% and 12.50% respectively. 2021 saw a further decline of 67.89%.
+
 2022: There was a resurgence in 2022 with a growth rate of 63.06%.
 
 #### Nogizaka46
 
 2013-2018: Nogizaka46 experienced consistent growth, with the highest being 31.38% in 2016.
+
 2019-2020: The group faced a decline in 2019 and 2020, with rates of -39.75% and -53.44% respectively.
+
 2021: Nogizaka46 saw a significant resurgence in 2021 with a growth rate of 81.30%.
+
 2022: The group experienced a decline again in 2022 with a rate of -38.00%.
 
 #### Keyakizaka46/Sakurazaka46
 
 2017-2018: The group experienced consistent growth, with a significant spike in 2018 of 80.46%.
+
 2019: There was no growth in 2019, indicating a stagnation in popularity.
+
 2020: Keyakizaka46 faced a massive decline in 2020 with a rate of -83.42%.
+
 2021: The group saw a resurgence in 2021 with a growth rate of 73.20%.
+
 2022: The group experienced a decline again in 2022 with a rate of -32.99%.
+
 
 ### Comparative Analysis
 
 #### Peak Growth years
 
 AKB48: 2010 with a growth rate of 468.748%.
+
 Nogizaka46: Ignoring their f2016 with a growth rate of 31.381%.
+
 Keyakizaka46: 2018 with a growth rate of 80.461%.
 
 AKB48's peak growth year was much earlier than the other two groups, and it also had a much higher growth rate. This indicates the period of Golden Age for idol otaku culture itself, and also portrays how **massive** AKB48 was at the time, making even more impressive how deep was the fall.
@@ -106,7 +121,9 @@ AKB48's peak growth year was much earlier than the other two groups, and it also
 #### Years of decline
 
 AKB48: 2012, 2014, 2017, 2019, 2020, and 2021.
+
 Nogizaka46: 2019, 2020, and 2022.
+
 Keyakizaka46: 2019, 2020, and 2022.
 
 It's interesting to notice that all three groups faced declines in 2019 and 2020. This indicates the world-wide challenge caused by the pandemic and the lockdowns. AKB48 faced more years of decline compared to the other two groups, as it had been declining in sales performance since before the pandemic.
@@ -114,15 +131,20 @@ It's interesting to notice that all three groups faced declines in 2019 and 2020
 #### Recovery Years
 
 AKB48: 2022 with a growth rate of 63.061%.
+
 Nogizaka46: 2021 with a growth rate of 81.303%.
+
 Keyakizaka46: 2021 with a growth rate of 73.204%.
+
 
 After facing the challenges of the Covid-19 pandemic, all three groups showed signs of recovery. Nogizaka46 had the highest recovery growth rate in 2021, while AKB48's recovery in 2022 was also noticeable.
 
 #### Consistency in Growth:
 
 AKB48: Had significant fluctuations, with explosive growth in the early years, followed by periods of decline and recovery.
+
 Nogizaka46: Displayed a more consistent growth pattern since its debut, with fewer years of decline.
+
 Keyakizaka46: After its debut, the group had a rapid rise but faced challenges in recent years such as the Tecchi scandal and the eventual rebranding to Sakurazaka46.
 
 Nogizaka46 appears to have the most consistent growth pattern, while AKB48 has faced more fluctuations.
@@ -130,13 +152,17 @@ Nogizaka46 appears to have the most consistent growth pattern, while AKB48 has f
 #### Key Takeaways
 
 AKB48 had a meteoric rise in the early years, but faced significant challenges in maintaining their popularity in the later years.
+
 Nogizaka46 had a consistent growth after their debut but faced challenges in 2019 and 2020. However, they managed to bounce back in 2021.
+
 Keyakizaka46 had a strong start after their debut but faced a significant decline in 2020. They managed to recover in 2021 with their return as Sakurazaka46, but faced another decline in 2022.
 
 #### Overall Growth from 2006 to 2022
 
 AKB48: Started at 92.427 in 2006 and reached 733,135 in 2022. A growth of approximately 745% in 16 years.
+
 Nogizaka46: Started at 998.357 in 2012 and reached 1,258,450 in 2022. A growth of approximately 126% in 10 years.
+
 Keyakizaka46: Started at 1.528.571 in 2016 and reached 575,120 in 2022. A growth of approximately -38% in 6 years.
 
 AKB48, being the oldest group, has seen the most significant overall growth. However, considering the time frame, Nogizaka46 has achieved impressive growth in a shorter period.
