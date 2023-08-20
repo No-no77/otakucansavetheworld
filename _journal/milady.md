@@ -2,13 +2,13 @@
 published: true
 subtitle:
 date: 2023-07-21
-tags:
+tags: copipe
 foam_template:
   filepath: '_journal/milady.md'
   name: Journal Entry
 ---
 
-#  Milady
+#  Copipe
 
 
 milady operates the whole world

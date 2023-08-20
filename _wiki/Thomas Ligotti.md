@@ -2,7 +2,7 @@
 published: true
 subtitle:
 date: 2023-07-20
-tags: Horror Writing
+tags: horror writing
 ---
 
 # Thomas Ligotti

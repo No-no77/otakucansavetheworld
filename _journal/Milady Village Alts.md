@@ -10,6 +10,8 @@ foam_template:
 
 # Milady Village Alts
 
+Just me trying the graphviz module
+
 {% graphviz %}
 
 digraph G {

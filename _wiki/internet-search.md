@@ -1,7 +1,7 @@
 ---
 published: true
 date: 2023-07-23
-tags:
+tags: internet
 foam_template:
   filepath: '_wiki/internet-search.md'
   name: Wiki Note
