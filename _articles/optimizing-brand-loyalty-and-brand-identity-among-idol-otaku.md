@@ -35,7 +35,7 @@ Nogizaka46 and Keyakizaka46 had good synergy and even if there was an overlap, K
 
 ## Data
 
-Here I will be sharing a few of my exploratory analysis as I move on with the project. Ideally this will be reorganized in the future as a proper, clean and concise post, but for now read at your own risks and take the next insights with a bit of skepticism.
+Here I will be sharing and consolidating my exploratory analysis as I move on with the project. Ideally this will be reorganized in the future as a proper, clean and concise post, but for now read at your own risks and take the next insights with a bit of skepticism.
 
 In most of those analysis we'll be comparing AKB48, Nogizaka46 and Keyakizaka46/Sakurazaka46 (We'll treat this one as a single thing) to identify the impact of adjascent groups and also noticing how much they differ based on a similar or different brand identity.
 
