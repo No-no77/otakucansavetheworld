@@ -112,7 +112,7 @@ A few insights that we can infer from these results are the following:
 
 AKB48: 2010 with a growth rate of 468.748%.
 
-Nogizaka46: Ignoring their f2016 with a growth rate of 31.381%.
+Nogizaka46: 2016 with a growth rate of 31.381%.
 
 Keyakizaka46: 2018 with a growth rate of 80.461%.
 
