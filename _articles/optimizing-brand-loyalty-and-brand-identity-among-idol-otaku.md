@@ -25,9 +25,9 @@ Drawing parallels to 2011, during AKB48's zenith, Akimoto Yasushi announced Nogi
 
 From a strategic standpoint, if the intention was to elevate a group to the top spot, even at the cost of dethroning your own group, then promoting Nogizaka alongside AKB makes sense. But if the goal was to retain AKB's supremacy, these decisions appear counterintuitive, if not illogical.
 
-## Starting hypotheses
+## Starting Hypotheses
 
-### The attention economy and Brand Identity
+### The Attention Economy and Brand Identity
 
 Attention is a limited resource, so even the remote recognition of relevancy or quality in another group should be understood as diluting part of the attention you have hold of as a courtesy. This issue is even more attenuated when the group you are supporting has a large amount of members, therefore being able to reach a broader amount of your own community, to Nogizaka only 46 members (two less than AKB48's maximum) was enough to migrate a robust amount of attention to itself. Though, this is not always a problem. See sister groups. In special we can talk about Nogizaka's first Sister Group, Keyakizaka46. Keyaki was designed to occupy the attention that Nogizaka46 couldn't reach. While Nogizaka was refined and ellegant, Keyakizaka was a derivative group composed of rebelious teenagers, a fairly distinct concept from Nogizaka, therefore they were able to introduce more people to the collection they belonged to, also known as Sakamichi Series. 
 
