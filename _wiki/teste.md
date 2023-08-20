@@ -1,10 +1,10 @@
 ---
 published: true
-date: 1993-08-19
+date: 0d17e0
 tags:
 foam_template:
-  filepath: '_wiki/test2.md'
+  filepath: '_wiki/teste.md'
   name: Wiki Note
 ---
-# a82a39
+# 53806e
 

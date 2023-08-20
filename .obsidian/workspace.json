@@ -11,8 +11,12 @@
             "id": "fff357a1b50621f2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "_journal/Similar Music Discovered by Accident.md",
+                "mode": "source",
+                "source": true
+              }
             }
           }
         ]
@@ -73,7 +77,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 296
+    "width": 200
   },
   "right": {
     "id": "fa5c2b51a2ba60c1",
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_journal/Similar Music Discovered by Accident.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "_journal/Similar Music Discovered by Accident.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "_journal/Similar Music Discovered by Accident.md"
+              }
             }
           },
           {
@@ -156,11 +164,26 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "fff357a1b50621f2",
+  "active": "e509f202f4abd033",
   "lastOpenFiles": [
+    "_wiki/teste.md",
+    "_wiki/test_plmdds.md",
+    "_wiki/testepfv.md",
+    "_wiki/title-of-my-new-note.md",
+    "_articles/Laws of True D&D.md",
+    "_articles/Nogizaka46 Chronology.md",
+    "_wiki/agora-vai.md",
+    "assets/templater-scripts/september.js",
+    "_wiki/megateste.md",
+    "assets/templater-scripts/randomhex.js",
+    "assets/templater-scripts/gen_eternal_september.js",
+    "_wiki/superteste.md",
+    "_articles/title-of-my-new-note.md",
+    "_site/assets/templater-scripts/gen_eternal_september.js",
+    "_wiki/test_final.md",
+    "_wiki/test3.md",
     "exocore/_templates/Untitled.md",
     "exocore/_templates/_wiki.md",
-    "_articles/Nogizaka46 Chronology.md",
     "exocore/_templates/_journal.md",
     "exocore/_templates/_article.md",
     "exocore/_templates/_daily.md",
@@ -168,8 +191,6 @@
     "_articles/null.md",
     "_wiki/test2.md",
     "_wiki/test.md",
-    "assets/templater-scripts/gen_eternal_september.js",
-    "_articles/Laws of True D&D.md",
     "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
     "_journal/2023-08 Decoding Idol Otaku Loyalty.md",
     "_journal/Milady.md",
@@ -179,9 +200,6 @@
     "images/teresa_matilda.png",
     "images/teresa_rei.png",
     "index.md",
-    "_wiki/MERN Stack.md",
-    "_wiki/milady.md",
-    "_journal/Similar Music Discovered by Accident copy.md",
     "images/tanasinn.jpg",
     "assets/favicon/favicon.ico",
     "assets/favicon/favicon-32x32 copy.png",
@@ -193,17 +211,7 @@
     "assets/favicon/New Project.png",
     "library/styled-miya-archive.html",
     "library/styled-miya-archive.htm",
-    "_articles/Hardsubs are Unethical.md",
-    "_wiki/Thomas Ligotti.md",
     "library/Notes on the Writing of Horror [Ligotti].pdf",
-    "ring.md",
-    "readme.md",
-    "Untitled.md",
-    "_daily/2023-07-20.md",
-    "Untitled",
-    "pages/noginback.html",
-    "_journal/Similar Music Discovered by Accident.md",
-    "library/delta green rpg - targets of opportunity.pdf",
     "Untitled.canvas"
   ]
 }

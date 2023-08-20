@@ -1,10 +1,10 @@
 ---
 published: true
-date: 2023-08-19
+date: cde3ef
 tags:
 foam_template:
-  filepath: '_wiki/test.md'
+  filepath: '_wiki/test_plmdds.md'
   name: Wiki Note
 ---
-# 8b1b6f
+# 10f732
 
