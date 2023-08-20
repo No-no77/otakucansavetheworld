@@ -1,6 +1,6 @@
 ---
 published: true
-subtitle: An In-Depth Timeline of Nogizaka46. 
+subtitle: Learn how to learn from the mistakes of the industry. 
 topic: Otaku
 certainty: likely
 importance: autism
