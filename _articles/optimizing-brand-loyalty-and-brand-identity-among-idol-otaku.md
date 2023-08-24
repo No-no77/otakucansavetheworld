@@ -14,11 +14,10 @@ foam_template:
 
 # Optimizing Brand Loyalty and Brand Identity among Idol Otaku
 
-**Goal:** Find correlations between brand loyalty in the context of a consumer-driven subculture such as j-idol culture. Leveraging an analytical approach can help us understand the dynamics that cause certain groups to rise or fall in popularity. By doing so, we can propose an optimal strategy to maintain relevance within the attention market and navigate trends adeptly, while also identifying aggressive techniques for mantaining control of your current status. In this study, the performance of two historically relevant groups will be compared: Nogizaka46 and AKB48.
+**Goal:** Find correlations between brand loyalty in the context of a consumer-driven subculture such as j-idol culture. Leveraging an analytical approach can help us understand the dynamics that cause certain groups to rise or fall in popularity. By doing so, we can propose an optimal strategy to maintain relevance within the attention market and navigate trends adeptly, while also identifying aggressive techniques for mantaining control of your current status. In this study, the performance of three historically relevant groups will be compared: Nogizaka46, Keyakizaka46 (Now Sakurazaka46) and AKB48.
 
 ## Introduction
 
-Introduction
 In mid-2023, the J-pop group BokuAo was unveiled by Aki-P[^1] as the official rival of Nogizaka46. Initially, I believed that BokuAo wouldn't surpass Nogizaka46. However, a realization dawned upon me: when you are at the top, you can only go down. This prompted me to closely observe every decision made for the group since the end of what we can term the Golden Age of Nogizaka.
 
 Drawing parallels to 2011, during AKB48's zenith, Akimoto Yasushi announced Nogizaka46 as a rival group. Their primary objective was to outperform AKB (and they succeeded). Yet, they weren't adversaries. Nogizaka often collaborated with AKB, be it through TV appearances or musical ventures. This symbiotic relationship saw Nogizaka's dependence on AKB, even as AKB grappled with its own decline.
