@@ -28,8 +28,8 @@ Discursive Reason: Based on scientific methods and proofs. Deduction, Induction 
 
 ## To-Read
 
-A Concise Introduction to Logic - _Hurley_
-Study Guide for Hurley's A Concise Introduction to Logic - _Hurley_
-An Introduction to Formal Logic - _Smith_
-Meaning and Argument - _Lepore_
-Symbolic Logic and Mechanical Theorem Proving - _Chang_
+- A Concise Introduction to Logic - _Hurley_
+- Study Guide for Hurley's A Concise Introduction to Logic - _Hurley_
+- An Introduction to Formal Logic - _Smith_
+- Meaning and Argument - _Lepore_
+- Symbolic Logic and Mechanical Theorem Proving - _Chang_
