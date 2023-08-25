@@ -348,23 +348,87 @@ FROM table1
 WHERE column1 IN (SELECT column1 FROM table2);
 ```
 
-### NESTED SUBQUERY
+### CORRELATED SUBQUERY
 
-A subquery that can be evaluated independently and passed to the main query for further operations.
-
-```sql 
-SELECT column1
-FROM table1
-WHERE column1 IN (SELECT column1 FROM table2);
-```
-
-### NESTED SUBQUERY
-
-A subquery that can be evaluated independently and passed to the main query for further operations.
+A subquery that refers to a column from a table in the main query. It's executed once for every row processed by the main query.
 
 ```sql 
 SELECT column1
-FROM table1
-WHERE column1 IN (SELECT column1 FROM table2);
+FROM table1 t1
+WHERE EXISTS (SELECT 1 FROM table2 t2 WHERE t2.column = t1.column);
 ```
+
 ## SET OPERATORS
+
+Used to combine the result set of two or more SELECT statements.
+
+### UNION
+
+Combines the result set of two or more SELECT statements, removing duplicates.
+
+```sql
+SELECT column1 FROM table1
+UNION
+SELECT column1 FROM table2;
+UNION ALL
+```
+
+Similar to UNION, but includes duplicates.
+
+```sql
+SELECT column1 FROM table1
+UNION ALL
+SELECT column1 FROM table2;
+```
+
+## INTERSECT
+Returns rows that are common to both SELECT statements.
+
+```sql
+SELECT column1 FROM table1
+INTERSECT
+SELECT column1 FROM table2;
+EXCEPT
+Returns rows from the first SELECT statement that aren't in the second SELECT statement.
+```
+
+```sql
+SELECT column1 FROM table1
+EXCEPT
+Used to combine the result set of two or more SELECT statements.
+```
+
+### UNION
+Combines the result set of two or more SELECT statements, removing duplicates.
+
+```sql
+SELECT column1 FROM table1
+UNION
+SELECT column1 FROM table2;
+```
+### UNION ALL
+Similar to UNION, but includes duplicates.
+
+```sql
+SELECT column1 FROM table1
+UNION ALL
+SELECT column1 FROM table2;
+```
+
+### INTERSECT
+Returns rows that are common to both SELECT statements.
+
+```sql
+SELECT column1 FROM table1
+INTERSECT
+SELECT column1 FROM table2;
+```
+
+### EXCEPT
+Returns rows from the first SELECT statement that aren't in the second SELECT statement.
+
+```sql
+SELECT column1 FROM table1
+EXCEPT
+SELECT column1 FROM table2;
+```
