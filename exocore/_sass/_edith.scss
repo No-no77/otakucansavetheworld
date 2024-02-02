@@ -4,42 +4,42 @@
 
 /* --- Body Colors --- */
 
-$background: #000000;
-$color-inner-divs: black;
-$color-items: black;
+$background: #eee8d5;;
+$color-inner-divs: #eee8d5;
+$color-items: #eee8d5;
 
 
 /* --- Text Colors --- */
-$color-text: white;
-$color-subtext: white;
+$color-text: #586e75;;
+$color-subtext: #586e75;;
 $color-code: pink;
-$internal-links: orange;
-$external-links: chocolate;
+$internal-links: #6c71c4;
+$external-links: #6c71c4;
 $invalid-links: $internal-links;
-$color-primary: orange;
-$color-secondary: blue;
+$color-primary: #586e75;
+$color-secondary: #6c71c4;
 $color-box-shadow: none;
 
 
 /* --- Borders --- */
-$article-border: 1px solid white;
-$sidebar-border: 1px solid white;
+$article-border: 1px solid #586e75;
+$sidebar-border: 1px solid #586e75;
 $prev-next-border: none;
 $color-item-border: none;
 $border-radius: 0px;
 
 /* --- Embeds, Sidenote and Footnote Colors --- */
-$embed-border: thin solid orange;
-$color-embed-background: black;
-$color-embed-title: orange;
-$color-embed-text: white;
+$embed-border: thin solid #586e75;
+$color-embed-background: #eee8d5;
+$color-embed-title: #586e75;
+$color-embed-text: #586e75;
 
-$footnote-border: thin solid orange;
-$color-footnote-background: black;
-$color-footnote-text: white;
+$footnote-border: thin solid #586e75;
+$color-footnote-background: #eee8d5;
+$color-footnote-text: #586e75;
 
 $sidenote-border: thin solid $color-primary;
-$color-sidenote-background: black;
+$color-sidenote-background: #eee8d5;
 $color-sidenote-text: $color-text;
 
 
@@ -109,7 +109,7 @@ hr {
 
 code {
   color: white;
-  background-color:blue;
+  background-color:#586e75;
   font-family: $font-family-monospace;
   font-size: 1em;
 }
@@ -158,7 +158,7 @@ a {
     font-weight: normal !important;
 }
 nav a {
-  color: blue !important;
+  color: #6c71c4 !important;
 }
 .anchor a {
   color: $color-text;
@@ -179,7 +179,7 @@ nav a {
 ================================================== */
 
 .anchor {visibility: hidden; color:gray; opacity:0.7; text-decoration:none; font-size: 0.8em; font-familiy:monospace}
-.anchor:hover {text-decoration:none; color:white !important; cursor:pointer;}
+.anchor:hover {text-decoration:none; color:#586e75 !important; cursor:pointer;}
 h1:hover > a.anchor,
 h2:hover > a.anchor,
 h3:hover > a.anchor,
@@ -214,7 +214,7 @@ h6:hover > a.anchor {
 }
 
 #graph-wrapper svg {
-    border: thin solid white;
+    border: thin solid #586e75;
 }
 
 /* TABLE OF CONTENTS
@@ -342,7 +342,7 @@ article {
     margin: auto;
     padding-bottom: 0.5em;
     text-align: center;
-    color: white;
+    color: #586e75;
 }
 
 .related ul {
@@ -698,8 +698,8 @@ font-weight: normal;
     // margin: 0.5em 0.5em auto auto;
     // position: absolute;
     float: right;
-    background-color: orange;
-    color: white;
+    background-color: #586e75;
+    color: #586e75;
     font-weight: normal;
   }
   
@@ -723,7 +723,7 @@ font-weight: normal;
 }
 
 .library-image {
-    background: white;
+    background: #eee8d5;
 }
 
 .library-image-container {
@@ -776,7 +776,7 @@ font-weight: normal;
 ================================================== */
 
 .prev-next {
-    border:1px solid white;
+    border:1px solid #586e75;
     margin-bottom: 0.5em;
     background-color: $background;
 //    display: grid;
@@ -819,9 +819,9 @@ font-weight: normal;
     width: 2em;
     height: 2em;
     float: right;
-    border: 2px solid white;
+    border: 2px solid #586e75;
     box-sizing: border-box;
-    box-shadow: 0px 0px 0px 1px black;
+    box-shadow: 0px 0px 0px 1px #eee8d5;
     margin-top: -1em;
 }
 
@@ -927,7 +927,7 @@ table, tr, td {
 
 // Border around the next/previous buttons above and below your posts
 .prev-next, {
-    border: 1px solid white; 
+    border: 1px solid #586e75; 
     box-sizing: border-box;
 
 }
@@ -994,14 +994,14 @@ table, tr, td {
 }
 
 .border {
-    border: thin solid black;
+    border: thin solid #eee8d5;
 }
 
 .shadow {
-    box-shadow: 0px 0px 15px black;
+    box-shadow: 0px 0px 15px #eee8d5;
 }
 
 .glow {
-    box-shadow: 0px 0px 15px white;
+    box-shadow: 0px 0px 15px #586e75;
 }
 
