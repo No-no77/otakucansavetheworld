@@ -12,7 +12,7 @@ title: 乃木坂46 Senbatsu Maker
   border: solid;
   border-width: thin;
   padding: 10px;
-  border-color: blue;
+  border-color: orange;
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 20px;
@@ -31,13 +31,13 @@ title: 乃木坂46 Senbatsu Maker
     width: 200px;
     height: auto;
     margin: 20px auto;
-    color: blue;
+    color: orange;
     font-family: "MS PGothic", "Courier", "Lucida Console", "Menlo Regular", "IBM Plex Mono", "Fira Code", "Fira Mono","Roboto Mono","Droid Sans Mono", Monaco, Consolas, Courier, monospace;;
     text-align: center;
     padding: 15px;
     transition-duration: 0.4s;
     overflow: hidden;
-    border-color: blue;
+    border-color: orange;
     border-style: solid;
     border-width: thin;
     background-color: white;
@@ -48,7 +48,7 @@ title: 乃木坂46 Senbatsu Maker
     margin-top: 15px;
     padding: 5px;
     width: 70px;
-    border-color: blue;
+    border-color: orange;
     border-style: solid;
     border-width: thin;
   }
@@ -181,7 +181,7 @@ function generateDropdowns() {
     rowDiv.innerHTML = '<h2>' + rowName + '</h2>';
     for (let i = 0; i < numDropdowns; i++) {
         let select = document.createElement('select');
-        select.style.borderColor = 'blue';
+        select.style.borderColor = 'orange';
         select.style.height = '1.5rem';
         select.style.margin = '10px';
         select.onchange = function() {
@@ -281,7 +281,7 @@ function confirmSelection() {
 
     let namelistDiv = document.createElement('div');
     namelistDiv.innerHTML = `
-        <p style="color: blue">CENTER: ${center.join(', ')}</p>
+        <p style="color: orange">CENTER: ${center.join(', ')}</p>
         <p>FIRST ROW: ${firstRow.join(', ')}</p>
         <p>SECOND ROW: ${secondRow.join(', ')}</p>
         <p>THIRD ROW: ${thirdRow.join(', ')}</p>

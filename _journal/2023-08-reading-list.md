@@ -15,20 +15,35 @@ foam_template:
 ### Gwern
 
 https://gwern.net/idea
+
 https://gwern.net/note/statistic
+
 https://gwern.net/correlation
+
 https://gwern.net/causality
+
 https://gwern.net/everything
+
 https://gwern.net/touhou
+
 https://gwern.net/doc/statistics/survival-analysis/index
+
 https://gwern.net/doc/statistics/prediction/index
+
 https://gwern.net/hpmor
+
 https://gwern.net/gpt-3
+
 https://gwern.net/subculture
+
 https://gwern.net/note/parasocial
+
 https://gwern.net/komm-susser-tod
+
 https://gwern.net/culture-is-not-about-esthetics
+
 https://gwern.net/review/umineko
+
 https://gwern.net/note/fashion
 
 ## Articles
@@ -47,7 +62,3 @@ https://gwern.net/doc/psychology/novelty/2022-silver.pdf
 https://gwern.net/doc/anime/2006-eng.pdf
 
 ## Documentation
-
-### Visual Studio Code User Guide
-
-https://code.visualstudio.com/docs/editor/codebasics
