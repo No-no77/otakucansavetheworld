@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_journal/Similar Music Discovered by Accident.md",
+                "file": "_wiki/Kurotokage - Sourcebook.md",
                 "mode": "source",
                 "source": true
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_journal/Similar Music Discovered by Accident.md",
+                "file": "_wiki/Kurotokage - Sourcebook.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_journal/Similar Music Discovered by Accident.md",
+                "file": "_wiki/Kurotokage - Sourcebook.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_journal/Similar Music Discovered by Accident.md"
+                "file": "_wiki/Kurotokage - Sourcebook.md"
               }
             }
           },
@@ -164,8 +164,24 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "e509f202f4abd033",
+  "active": "fff357a1b50621f2",
   "lastOpenFiles": [
+    "_wiki/EL2303AD - The Philippines.md",
+    "_wiki/Kurotokage - Sourcebook.md",
+    "_wiki/EL2303AD - Micronesia.md",
+    "_wiki/EL2303AD - Life in Japan.md",
+    "_wiki/EL2303AD - Japan Off-Earth.md",
+    "_wiki/EL2303AD - Japan's Military.md",
+    "_wiki/EL2303AD - Doris.md",
+    "_wiki/ChatGPT Prompts.md",
+    "_wiki/EL2303AD - Empire of Japan.md",
+    "_wiki/EL2303AD - General.md",
+    "_wiki/EL2303AD - History of Japan.md",
+    "images/japgovct.gif",
+    "_wiki/Thomas Ligotti.md",
+    "_wiki/Internet Surfing.md",
+    "_wiki/Internal Rating System.md",
+    "_journal/Similar Music Discovered by Accident.md",
     "_wiki/teste.md",
     "_wiki/test_plmdds.md",
     "_wiki/testepfv.md",
@@ -181,25 +197,10 @@
     "_articles/title-of-my-new-note.md",
     "_site/assets/templater-scripts/gen_eternal_september.js",
     "_wiki/test_final.md",
-    "_wiki/test3.md",
-    "exocore/_templates/Untitled.md",
-    "exocore/_templates/_wiki.md",
-    "exocore/_templates/_journal.md",
-    "exocore/_templates/_article.md",
-    "exocore/_templates/_daily.md",
-    "exocore/_templates/_scrapbook.md",
-    "_articles/null.md",
-    "_wiki/test2.md",
-    "_wiki/test.md",
-    "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
-    "_journal/2023-08 Decoding Idol Otaku Loyalty.md",
-    "_journal/Milady.md",
-    "_journal/Milady Village Alts.md",
     "pages/sorter.html",
     "pages/tags copy.html",
     "images/teresa_matilda.png",
     "images/teresa_rei.png",
-    "index.md",
     "images/tanasinn.jpg",
     "assets/favicon/favicon.ico",
     "assets/favicon/favicon-32x32 copy.png",
@@ -208,7 +209,6 @@
     "assets/favicon/favicon-16x16.png",
     "assets/favicon/New Project (1).png",
     "assets/favicon/android-chrome-192x192.png",
-    "assets/favicon/New Project.png",
     "library/styled-miya-archive.html",
     "library/styled-miya-archive.htm",
     "library/Notes on the Writing of Horror [Ligotti].pdf",

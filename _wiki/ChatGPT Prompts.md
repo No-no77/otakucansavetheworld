@@ -1,7 +1,7 @@
 ---
 published: true
 date: 2023-08-20
-tags:
+tags: ai
 foam_template:
   filepath: '_wiki/chatgpt-prompts.md'
   name: Wiki Note

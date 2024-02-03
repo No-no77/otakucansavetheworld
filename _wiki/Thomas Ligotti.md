@@ -1,17 +1,15 @@
 ---
 published: true
-subtitle:
+subtitle: from Thomas Ligotti's Notes on the Writing of Horror: A Story
 date: 2023-07-20
-tags: horror writing
+tags: horror writing archive
 ---
 
 # Thomas Ligotti
 
-## Notes on the Writing of Horror: A Story
-
 [Download here](../library/Notes%20on%20the%20Writing%20of%20Horror%20[Ligotti].pdf)
 
-### The Story
+## The Story
 
 Thomas Ligotti is the most startling and talented horror writer to emerge in recent years. Exclusively a short story writer thus far in his career, he published all of his early stories in semiprofessional and small press genre magazines for several years, remaining obscure. An American writer, his first trade collection of stories, Songs of a Dead Dreamer (1990), was published in England, the result of a gradually growing reputation among the avid genre readers. His second collection. Grimscribe (1991), was published at the end of 1991. Perhaps the most startling thing about his work, aside from the extraordinary stylistic sophistication (one is reminded of the polished prose and effects of Robert Aickman’s strange stories), is his devotion to horror, which is positively Lovecraftian— as is his bent for theory and knowledge of the history of the literature. This present piece selected is his masterpiece to date. “Few other writers,” says Ramsey Campbell, “could conceive a horror story in the form of notes on the writing of the genre, and I can't think of any other writer who could have brought it off." It is no less than an instructional essay on the writing of horror, transformed by stylistic magic and artful construction into a powerful work of fiction. Writing students I have taught have found it a revelation. It is included for your delight and instruction.
 
@@ -31,7 +29,7 @@ Very quickly now. Nathan chases the kids into what turns out to be a condemned b
 
 Incidentally, this story was originally intended for publication under my perennial pen name, G.K. Riggers, and entitled: “Romance of a Dead Man.”
 
-### The Styles
+## The Styles
 
 There is more than one way to write a horror story, so much one expects to be told at this point. And such a statement, true or false, is easily demonstrated. In this section we will examine what may be termed three primary techniques of terror. They are: the realistic technique, the traditional Gothic technique, and the experimental technique. Each serves its user in different ways and realizes different ends, there’s no question about that. After a little soul-searching, the prospective horror writer may awaken to exactly what his ends are and arrive at the most efficient technique for handling them. Thus . . .
 
@@ -75,7 +73,7 @@ Of course at this point we have already seen where Nathan is going and, in a way
 
 The experimental technique. It’s easy, now try it yourself.
 
-### Another Style
+## Another Style
 
 All the styles we have just examined have been simplified for the purposes of instruction, haven’t they? Each is a purified example of its kind, let’s not kid ourselves. In the real world of horror fiction, however, the above three techniques often get entangled with one another in hopelessly mysterious ways, almost to the point where all previous talk about them is useless for all practical purposes. But an ulterior purpose, which I’m saving for later, may thus be better served. Before we get there, though, I’d like, briefly, to propose still another style.
 
@@ -83,7 +81,7 @@ The story of Nathan is one very close to my heart and I hope, in its basic traum
 
 I couldn’t do it, my friends. It’s not easy, and I don’t suggest that you try it yourself.
 
-### The Final Style
+## The Final Style
 
 Dear horror writers of the future, I ask you: what is the style of horror? What is its tone, its voice? Is it that of an old storyteller, keeping eyes wide around the tribal campfire; is it that of a documentarian of current or historical happenings, reporting events heard-about and conversations overheard; is it even that of a yarn-spinning god who can see the unseeable and reveal, from viewpoint omniscient, the horrific hearts of man and monster? I have to say that it’s none of these, sorry if it’s taken so long.
 
