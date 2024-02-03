@@ -1,7 +1,7 @@
 ---
 published: true
 subtitle: from Edward Lipsett's Delta Green
-date: 2024-02
+date: 2024-02-03
 tags: kurotokage ttrpg archive
 ---
 
@@ -13,7 +13,7 @@ Overview to keep track of what's going on
 
 - Modern Japanese society in brief
 - Being a gaijin in modern Japan
-	- [Japanese names]
+	- Japanese names
 	- [Female first names]
 	- [Male first names]
 - Surnames
@@ -105,14 +105,13 @@ Overview to keep track of what's going on
 	2. Cthonians & CATFISH (a collection of docs recovered and compiled by Kurotokage operatives or Anti-Mythos Monks through the years)
 
 - Possible expansions/sidebars/stuff....
-
-        Japanese Civil Protection details and DG-style template NPCs (who knows.... a Cthonian yamabushi cultist, a non-conformist geologist keeping up Mogi's research, an oversensitive manga artist etc)
-        New Cthonian Spells/Abilities - Mating Call, Clan Summoning etc.
-        Keeper's Help - some new and alternative takes on the old 'stolen cthonian egg' scenario seed.
+	1. Japanese Civil Protection details and DG-style template NPCs (who knows.... a Cthonian yamabushi cultist, a non-conformist geologist keeping up Mogi's research, an oversensitive manga artist etc)
+	2. New Cthonian Spells/Abilities - Mating Call, Clan Summoning etc.
+	3. Keeper's Help - some new and alternative takes on the old 'stolen cthonian egg' scenario seed.
 
 [Ghouls]
 
-Hastur
+[Hastur]
 
 [Dreamlands]
 
@@ -124,29 +123,29 @@ Hastur
 4. Hidachi and the Death of Deep Thoat
 5. Meeting Kazuo and The Taira 
 
-Tomes
+[Tomes]
 
-Bibliography
+## Bibliography
 
-Maps of Japan (ancient, Edo-era PDF, modern-era PDF or modern-era links
+- Maps of Japan (ancient, Edo-era PDF, modern-era PDF or modern-era links
 
-Sidebars and modules
+## Sidebars and modules
 
-    Project AHAB
-    Otani Kozui
-    Tanuki
-    The Lost Legion
-    St. Jerome in Japan
-    Deep Ones in China Sea (also, see Mibe)
-    Lloigor (North Korea?)
-    Byakhee
-    Ithaqua 
+1. Project AHAB
+2. Otani Kozui
+3. Tanuki
+4. The Lost Legion
+5. St. Jerome in Japan
+6. Deep Ones in China Sea (also, see Mibe)
+7. Lloigor (North Korea?)
+8. Byakhee
+9. Ithaqua 
 
 Related Fiction
 
-    Dream Reaper by Davide Mana
-    Without Intent by Davide Mana
-    Tosui Scrubs a Floor by Edward Lipsett 
+1. Dream Reaper by Davide Mana
+2. Without Intent by Davide Mana
+3. Tosui Scrubs a Floor by Edward Lipsett 
 
 --- 
 

@@ -1,7 +1,7 @@
 ---
 published: true
 subtitle: from Edward Lipsett's 2303AD - Japan's Battle for the Stars
-date: 2024-02
+date: 2024-02-03
 tags: el2303ad ttrpg archive
 ---
 
