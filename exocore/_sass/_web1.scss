@@ -13,28 +13,28 @@ $color-items: $background;
 $color-text: #333333;
 $color-subtext: #333333;
 $color-code: pink;
-$internal-links: blue;
-$external-links: blue;
+$internal-links: #333333;
+$external-links: #333333;
 $invalid-links: $internal-links;
-$color-primary: blue;
-$color-secondary: blue;
+$color-primary: #333333;
+$color-secondary: #333333;
 $color-box-shadow: none;
 
 
 /* --- Borders --- */
-$article-border: 1px solid blue;
-$sidebar-border: 1px solid blue;
+$article-border: 1px solid #333333;
+$sidebar-border: 1px solid #333333;
 $prev-next-border: none;
 $color-item-border: none;
 $border-radius: 0px;
 
 /* --- Embeds, Sidenote and Footnote Colors --- */
-$embed-border: 1px solid blue;
+$embed-border: 1px solid #333333;
 $color-embed-background: white;
 $color-embed-title: #333333;
 $color-embed-text: #333333;
 
-$footnote-border: 1px solid blue;
+$footnote-border: 1px solid #333333;
 $color-footnote-background: white;
 $color-footnote-text: #333333;
 
@@ -112,7 +112,7 @@ hr {
 ================================================== */
 
 code {
-  color: black;
+  color: #333333;
   background-color:#D8D3D9;
   font-family: $font-family-monospace;
   font-size: 1em;
@@ -156,7 +156,7 @@ a {
 
 }
 nav a {
-    color: blue !important;
+    color: #333333 !important;
     text-decoration: underline;
   
 }

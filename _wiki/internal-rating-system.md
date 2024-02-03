@@ -6,7 +6,7 @@ foam_template:
   filepath: '_wiki/internal-rating-system.md'
   name: Wiki Note
 ---
-# d5ce4e
+# Internal Rating system
 
 Similar to Gwern's apprioach to Confidence and Importance tags, I will be using the following methodology to organize my posts:
 
