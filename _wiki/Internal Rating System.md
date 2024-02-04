@@ -2,9 +2,6 @@
 published: true
 date: 2023-08-19
 tags: meta
-foam_template:
-  filepath: '_wiki/internal-rating-system.md'
-  name: Wiki Note
 ---
 # Internal Rating System
 

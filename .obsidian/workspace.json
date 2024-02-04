@@ -4,15 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "fc21fb7615468f84",
+        "id": "7d3b86ab6bd7452a",
         "type": "tabs",
         "children": [
           {
-            "id": "dd676f2a8c5d04cf",
+            "id": "e85dcdb6d346398f",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "_wiki/KUROTOKAGE - Sourcebook.md",
+                "mode": "source",
+                "source": true
+              }
             }
           }
         ]
@@ -89,6 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "_wiki/KUROTOKAGE - Sourcebook.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,6 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "_wiki/KUROTOKAGE - Sourcebook.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +132,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "_wiki/KUROTOKAGE - Sourcebook.md"
+              }
             }
           },
           {
@@ -156,14 +164,23 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "dd676f2a8c5d04cf",
+  "active": "e85dcdb6d346398f",
   "lastOpenFiles": [
-    "_wiki/Dream Reaper.md",
-    "_wiki/KUROTOKAGE - Sourcebook.md",
     "_wiki/Thomas Ligotti.md",
-    "_wiki/Internet Surfing.md",
-    "_wiki/Internal Rating System.md",
+    "_wiki/Dream Reaper.md",
+    "_wiki/EL2303AD - Doris.md",
+    "_articles/Nogizaka46 Chronology.md",
+    "_articles/Optimizing Brand Loyalty and Brand Identity among Idol Otaku.md",
+    "_wiki/KUROTOKAGE - Sourcebook.md",
     "_wiki/EL2303AD - The Philippines.md",
+    "_wiki/Internal Rating System.md",
+    "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
+    "_journal/Similar Music Discovered by Accident.md",
+    "_wiki/423cca.md",
+    "_wiki/1f1f78.md",
+    "_wiki/e256cb.md",
+    "_wiki/613f57.md",
+    "_wiki/Internet Surfing.md",
     "_wiki/EL2303AD - Micronesia.md",
     "_wiki/EL2303AD - Life in Japan.md",
     "_wiki/EL2303AD - Japan's Military.md",
@@ -171,23 +188,14 @@
     "_wiki/EL2303AD - History of Japan.md",
     "_wiki/EL2303AD - General.md",
     "_wiki/EL2303AD - Empire of Japan.md",
-    "_wiki/EL2303AD - Doris.md",
     "_wiki/ChatGPT Prompts.md",
     "images/japgovct.gif",
-    "_journal/Similar Music Discovered by Accident.md",
     "_wiki/teste.md",
     "_wiki/test_plmdds.md",
     "_wiki/testepfv.md",
-    "_wiki/title-of-my-new-note.md",
-    "_articles/Laws of True D&D.md",
-    "_articles/Nogizaka46 Chronology.md",
-    "_wiki/agora-vai.md",
     "assets/templater-scripts/september.js",
-    "_wiki/megateste.md",
     "assets/templater-scripts/randomhex.js",
     "assets/templater-scripts/gen_eternal_september.js",
-    "_wiki/superteste.md",
-    "_articles/title-of-my-new-note.md",
     "_site/assets/templater-scripts/gen_eternal_september.js",
     "pages/sorter.html",
     "pages/tags copy.html",

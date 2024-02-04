@@ -9,59 +9,155 @@ tags: kurotokage ttrpg archive deltagreen
 
 *By Davide Mana*
 
-They took us out of deep freeze and put us back to sleep because there was something weird going on on the other side and they wanted us to take a peek.
-Chances were, it was seeping through to our side, too, or the paper-pushers would not have bothered to momentarily forget about the last shootout and give us rubber badges and carte blanche again.
+**I.** 
+
+They took us out of deep freeze and put us back to sleep because there was
+
+something weird going on on the other side and they wanted us to take a peek.
+
+Chances were, it was seeping through to our side, too, or the paper-pushers
+
+would not have bothered to momentarily forget about the last shootout and
+
+give us rubber badges and carte blanche again.
+
 But we jumped at it anyway.
+
 It was good being back in the field.
+
 It did not stay good for long.
+
 There was a board nailed over the gutter.
+
 It read 'gurgling stream'.
-The water was dark, thick and slow, chunks of gray rock surfacing along its course.
-Around us, the landscape was flat and bathed in the unflinching light of a copper-ball-like sun.
-A pair of clouds ran far on the too-near horizon, clearly in a hurry to vacate the premises. The air was still and smelled funny.
-A plank was placed over the stream, and on the other side there was a blank wall with 'baroque ornamentation' scrawled over, and a rusty iron gate with a 'garden' plate.
+
+The water was dark, thick and slow, chunks of gray rock surfacing along its
+
+course.
+
+Around us, the landscape was flat and bathed in the unflinching light of a
+
+copper-ball-like sun.
+
+A pair of clouds ran far on the too-near horizon, clearly in a hurry to
+
+vacate the premises. The air was still and smelled funny.
+
+A plank was placed over the stream, and on the other side there was a blank
+
+wall with 'baroque ornamentation' scrawled over, and a rusty iron gate with
+
+a 'garden' plate.
+
 Our steps lifted small clouds of dust.
+
 "What kind of place is this?"
+
 My voice sounded muffled, somewhat dampened.
+
 Val shook her head and turned, taking in the little there was there to take.
-In the mid-distance, a huge, highway-style billboard carried the 'hills vista' script in washed-away block capitals in a white field.
-We both felt the distinctive lack of pattern, a broken feeling permeating the whole area.
+
+In the mid-distance, a huge, highway-style billboard carried the 'hills
+
+vista' script in washed-away block capitals in a white field.
+
+We both felt the distinctive lack of pattern, a broken feeling permeating
+
+the whole area.
+
 The stuff dreams were made of was wearing off.
-She crouched down and took a handful of the cinder-like soil, rubbing it between her fingers.
-"You ever been to Ib?" she asked me, standing up and passing the hand on the leg of the trousers to clean it.
+
+She crouched down and took a handful of the cinder-like soil, rubbing it
+
+between her fingers.
+
+"You ever been to Ib?" she asked me, standing up and passing the hand on
+
+the leg of the trousers to clean it.
+
 We both wore ill-fitting, rough hewn one piece suits and sandals.
+
 "Is it like this?" I asked. Ib is not exactly high on my list of dream spots.
+
 She sucked her cheek in. "Not this bad, but similar."
+
 She stepped over the plank and stood by the gate.
+
 "The same feeling of consumption, of fading away."
-On the other side of the wall there was a large upturned crate, with smaller boxes around it.
+
+On the other side of the wall there was a large upturned crate, with
+
+smaller boxes around it.
+
 The dining room, I guessed.
-The other wall was blank again, two skewed squares drawn on it, each framing the word 'window'.
+
+The other wall was blank again, two skewed squares drawn on it, each
+
+framing the word 'window'.
+
 "What of the people that lived here?" she asked.
-A chunk of something crumbled under my foot. "I just hope they were out when whatever it was hit this place."
+
+A chunk of something crumbled under my foot. "I just hope they were out
+
+when whatever it was hit this place."
+
 I bent and picked up a smallish square of paper, folded.
+
 'rosebud'.
+
 There were more scattered around.
-We got out again, not that there was that much difference between that and the inside.
+
+We got out again, not that there was that much difference between that and
+
+the inside.
+
 The clouds were gone, the sun was in the same position.
+
 The gutter had completely bogged down.
+
 Val closed her eyes, her breath slowing, getting more regular.
+
 "There's no carrier," she said after a few seconds.
+
 It was easy to see the thing did not please her one bit.
+
 "This place is slowly unwinding away into nothingness."
+
 I pointed to the blank wall.
+
 It now read 'squiggly thingees'
+
 "Not that slowly."
+
 The billboard was barely visible, hazy for the distance.
+
 'humps', it read.
+
 She nodded.
+
 "We better wake up."
+
 Her tone was urgent.
+
 I could only agree.
+
 We took a walk along the riverbank.
-Geese were doing their bit down by the water, while joggers and mothers with kids in perambulators passed us by.
-It was a good place to talk over matters of some import, as nobody would pay us more than some cursory attention.
-Val dropped her jacket on the rail and leaned on it, watching the brown water running. A quarter of a mile upstream, a blue-tinted barge was moored to a rickety landing-stage.
+
+Geese were doing their bit down by the water, while joggers and mothers
+
+with kids in perambulators passed us by.
+
+It was a good place to talk over matters of some import, as nobody would
+
+pay us more than some cursory attention.
+
+Val dropped her jacket on the rail and leaned on it, watching the brown
+
+water running.
+
+A quarter of a mile upstream, a blue-tinted barge was moored to a rickety
+
+landing-stage.
 
 Someone had scrawled 'E. SALGARI' in red paint on the side of one of the
 
@@ -113,7 +209,7 @@ She visibly shivered.
 
 "Neither did I"
 
-Dream Reaper - Part 2
+**II.**
 
 We landed in Hlanith under a pouring rain and it was clear the Dreamkiller
 
@@ -343,7 +439,7 @@ Val was clearly more familiar with it.
 
 hit Olathoe."
 
-Dream Reaper - Part 3
+**III.**
 
 Val was silently crying as we went through the ashen ruins in the heart of
 
@@ -607,7 +703,7 @@ Val nodded as a car's engine coughed in front of the building.
 
 "Fucking Celephais Central."
 
-Dream Reaper - Part 4
+**II.**
 
 The old occultist stood in the doorway and looked at us.
 
@@ -823,7 +919,7 @@ I nodded again.
 
 A loud bang ringed out.
 
-Dream Reaper - Part 5
+**III.**
 
 The cats gratified us with their dignified indifference.
 
@@ -865,56 +961,190 @@ the stones.
 
 He had tried to drink from a fountain, leaving consumption marks on the
 
-stone where he had supported himself, burning his mouth and fouling the water. Stumbling on a fruit stall, he had robbed the apples of their color, Glass still flowed like thick honey in the window frame he had watched through, looking inside, calling for assistance.
-Around us, as around him, the Ultharians were tight-lipped and reserved as usual. They had witnessed the portent, not the first in their land, and likely not the least, and had kept their distance, more uncompromisingly extraneous than a pitchforks-and-torches, Hammer-style crowd.
+stone where he had supported himself, burning his mouth and fouling the
+
+water. Stumbling on a fruit stall, he had robbed the apples of their color,
+
+Glass still flowed like thick honey in the window frame he had watched
+
+through, looking inside, calling for assistance.
+
+Around us, as around him, the Ultharians were tight-lipped and reserved as
+
+usual. They had witnessed the portent, not the first in their land, and
+
+likely not the least, and had kept their distance, more uncompromisingly
+
+extraneous than a pitchforks-and-torches, Hammer-style crowd.
+
 There would be time for cordiality and welcomes next time, for us.
+
 Now something had perturbed the city's routine, and had to be taken care of.
-Once out of the city gates, past the warped planks of the drawbridge, we simply followed the track of dead weeds and papery flowers.
+
+Once out of the city gates, past the warped planks of the drawbridge, we
+
+simply followed the track of dead weeds and papery flowers.
+
 North-east.
-The cats watched us go, and their amber-eyed indifference walked with us towards the woods.
-We finally found him two miles up the Skai valley, in a small clearing on the left river bank, where the river makes a turn and willows and birches leave the place to older, sterner trees. He was heaped in the center of a small clearing, a gray circle of death spreading around him, dusty gray wisps carried by the breeze.
-On a large flat rock a stone-throw away, half a dozen bearded mink-like creatures surveyed the scene with their obsidian bead-like eyes.
+
+The cats watched us go, and their amber-eyed indifference walked with us
+
+towards the woods.
+
+We finally found him two miles up the Skai valley, in a small clearing on
+
+the left river bank, where the river makes a turn and willows and birches
+
+leave the place to older, sterner trees. He was heaped in the center of a
+
+small clearing, a gray circle of death spreading around him, dusty gray
+
+wisps carried by the breeze.
+
+On a large flat rock a stone-throw away, half a dozen bearded mink-like
+
+creatures surveyed the scene with their obsidian bead-like eyes.
+
 Val groaned.
+
 She hates Zoogs.
+
 "You look him up," she said as we got nearer. "I'll take care of the psi-rats."
-She walked on, the Zoogs jostling around on their stone stool, tentaclets waving.
+
+She walked on, the Zoogs jostling around on their stone stool, tentaclets
+
+waving.
+
 I stopped at the margin of the burned out zone.
-A bird of some kind had flown over it, precipitating in a heap of feathers, strings and corks, a broken simulacrum on the concrete-like ground, now regressing to a cardboard-cutout consistence. 
-My shadow fell over him and he turned his head, gray matted hair dropping over his eyes.
+
+A bird of some kind had flown over it, precipitating in a heap of feathers,
+
+strings and corks, a broken simulacrum on the concrete-like ground, now
+
+regressing to a cardboard-cutout consistence.
+
+My shadow fell over him and he turned his head, gray matted hair dropping
+
+over his eyes.
+
 He was naked, mad and filthy.
+
 Thick perlaceous mucus dripped from his mouth and nose, a physical reaction
+
 to panic.
+
 He coughed, scattering some of the stuff around.
-He looked at me with rheumy eyes and I still wondered if he recognized me as the intruder in his house or if what was left of his　 mind, too busy trying to find somewhere to run, just registered me as an unknown human in black and silver.
+
+He looked at me with rheumy eyes and I still wondered if he recognized me
+
+as the intruder in his house or if what was left of his　 mind, too busy
+
+trying to find somewhere to run, just registered me as an unknown human in
+
+black and silver.
+
 "What....?" he croaked.
+
 I was suddenly conscious of the silence growing around us.
+
 Not even the river made any sound as it flew downhill.
+
 Slumberland was waiting.
-At the margin of the clearing, Val was keeping up her staring contest with the Zoog elder.
+
+At the margin of the clearing, Val was keeping up her staring contest with
+
+the Zoog elder.
+
 "What hell is this?" he finally rattled.
-I looked around at the emerald and citrine forest, the deep velvety shadow and the slow course of deep blue Skai.
+
+I looked around at the emerald and citrine forest, the deep velvety shadow
+
+and the slow course of deep blue Skai.
+
 Flowers.
+
 Butterflies.
+
 A clear sky stretching over us in the early afternoon hours.
-But it all ended at the sharp limit of the burnout area, a span away from the tip of my shoes.
+
+But it all ended at the sharp limit of the burnout area, a span away from
+
+the tip of my shoes.
+
 He tried to pick himself up, crouching on his hands and knees.
-He coughed again, more foul matter dripping forth, forming a slimy pool between his hands. His nails where broken, fingers scarred raw by his attempts at digging in the dead earth, looking from an escape route somewhere.
-"What pain....?" he went on.He rolled again in fetal position, a low hum escaping his dry lips thatfinally erupted in hysterical crying.
-It would not take long, now. The field was waning, the umbilical soon to be severed forever.
+
+He coughed again, more foul matter dripping forth, forming a slimy pool
+
+between his hands. His nails where broken, fingers scarred raw by his
+
+attempts at digging in the dead earth, looking from an escape route somewhere.
+
+"What pain....?" he went on.
+
+He rolled again in fetal position, a low hum escaping his dry lips that
+
+finally erupted in hysterical crying.
+
+It would not take long, now. The field was waning, the umbilical soon to be
+
+severed forever.
+
 "What.... did I do," he tried, shaking,"to deserve.... this?"
+
 I would have liked to tell him.
-Look, I would have liked to say, you have put a stupid Spanish gun to your temple and pulled the trigger. You know the thing, cheap and silver-plated, you were keeping it in your nightstand drawer, under a Pitigrilli novel, together with your thermometer and a box of Aspirine. Confort made to measure for each kind of distress.
-But being an old creep, I'd add, you failed to kill yourself. The weak 7.65 bullet is now firmly lodged in your brainbox and your carcass is stashed away in an emergency ward, the docs trying to keep your body going, puzzling at the weird patterns of your alpha waves.
+
+Look, I would have liked to say, you have put a stupid Spanish gun to your
+
+temple and pulled the trigger. You know the thing, cheap and silver-plated,
+
+you were keeping it in your nightstand drawer, under a Pitigrilli novel,
+
+together with your thermometer and a box of Aspirine. Confort made to
+
+measure for each kind of distress.
+
+But being an old creep, I'd add, you failed to kill yourself. The weak 7.65
+
+bullet is now firmly lodged in your brainbox and your carcass is stashed
+
+away in an emergency ward, the docs trying to keep your body going,
+
+puzzling at the weird patterns of your alpha waves.
+
 But there is no refuge here for the likes of you. No freedom.
-So it's sort of a due to be paid, you see. I'll have to pull the plug on you here, so that the scan gets flat and the boys in white can get hold of someone with legal authority and turn the machines off.
+
+So it's sort of a due to be paid, you see. I'll have to pull the plug on
+
+you here, so that the scan gets flat and the boys in white can get hold of
+
+someone with legal authority and turn the machines off.
+
 I would have preferred to be able, and tell him.
+
 A man deserves to know why he is being killed.
-But his mind was choked with concepts like sin and retribution, cracking under the weight of misplaced guilt and the pressure of environmental rejection, and he would have failed to appreciate the facts as he was failing to appreciate the scenery.
+
+But his mind was choked with concepts like sin and retribution, cracking
+
+under the weight of misplaced guilt and the pressure of environmental
+
+rejection, and he would have failed to appreciate the facts as he was
+
+failing to appreciate the scenery.
+
 I still wondered at his unseen masters, the people setting him up.
+
 As a weapon?
+
 An experiment?
+
 We'd be kept wondering.
+
 Val was coming back, the Zoogs gone.
-The burned out area was slowly creeping under the tips of my shoes,spreading steadily.
+
+The burned out area was slowly creeping under the tips of my shoes,
+
+spreading steadily.
+
 So I stepped in the circle and cut his throat.
+
 Gently.

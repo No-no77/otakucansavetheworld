@@ -25,7 +25,7 @@ Amaterasu's plan, which she has been carefully trying to guide to fruition for c
 
 In order to pull this off, she needs a suitable candidate in the RW: one of her descendants, with a powerful Dreaming ability and incredible will. Due to the inbreeding over the centuries, and the way the people surrounding the Emperor have always done their best to stamp out any signs of willfulness in the young Imperial heirs (to make them easier to manipulate), such candidates are hard to find. She has tried and failed several times (witness WW2). At present, she seems not to be trying with the current Emperor or his eldest son. And this son is having no luck in producing an heir, male or female. But that is no guarantee of safety -- it might be that she needs a female vessel (which might be why the Imperial line long ago went from placing females on the throne to placing males there). And there is talk lately of putting a woman on the Chrysanthemum Throne if no male heirs are born.
 
-Also, the process of infusing the RW with the essence of the DLs will almost certainly destroy the DLs, or at least change them profoundly (as described in [Davide Mana's "Dream Reaper"](http://web.archive.org/web/20050505050039/http://kurotokage.org/Kurotokage/DreamReaper.htm)). This could mean the deaths of millions and the destruction of the repository of humanity's collective unconscious.
+Also, the process of infusing the RW with the essence of the DLs will almost certainly destroy the DLs, or at least change them profoundly (as described in [Davide Mana's "Dream Reaper"](../_wiki/Dream%20Reaper.md)). This could mean the deaths of millions and the destruction of the repository of humanity's collective unconscious.
 
 **The Taira Emperor and the Emperor of Japan**
 

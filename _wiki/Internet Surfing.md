@@ -2,9 +2,6 @@
 published: true
 date: 2023-07-23
 tags: internet
-foam_template:
-  filepath: '_wiki/internet-search.md'
-  name: Wiki Note
 ---
 # Internet Surfing
 
