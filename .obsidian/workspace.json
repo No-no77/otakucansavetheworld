@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "_wiki/KUROTOKAGE - Sourcebook.md",
+                "file": "ring.md",
                 "mode": "source",
                 "source": true
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "_wiki/KUROTOKAGE - Sourcebook.md",
+                "file": "ring.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "_wiki/KUROTOKAGE - Sourcebook.md",
+                "file": "ring.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "_wiki/KUROTOKAGE - Sourcebook.md"
+                "file": "ring.md"
               }
             }
           },
@@ -166,12 +166,13 @@
   },
   "active": "e85dcdb6d346398f",
   "lastOpenFiles": [
+    "_wiki/Japan's Other Emperor.md",
+    "_wiki/KUROTOKAGE - Sourcebook.md",
     "_wiki/Thomas Ligotti.md",
     "_wiki/Dream Reaper.md",
     "_wiki/EL2303AD - Doris.md",
     "_articles/Nogizaka46 Chronology.md",
     "_articles/Optimizing Brand Loyalty and Brand Identity among Idol Otaku.md",
-    "_wiki/KUROTOKAGE - Sourcebook.md",
     "_wiki/EL2303AD - The Philippines.md",
     "_wiki/Internal Rating System.md",
     "_journal/Comprehensive Timeline of Nogizaka46 Meguri Sales.md",
@@ -192,7 +193,6 @@
     "images/japgovct.gif",
     "_wiki/teste.md",
     "_wiki/test_plmdds.md",
-    "_wiki/testepfv.md",
     "assets/templater-scripts/september.js",
     "assets/templater-scripts/randomhex.js",
     "assets/templater-scripts/gen_eternal_september.js",
