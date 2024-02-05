@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ring.md",
+                "file": "_wiki/KUROTOKAGE - Sourcebook.md",
                 "mode": "source",
                 "source": true
               }
@@ -93,7 +93,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ring.md",
+                "file": "_wiki/KUROTOKAGE - Sourcebook.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +110,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ring.md",
+                "file": "_wiki/KUROTOKAGE - Sourcebook.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +133,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ring.md"
+                "file": "_wiki/KUROTOKAGE - Sourcebook.md"
               }
             }
           },
@@ -168,6 +168,7 @@
   "lastOpenFiles": [
     "_wiki/Japan's Other Emperor.md",
     "_wiki/KUROTOKAGE - Sourcebook.md",
+    "ring.md",
     "_wiki/Thomas Ligotti.md",
     "_wiki/Dream Reaper.md",
     "_wiki/EL2303AD - Doris.md",
@@ -192,7 +193,6 @@
     "_wiki/ChatGPT Prompts.md",
     "images/japgovct.gif",
     "_wiki/teste.md",
-    "_wiki/test_plmdds.md",
     "assets/templater-scripts/september.js",
     "assets/templater-scripts/randomhex.js",
     "assets/templater-scripts/gen_eternal_september.js",
