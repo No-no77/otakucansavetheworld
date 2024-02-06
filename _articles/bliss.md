@@ -1,15 +1,13 @@
 ---
 
 published: true
-
 subtitle:  by Mike Loader and Lara Bartram
-
 topic: fiction
-
 date: 2024-02-05
-
 tags: ranma fanfic archive lovecraft
-
+certainty: archive
+importance: autism
+status: complete
 foam_template:
 
 filepath: '_articles/bliss.md'
@@ -6150,35 +6148,13 @@ rest, both of the adults will survive. He hopes to see then awake and lucid by t
 
 Log of the Wakazashi Maru, 5/24/98
 
-More mysteries. The two young people identify
+More mysteries. The two young people identify themselves as Akane and Ukyo, no last names, and claim to have been fleeing an island where they had been stranded for two years. They further claim to have no memory of their lives before this wreck, citing amnesia.
 
-themselves as Akane and Ukyo, no last names, and claim to have been fleeing an island where they had been
+This is a patently ridiculous story, since there are no islands aside from Midway within any reasonable distance. Furthermore, a unusually large storm swept through this area four days ago, which would have certainly sunk their tiny raft.
 
-stranded for two years. They further claim to have no
+However, the browning of their skin and signs of exposure to the elements are evidence of an island existence. So is the construction of their raft, and each bears healing puncture wounds, which they attribute to wild dogs. Dr. Winchester confirms the bites as canine.
 
-memory of their lives before this wreck, citing amnesia.
-
-This is a patently ridiculous story, since there are
-
-no islands aside from Midway within any reasonable
-
-distance. Furthermore, a unusually large storm swept
-
-through this area four days ago, which would have
-
-certainly sunk their tiny raft.
-
-However, the browning of their skin and signs of
-
-exposure to the elements are evidence of an island
-
-existence. So is the construction of their raft, and each bears healing puncture wounds, which they attribute to wild dogs. Dr. Winchester confirms the bites as canine.
-
-The baby is healthy, the adults are confused but
-
-otherwise in sound mental health. We shall reach Japan within a few days, and perhaps their fingerprint or
-
-dental records will allow us to identify the two beyond a first name. Since neither appears to speak English, I shall assume them to be Japanese citizens.
+The baby is healthy, the adults are confused but otherwise in sound mental health. We shall reach Japan within a few days, and perhaps their fingerprint or dental records will allow us to identify the two beyond a first name. Since neither appears to speak English, I shall assume them to be Japanese citizens.
 
 ---
 

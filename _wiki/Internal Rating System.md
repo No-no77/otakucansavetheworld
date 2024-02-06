@@ -12,6 +12,7 @@ Similar to Gwern's apprioach to Confidence and Importance tags, I will be using 
 likely - It is likely that my ideas are correct
 high -  It is high likely that my ideas are correct
 log - A mere register of a sequence of facts, preferably in  chronological order.
+archive -
 
 It's important to notice that other than log, the certainty tags for other posts are subjected to change as time goes.
 
