@@ -5,8 +5,9 @@ title: Webring
 
 Collection of cool blogs and websites I've found across the years.
 
+| | |
+| --------------------------------------------------------------------------------------------------- ---------------------------------------------------------------------------------------------------------- | --- |
 | [HYPERSTITION](http://hyperstition.abstractdynamics.org/)                                           | .........                                                                                                  |     |
-| --------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- | --- |
 | [Outside in](https://web.archive.org/web/20180213122613/http://www.xenosystems.net/)                | Involvements with reality                                                                                  |     |
 | [Urban Future (2.1)](https://web.archive.org/web/20180126083013/http://www.ufblog.net/)             | views from the decopunk delta                                                                              |     |
 | [Gwern](https://gwern.net/)                                                                         | This Is The Website of **Gwern Branwen**.                                                                  |     |

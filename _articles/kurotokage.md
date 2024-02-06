@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 subtitle:  from Edward Lipsett's Delta Green
 topic: fiction
 date: 2024-02-03

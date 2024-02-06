@@ -1,7 +1,7 @@
 ---
 published: true
 subtitle: An In-Depth Timeline of Nogizaka46. 
-topic: Otaku
+topic: otaku
 date: 2023-07-15
 tags: nogizaka46 j-pop log
 certainty: log
