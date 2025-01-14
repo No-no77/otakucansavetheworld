@@ -236,11 +236,13 @@ document.getElementById('start-btn').onclick = function() {
 
 async function generateResultsPNG(rankings) {
   const GRID_SIZE = Math.ceil(Math.sqrt(rankings.length));
-  const CELL_SIZE = 150;
-  const PADDING = 0;
-  const IMG_SIZE = 120;
-  const width = GRID_SIZE * CELL_SIZE;
-  const height = GRID_SIZE * CELL_SIZE;
+  const CELL_SIZE = 150; // Size of each cell
+  const IMG_SIZE = 120; // Size of each image
+  const MARGIN = 10; // Space between each cell
+  const PADDING = 0; // Padding inside each cell
+
+  const width = GRID_SIZE * (CELL_SIZE + MARGIN) - MARGIN; // Total canvas width
+  const height = GRID_SIZE * (CELL_SIZE + MARGIN) - MARGIN; // Total canvas height
 
   // Create canvas
   const canvas = document.createElement('canvas');
@@ -256,7 +258,7 @@ async function generateResultsPNG(rankings) {
   ctx.font = '24px Arial';
   ctx.fillStyle = 'rgba(0,0,0,0.1)';
   ctx.textAlign = 'center';
-  ctx.fillText('otakucanchangetheworld', width/2, height-20);
+  ctx.fillText('otakucanchangetheworld', width / 2, height - 20);
 
   // Function to load image and return a promise
   const loadImage = (src) => {
@@ -273,18 +275,18 @@ async function generateResultsPNG(rankings) {
   const drawIdolCard = async (idol, index) => {
     const row = Math.floor(index / GRID_SIZE);
     const col = index % GRID_SIZE;
-    const x = col * CELL_SIZE + PADDING;
-    const y = row * CELL_SIZE + PADDING;
-    
+    const x = col * (CELL_SIZE + MARGIN); // Include margin in x
+    const y = row * (CELL_SIZE + MARGIN); // Include margin in y
+
     // Draw card background
     ctx.strokeStyle = '#ccc';
-    ctx.strokeRect(x, y, CELL_SIZE-PADDING*2, CELL_SIZE-PADDING*2);
+    ctx.strokeRect(x, y, CELL_SIZE, CELL_SIZE);
 
     // Load and draw image
     try {
       const imagePath = imagePaths[idol.name] || '/api/placeholder/120/120';
       const img = await loadImage(imagePath);
-      const imgX = x + (CELL_SIZE-PADDING*2-IMG_SIZE)/2;
+      const imgX = x + (CELL_SIZE - IMG_SIZE) / 2;
       const imgY = y + 10;
       ctx.drawImage(img, imgX, imgY, IMG_SIZE, IMG_SIZE);
     } catch (error) {
@@ -297,7 +299,7 @@ async function generateResultsPNG(rankings) {
     // Draw text
     ctx.fillStyle = 'black';
     ctx.textAlign = 'center';
-    const centerX = x + (CELL_SIZE-PADDING*2)/2;
+    const centerX = x + CELL_SIZE / 2;
 
     // Name (bold)
     ctx.font = 'bold 12px Arial';
@@ -307,7 +309,7 @@ async function generateResultsPNG(rankings) {
     ctx.font = '10px Arial';
     ctx.fillText(`Rating: ${Math.round(idol.rating)}`, centerX, y + IMG_SIZE + 45);
     ctx.fillText(
-      `Certainty: ${Math.round(100-(idol.uncertainty/MAX_UNCERTAINTY*100))}%`,
+      `Certainty: ${Math.round(100 - (idol.uncertainty / MAX_UNCERTAINTY) * 100)}%`,
       centerX, y + IMG_SIZE + 60
     );
   };
@@ -316,7 +318,7 @@ async function generateResultsPNG(rankings) {
   for (let i = 0; i < rankings.length; i++) {
     await drawIdolCard(rankings[i], i);
   }
-  
+
   // Return the PNG data URL directly
   return canvas.toDataURL('image/png');
 }
@@ -462,8 +464,8 @@ generateResultsPNG(rankings).then(pngDataUrl => {
       document.getElementById('confidence2').style.width = 
         `${(1 - stats2.uncertainty/MAX_UNCERTAINTY) * 100}%`;
       
-      document.getElementById('image1').src = imagePaths[idol1] || '/api/placeholder/300/300';
-      document.getElementById('image2').src = imagePaths[idol2] || '/api/placeholder/300/300';
+      document.getElementById('image1').src = imagePaths[idol1] || '/images/no_texture.png';
+      document.getElementById('image2').src = imagePaths[idol2] || '/images/no_texture.png';
     }
 
     function updateRankingsTable() {
