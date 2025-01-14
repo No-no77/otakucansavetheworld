@@ -1,9 +1,7 @@
----
-layout: default
-category: archive
-title: 乃木坂46 Bayesian Sorter
----
-
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Probabilistic Idol Ranker</title>
   <style>
     body {
       font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -72,13 +70,13 @@ title: 乃木坂46 Bayesian Sorter
       padding: 8px 16px;
       margin-right: 10px;
       border: 1px solid #333;
-      background-color: #007bff;
+      background-color: black;
       color: white;
       cursor: pointer;
     }
 
     button:hover {
-      background-color: #0056b3;
+      background-color: grey;
     }
 
     select {
@@ -116,21 +114,22 @@ title: 乃木坂46 Bayesian Sorter
     }
   </style>
 </head>
-  <div class="leftcolumn">
-    {% include profile-card.html %}
-  </div>
-  
-  <div class="midcolumn">
-    <div class="index-card">
-      <br>
-        <h1 class="index-title">乃木坂46 Bayesian Sorter</h1>    
-      <div class="side-card">
-      </div>
-    </div>
+<body>
+  <a href="/">Return Home</a>
+  <h1>乃木坂46 Bayesian Sorter</h1>
+  <p>Select your preferred idol in each comparison. The system will adaptively learn rankings while accounting for noise/inconsistency in your choices.</p>
+  <p>This sorter tracks pairwise comparisons between items and infers their underlying ratings based on a noisy, probabilistic model inspired by the Elo or Bradley-Terry approach. It dynamically identifies and queries the user with comparisons involving items with the highest uncertainty in their current ratings, aiming to efficiently reduce uncertainty. The process continues interactively until the user ends the session, at which point a fully rescaled and finalized set of ratings is output.</p>
+  <button id="finish-btn" style="display:none">Finish & Show Results</button>
+  <br>
   <div class="control-panel">
     <select id="group-select">
+      <option value="active-members">Active Members</option>
+      <option value="first-gen">1st Generation</option>
+      <option value="second-gen">2nd Generation</option>
+      <option value="third-gen">3rd Generation</option>
       <option value="fourth-gen">4th Generation</option>
       <option value="fifth-gen">5th Generation</option>
+      <option value="all-gens">All Generations</option>
     </select>
     <button id="start-btn">Start Ranking</button>
   </div>
@@ -173,8 +172,7 @@ title: 乃木坂46 Bayesian Sorter
       </table>
     </div>
   </div>
-  {% include license.html %}
-</div>
+
   <script>
   
   document.head.insertAdjacentHTML('beforeend', `
@@ -239,7 +237,7 @@ document.getElementById('start-btn').onclick = function() {
 async function generateResultsPNG(rankings) {
   const GRID_SIZE = Math.ceil(Math.sqrt(rankings.length));
   const CELL_SIZE = 150;
-  const PADDING = 40;
+  const PADDING = 0;
   const IMG_SIZE = 120;
   const width = GRID_SIZE * CELL_SIZE;
   const height = GRID_SIZE * CELL_SIZE;
