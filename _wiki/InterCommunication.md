@@ -152,9 +152,9 @@ MINATO Chihiro
 Jean-Luc Godard's "Interiors"
 ABE Kazushige
 
-[[18/higashi_E]]
+[[_scrapbook/intercity/18/higashi_E.md]]
 
-[[zizek]]
+[[_scrapbook/intercity/18/zizek.md]]
 
 Reminiscences of a Journey with Jonas Mekas
 KITAKOJI Takashi
@@ -168,7 +168,7 @@ Jean BAUDRILLARD
 Dialogue between Art and Science - Random Thoughts on Two Symposiums
 SAKANE Itsuo
 
-[[angel]]
+[[_scrapbook/intercity/18/angel.md]]
 
 Burning the Interface - Longing for the Public Computer
 Lionel DERSOT / Translation: OGAWA Naoya
