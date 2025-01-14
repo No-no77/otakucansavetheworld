@@ -346,47 +346,76 @@ function confirmDistribution() {
     }
 }
 
-function createFormationDisplay(center, firstRow, secondRow, thirdRow) {
-    const formationDisplay = document.createElement('div');
-    formationDisplay.className = 'formation-display';
+async function createFormationDisplayImage(center, firstRow, secondRow, thirdRow) {
+    const CANVAS_WIDTH = 800; // Define your desired canvas width
+    const CANVAS_HEIGHT = 400; // Define your desired canvas height
+    const MEMBER_SIZE = 50; // Size of the member images
+    const PADDING = 20; // Space between each member
 
-    function createRow(members) {
-        const row = document.createElement('div');
-        row.className = 'formation-row';
-        
-        members.forEach(member => {
-            const container = document.createElement('div');
-            container.className = 'member-container';
-            
-            const img = document.createElement('img');
-            img.src = imagePaths[member];
-            img.className = 'member-image';
-            img.alt = member;
-            
-            const name = document.createElement('div');
-            name.className = 'member-name';
-            name.textContent = member;
-            
-            container.appendChild(img);
-            container.appendChild(name);
-            row.appendChild(container);
+    // Create canvas
+    const canvas = document.createElement('canvas');
+    canvas.width = CANVAS_WIDTH;
+    canvas.height = CANVAS_HEIGHT;
+    const ctx = canvas.getContext('2d');
+
+    // Function to load image and return a promise
+    const loadImage = (src) => {
+        return new Promise((resolve, reject) => {
+            const img = new Image();
+            img.crossOrigin = 'Anonymous'; // Handle CORS issues
+            img.onload = () => resolve(img);
+            img.onerror = () => reject(new Error('Image load failed'));
+            img.src = src;
         });
-        
-        return row;
-    }
+    };
 
-    [center, firstRow, secondRow, thirdRow].forEach(rowMembers => {
-        if (rowMembers.length > 0) {
-            formationDisplay.appendChild(createRow(rowMembers));
+    // Draw the members in a row
+    const drawRow = async (members, yPosition) => {
+        const totalWidth = members.length * (MEMBER_SIZE + PADDING) - PADDING;
+        const startX = (CANVAS_WIDTH - totalWidth) / 2; // Center the row horizontally
+
+        for (let i = 0; i < members.length; i++) {
+            const x = startX + i * (MEMBER_SIZE + PADDING);
+            const member = members[i];
+
+            // Load and draw member image
+            try {
+                const img = await loadImage(imagePaths[member] || '/api/placeholder/50/50');
+                ctx.drawImage(img, x, yPosition, MEMBER_SIZE, MEMBER_SIZE);
+            } catch (error) {
+                console.error('Error loading image:', error);
+                ctx.fillStyle = '#eee';
+                ctx.fillRect(x, yPosition, MEMBER_SIZE, MEMBER_SIZE); // Placeholder if image fails
+            }
+
+            // Draw member name
+            ctx.fillStyle = 'black';
+            ctx.textAlign = 'center';
+            ctx.font = '12px Arial';
+            ctx.fillText(member, x + MEMBER_SIZE / 2, yPosition + MEMBER_SIZE + 15);
         }
-    });
+    };
 
-    const watermark = document.createElement('div');
-    watermark.className = 'watermark';
-    watermark.innerHTML = `otakucanchangetheworld<br>${new Date().toLocaleDateString()}`;
-    formationDisplay.appendChild(watermark);
+    // Draw all rows
+    let currentY = 50;
+    await drawRow(center, currentY); // Draw center row
+    currentY += MEMBER_SIZE + 50; // Space between rows
+    await drawRow(firstRow, currentY); // Draw first row
+    currentY += MEMBER_SIZE + 50;
+    await drawRow(secondRow, currentY); // Draw second row
+    currentY += MEMBER_SIZE + 50;
+    await drawRow(thirdRow, currentY); // Draw third row
 
-    return formationDisplay;
+    // Add watermark
+    ctx.fillStyle = 'rgba(0,0,0,0.1)';
+    ctx.font = '20px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText(`otakucanchangetheworld`, CANVAS_WIDTH / 2, CANVAS_HEIGHT - 30);
+    ctx.font = '16px Arial';
+    ctx.fillText(new Date().toLocaleDateString(), CANVAS_WIDTH / 2, CANVAS_HEIGHT - 10);
+
+    // Return the PNG data URL directly
+    return canvas.toDataURL('image/png');
 }
 
 function confirmSelection() {
