@@ -152,7 +152,7 @@ MINATO Chihiro
 Jean-Luc Godard's "Interiors"
 ABE Kazushige
 
-![[18/higashi_E]]
+![[higashi_E]]
 
 ![[zizek]]
 
