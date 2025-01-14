@@ -14,4 +14,3 @@ A few notes from Gwern's "Internet Search Tips"
 3. Site: for search a specific website or specific directory of that website (eg. site:gwern.net/docs/genetics/, or to exclude folders, site:gwern.net -site:gwern.net/docs/).
 4. Tools > Set date range
 5. Tools > Verbatim mode
-

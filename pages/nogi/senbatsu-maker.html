@@ -13,7 +13,7 @@ title: 乃木坂46 Senbatsu Maker
   border: solid;
   border-width: thin;
   padding: 10px;
-  border-color: blue;
+  border-color: #333;
   margin-left: 20px;
   margin-right: 20px;
   margin-bottom: 20px;
@@ -38,7 +38,7 @@ title: 乃木坂46 Senbatsu Maker
     padding: 15px;
     transition-duration: 0.4s;
     overflow: hidden;
-    border-color: blue;
+    border-color: #333;
     border-style: solid;
     border-width: thin;
     background-color: white;
@@ -49,7 +49,7 @@ title: 乃木坂46 Senbatsu Maker
     margin-top: 15px;
     padding: 5px;
     width: 70px;
-    border-color: blue;
+    border-color: #333;
     border-style: solid;
     border-width: thin;
 }
@@ -89,7 +89,7 @@ title: 乃木坂46 Senbatsu Maker
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 1px solid blue;
+    border: 1px solid #333;
     object-fit: cover;
     margin-bottom: 8px;
 }
@@ -259,7 +259,7 @@ function generateDropdowns() {
     rowDiv.innerHTML = '<h2>' + rowName + '</h2>';
     for (let i = 0; i < numDropdowns; i++) {
         let select = document.createElement('select');
-        select.style.borderColor = 'blue';
+        select.style.borderColor = '#333';
         select.style.height = '1.5rem';
         select.style.margin = '10px';
         select.onchange = function() {

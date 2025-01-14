@@ -27,7 +27,7 @@ title: 乃木坂46 Bayesian Sorter
     }
 
     .card {
-      border: 1px solid blue;
+      border: 1px solid #333;
       padding: 20px;
       text-align: center;
       cursor: pointer;
@@ -52,7 +52,7 @@ title: 乃木坂46 Bayesian Sorter
 
     .stats-table th, .stats-table td {
       padding: 8px;
-      border: 1px solid blue;
+      border: 1px solid #333;
       text-align: left;
     }
 
@@ -71,7 +71,7 @@ title: 乃木坂46 Bayesian Sorter
     button {
       padding: 8px 16px;
       margin-right: 10px;
-      border: 1px solid blue;
+      border: 1px solid #333;
       background-color: #007bff;
       color: white;
       cursor: pointer;
@@ -83,7 +83,7 @@ title: 乃木坂46 Bayesian Sorter
 
     select {
       padding: 8px;
-      border: 1px solid blue;
+      border: 1px solid #333;
     }
 
     .confidence-bar {
@@ -129,13 +129,8 @@ title: 乃木坂46 Bayesian Sorter
     </div>
   <div class="control-panel">
     <select id="group-select">
-      <option value="active-members">Active Members</option>
-      <option value="first-gen">1st Generation</option>
-      <option value="second-gen">2nd Generation</option>
-      <option value="third-gen">3rd Generation</option>
       <option value="fourth-gen">4th Generation</option>
       <option value="fifth-gen">5th Generation</option>
-      <option value="all-gens">All Generations</option>
     </select>
     <button id="start-btn">Start Ranking</button>
   </div>
@@ -143,7 +138,7 @@ title: 乃木坂46 Bayesian Sorter
   <div class="container">
     <div class="comparison-area">
       <div class="card" id="card1">
-        <img id="image1" src="/api/placeholder/300/300" alt="Idol 1">
+        <img id="image1" src="/images/no_texture.png" alt="Idol 1">
         <h3 id="name1"></h3>
         <p>Current Rating: <span id="rating1"></span></p>
         <div class="confidence-bar">
@@ -151,7 +146,7 @@ title: 乃木坂46 Bayesian Sorter
         </div>
       </div>
       <div class="card" id="card2">
-        <img id="image2" src="/api/placeholder/300/300" alt="Idol 2">
+        <img id="image2" src="/images/no_texture.png" alt="Idol 2">
         <h3 id="name2"></h3>
         <p>Current Rating: <span id="rating2"></span></p>
         <div class="confidence-bar">

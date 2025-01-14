@@ -8,7 +8,3 @@ title: Webring
                                                                 |     |
 
 ---
-
->I believe in:
-
->Thousand-Year Panty Shot Reich
