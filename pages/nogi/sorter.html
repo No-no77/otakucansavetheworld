@@ -1,7 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Probabilistic Idol Ranker</title>
+---
+layout: default
+category: archive
+title: 乃木坂46 Bayesian Sorter
+---
+
   <style>
     body {
       font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -114,11 +116,17 @@
     }
   </style>
 </head>
-<body>
-  <h1>Probabilistic Idol Ranker</h1>
-  <p>Select your preferred idol in each comparison. The system will adaptively learn rankings while accounting for noise/inconsistency in your choices.</p>
-  <button id="finish-btn" style="display:none">Finish & Show Results</button>
-  <br>
+  <div class="leftcolumn">
+    {% include profile-card.html %}
+  </div>
+  
+  <div class="midcolumn">
+    <div class="index-card">
+      <br>
+        <h1 class="index-title">乃木坂46 Bayesian Sorter</h1>    
+      <div class="side-card">
+      </div>
+    </div>
   <div class="control-panel">
     <select id="group-select">
       <option value="active-members">Active Members</option>
@@ -170,7 +178,8 @@
       </table>
     </div>
   </div>
-
+  {% include license.html %}
+</div>
   <script>
   
   document.head.insertAdjacentHTML('beforeend', `
@@ -235,7 +244,7 @@ document.getElementById('start-btn').onclick = function() {
 async function generateResultsPNG(rankings) {
   const GRID_SIZE = Math.ceil(Math.sqrt(rankings.length));
   const CELL_SIZE = 150;
-  const PADDING = 10;
+  const PADDING = 40;
   const IMG_SIZE = 120;
   const width = GRID_SIZE * CELL_SIZE;
   const height = GRID_SIZE * CELL_SIZE;
