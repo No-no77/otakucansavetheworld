@@ -238,8 +238,8 @@ async function generateResultsPNG(rankings) {
   const GRID_SIZE = Math.ceil(Math.sqrt(rankings.length));
   const CELL_SIZE = 150; // Size of each cell
   const IMG_SIZE = 120; // Size of each image
-  const MARGIN = 40; // Space between each cell
-  const PADDING = 10; // Padding inside each cell
+  const MARGIN = 100; // Space between each cell
+  const PADDING = 50; // Padding inside each cell
 
   const width = GRID_SIZE * (CELL_SIZE + MARGIN) - MARGIN; // Total canvas width
   const height = GRID_SIZE * (CELL_SIZE + MARGIN) - MARGIN; // Total canvas height
