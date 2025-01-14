@@ -1,0 +1,425 @@
+---
+layout: default
+category: archive
+title: 乃木坂46 Senbatsu Maker
+---
+
+<style>
+* {
+  font-family: "MS PGothic", "Courier", "Lucida Console", "Menlo Regular", "IBM Plex Mono", "Fira Code", "Fira Mono","Roboto Mono","Droid Sans Mono", Monaco, Consolas, Courier, monospace;
+}
+
+.distributionForm, .selection {
+  border: solid;
+  border-width: thin;
+  padding: 10px;
+  border-color: blue;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.selection {
+  margin-bottom: 20px;
+}
+
+.form-grid {
+  white-space-collapse: preserve-breaks;
+}
+
+.button {
+    display: block;
+    width: 200px;
+    height: auto;
+    margin: 20px auto;
+    color: #333333;
+    font-family: "MS PGothic", "Courier", "Lucida Console", "Menlo Regular", "IBM Plex Mono", "Fira Code", "Fira Mono","Roboto Mono","Droid Sans Mono", Monaco, Consolas, Courier, monospace;
+    text-align: center;
+    padding: 15px;
+    transition-duration: 0.4s;
+    overflow: hidden;
+    border-color: blue;
+    border-style: solid;
+    border-width: thin;
+    background-color: white;
+    cursor: pointer;
+}
+
+.quantity {
+    margin-top: 15px;
+    padding: 5px;
+    width: 70px;
+    border-color: blue;
+    border-style: solid;
+    border-width: thin;
+}
+
+.counter {
+    padding: 0.5em 1em;
+}
+
+.input {
+    overflow: visible;
+}
+
+/* New styles for formation display */
+.formation-display {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+}
+
+.formation-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.member-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.member-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 1px solid blue;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.member-name {
+    font-size: 12px;
+    text-align: center;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.watermark {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: rgba(0,0,0,0.1);
+    text-align: right;
+    font-size: 12px;
+}
+</style>
+
+<div class="leftcolumn">
+  {% include profile-card.html %}
+</div>
+
+<div class="midcolumn">
+  <div class="index-card">
+    <br>
+      <h1 class="index-title">乃木坂46 Senbatsu Maker</h1>    
+    <div class="side-card">
+    </div>
+  </div>
+
+  <div id="selectionCount" class="counter">Total Slots Left: 22</div>
+  <br>
+  <div id="distributionForm" class="distributionForm">
+    <div class="form-grid">
+      <label for="center">Center:</label>
+      <input type="number" id="center" name="center" min="1" max="2" value="1" onchange="updateCount()" class="quantity"><br>
+      <label for="firstRow">First Row:</label>
+      <input type="number" id="firstRow" name="firstRow" min="2" max="10" onchange="updateCount()" class="quantity"><br>
+      <label for="secondRow">Second Row:</label>
+      <input type="number" id="secondRow" name="secondRow" min="3" max="10" onchange="updateCount()" class="quantity"><br>
+      <label for="thirdRow">Third Row:</label>
+      <input type="number" id="thirdRow" name="thirdRow" min="4" max="10" onchange="updateCount()" class="quantity"><br>
+    </div> 
+    
+    <div id="error" style="color: red;"></div>
+    <div id="button-container" style="display: flex; justify-content: space-between;">
+      <input type="button" value="Confirm" id="confirmButton" onclick="confirmDistribution()" style="display: none;" class="button">
+      <input type="button" value="Reset" onclick="resetDistribution()" class="button">
+    </div>
+  </div>
+
+  <div class="selection" id="selection" style="display: none;">
+    <div id="dropdowns"></div>
+    <div id="button-container" style="display: flex; justify-content: space-between;">
+      <input type="button" value="Confirm" id="confirmSelectionButton" onclick="confirmSelection()" style="display: none;" class="button">
+      <input type="button" value="Reset Selections" id="resetSelectionsButton" onclick="resetSelections()" style="display: none;" class="button">
+    </div>
+    <div id="memberSelection" style="display: none;"></div>  
+    <input type="button" value="Try Again" id="tryAgainButton" onclick="resetEverything()" style="display: none;" class="button">
+    <br>
+  </div> 
+  {% include license.html %}
+</div>
+
+<script>
+let totalSlots = 25;
+let members = [ "ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI", "SATO KAEDE",
+          "NAKAMURA RENO","MUKAI HAZUKI", "YAMASHITA MIZUKI", "YOSHIDA AYANO CHRISTIE", "YODA YUKI",
+          "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",  "SATO RIKA", "SHIBATA YUNA",
+          "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",  "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA",
+          "MATSUO MIYU", "YAKUBO MIO", "YUMIKI NAO","IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
+          "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO", "NAKANISHI ARUNO",
+          "OKAMOTO HINA"];
+
+var imagePaths = {
+    "ITO RIRIA":'/images/sorter_pics/ririan.jpg',
+    "IWAMOTO RENKA":'/images/sorter_pics/renka.jpg',
+    "UMEZAWA MINAMI":'/images/sorter_pics/ume.jpg',
+    "KUBO SHIORI":'/images/sorter_pics/kubo.jpg',
+    "SAKAGUCHI TAMAMI":'/images/sorter_pics/tamami.jpg',
+    "SATO KAEDE":'/images/sorter_pics/kaede.jpg',
+    "NAKAMURA RENO":'/images/sorter_pics/reno.jpg',
+    "MUKAI HAZUKI":'/images/sorter_pics/mukai.jpg',
+    "YAMASHITA MIZUKI":'/images/sorter_pics/mizuki.jpg',
+    "YOSHIDA AYANO CHRISTIE":'/images/sorter_pics/yac.jpg',
+    "YODA YUKI":'/images/sorter_pics/yoda.jpg',
+    "ENDO SAKURA":'/images/sorter_pics/enpii.jpg',
+    "KAKI HARUKA":'/images/sorter_pics/falseflag.jpg',
+    "KANAGAWA SAYA":'/images/sorter_pics/saya.jpg',
+    "KUROMI HARUKA":'/images/sorter_pics/kuruminha.jpg',
+    "SATO RIKA":'/images/sorter_pics/rika.jpg',
+    "SHIBATA YUNA":'/images/sorter_pics/shibata.jpg',
+    "SEIMIYA REI":'/images/sorter_pics/rei.jpg',
+    "KAKEHASHI SAYAKA":'/images/sorter_pics/kakehashi.jpg',
+    "TAMURA MAYU":'/images/sorter_pics/mayutan.jpg',
+    "TSUTSUI AYAME":'/images/sorter_pics/ayamen.jpg',
+    "HAYAKAWA SEIRA":'/images/sorter_pics/normalbros.jpg',
+    "HAYASHI RUNA":'/images/sorter_pics/runa.jpg',
+    "MATSUO MIYU":'/images/sorter_pics/miyu.jpg',
+    "YAKUBO MIO":'/images/sorter_pics/yakubo.jpg',
+    "YUMIKI NAO":'/images/sorter_pics/yumiki.jpg',
+    "IOKI MAO":'/images/sorter_pics/mao.jpg',
+    "IKEDA TERESA":'/images/sorter_pics/terepan.jpg',
+    "ICHINOSE MIKU":'/images/sorter_pics/miku.jpg',
+    "INOUE NAGI": '/images/sorter_pics/nyagi.jpg',
+    "OGAWA AYA":'/images/sorter_pics/aya.jpg',
+    "OKUDA IROHA":'/images/sorter_pics/iroha.jpg',
+    "KAWASAKI SAKURA":'/images/sorter_pics/sprite.jpg',
+    "SUGAWARA SATSUKI":'/images/sorter_pics/satsuki.jpg',
+    "TOMISATO NAO":'/images/sorter_pics/nao.jpg',
+    "NAKANISHI ARUNO":'/images/sorter_pics/arno.jpg',
+    "OKAMOTO HINA":'/images/sorter_pics/hina.jpg'
+};
+
+// Initialize form values
+document.getElementById('center').value = "1";
+document.getElementById('firstRow').value = "2";
+document.getElementById('secondRow').value = "3";
+document.getElementById('thirdRow').value = "4";
+updateCount();
+
+function updateCount() {
+    let center = parseInt(document.getElementById('center').value);
+    let firstRow = parseInt(document.getElementById('firstRow').value);
+    let secondRow = parseInt(document.getElementById('secondRow').value);
+    let thirdRow = parseInt(document.getElementById('thirdRow').value);
+
+    let totalSelected = center + firstRow + secondRow + thirdRow;
+    let slotsLeft = Math.max(0, totalSlots - totalSelected);
+    
+    document.getElementById('selectionCount').innerText = "Total Slots Left: " + slotsLeft;
+
+    if (center >= firstRow || firstRow >= secondRow || secondRow >= thirdRow || totalSelected > totalSlots) {
+        document.getElementById('error').innerText = "Invalid distribution. Please keep the size of each row coherent.";
+        document.getElementById('confirmButton').style.display = 'none';
+    } else {
+        document.getElementById('error').innerText = '';
+        document.getElementById('confirmButton').style.display = 'inline';
+    }
+}
+
+function resetDistribution() {
+    document.getElementById('center').value = "1";
+    document.getElementById('firstRow').value = "2";
+    document.getElementById('secondRow').value = "3";
+    document.getElementById('thirdRow').value = "4";
+    updateCount();
+}
+
+function generateDropdowns() {
+    let center = parseInt(document.getElementById('center').value);
+    let firstRow = parseInt(document.getElementById('firstRow').value);
+    let secondRow = parseInt(document.getElementById('secondRow').value);
+    let thirdRow = parseInt(document.getElementById('thirdRow').value);
+
+    let dropdownsDiv = document.getElementById('dropdowns');
+    dropdownsDiv.innerHTML = '';
+
+    let availableMembers = [...members];
+
+    let createDropdownRow = function(numDropdowns, rowName) {
+    let rowDiv = document.createElement('div');
+    rowDiv.innerHTML = '<h2>' + rowName + '</h2>';
+    for (let i = 0; i < numDropdowns; i++) {
+        let select = document.createElement('select');
+        select.style.borderColor = 'blue';
+        select.style.height = '1.5rem';
+        select.style.margin = '10px';
+        select.onchange = function() {
+            updateAvailableMembers();
+        };
+        // Start with an empty option
+        let defaultOption = document.createElement('option');
+        defaultOption.value = '';
+        defaultOption.text = '';
+        select.appendChild(defaultOption);
+        // Add the available members
+        availableMembers.forEach(member => {
+            let option = document.createElement('option');
+            option.value = member;
+            option.text = member;
+            select.appendChild(option);
+        });
+        rowDiv.appendChild(select);
+    }
+    dropdownsDiv.appendChild(rowDiv);
+};
+
+
+    createDropdownRow(center, 'Center');
+    createDropdownRow(firstRow, 'First Row');
+    createDropdownRow(secondRow, 'Second Row');
+    createDropdownRow(thirdRow, 'Third Row');
+}
+
+function checkSelections() {
+    let selects = document.querySelectorAll('#dropdowns select');
+    let allFilled = Array.from(selects).every(select => select.value);
+    let errorMessageDiv = document.getElementById('error');
+    if (allFilled) {
+        errorMessageDiv.innerText = '';
+        document.getElementById('confirmSelectionButton').style.display = 'inline';
+    } else {
+        errorMessageDiv.innerText = "Please select all members before confirming.";
+        document.getElementById('confirmSelectionButton').style.display = 'none';
+    }
+}
+
+function updateAvailableMembers() {
+    let selectedMembers = [];
+    let selects = document.querySelectorAll('#dropdowns select');
+    selects.forEach(select => {
+        if (select.value) {
+            selectedMembers.push(select.value);
+        }
+    });
+
+    selects.forEach(select => {
+        let currentValue = select.value;
+        let options = Array.from(select.options);
+        options.forEach(option => {
+            if (selectedMembers.includes(option.value) && currentValue !== option.value) {
+                option.disabled = true;
+            } else {
+                option.disabled = false;
+            }
+        });
+    });
+    checkSelections();
+}
+
+function confirmDistribution() {
+    let center = parseInt(document.getElementById('center').value);
+    let firstRow = parseInt(document.getElementById('firstRow').value);
+    let secondRow = parseInt(document.getElementById('secondRow').value);
+    let thirdRow = parseInt(document.getElementById('thirdRow').value);
+
+    let totalSelected = center + firstRow + secondRow + thirdRow;
+
+    if (totalSelected <= totalSlots) {
+        generateDropdowns();
+        document.getElementById('distributionForm').style.display = 'none';  // Hide distribution form
+        document.getElementById('memberSelection').style.display = 'block'; // Show member selection form
+        document.getElementById('confirmSelectionButton').style.display = 'none'; // Show confirm button for member selection
+        document.getElementById('resetSelectionsButton').style.display = 'inline'; // Show reset selections button
+        document.getElementById('selectionCount').innerText = '';  // Empty the 'Total Slots Left' text
+        document.getElementById('selection').style.display = 'flow-root';
+    } else {
+        document.getElementById('error').innerText = "Total selected exceeds the total slots.";
+        document.getElementById('confirmButton').style.display = 'none';
+    }
+}
+
+function createFormationDisplay(center, firstRow, secondRow, thirdRow) {
+    const formationDisplay = document.createElement('div');
+    formationDisplay.className = 'formation-display';
+
+    function createRow(members) {
+        const row = document.createElement('div');
+        row.className = 'formation-row';
+        
+        members.forEach(member => {
+            const container = document.createElement('div');
+            container.className = 'member-container';
+            
+            const img = document.createElement('img');
+            img.src = imagePaths[member];
+            img.className = 'member-image';
+            img.alt = member;
+            
+            const name = document.createElement('div');
+            name.className = 'member-name';
+            name.textContent = member;
+            
+            container.appendChild(img);
+            container.appendChild(name);
+            row.appendChild(container);
+        });
+        
+        return row;
+    }
+
+    [center, firstRow, secondRow, thirdRow].forEach(rowMembers => {
+        if (rowMembers.length > 0) {
+            formationDisplay.appendChild(createRow(rowMembers));
+        }
+    });
+
+    const watermark = document.createElement('div');
+    watermark.className = 'watermark';
+    watermark.innerHTML = `otakucanchangetheworld<br>${new Date().toLocaleDateString()}`;
+    formationDisplay.appendChild(watermark);
+
+    return formationDisplay;
+}
+
+function confirmSelection() {
+    let dropdownsDiv = document.getElementById('dropdowns');
+    let selects = dropdownsDiv.querySelectorAll('select');
+    let selections = Array.from(selects).map(select => select.value);
+
+    let center = selections.slice(0, parseInt(document.getElementById('center').value));
+    let firstRow = selections.slice(center.length, center.length + parseInt(document.getElementById('firstRow').value));
+    let secondRow = selections.slice(center.length + firstRow.length, center.length + firstRow.length + parseInt(document.getElementById('secondRow').value));
+    let thirdRow = selections.slice(center.length + firstRow.length + secondRow.length);
+
+    dropdownsDiv.innerHTML = '';
+    dropdownsDiv.appendChild(createFormationDisplay(center, firstRow, secondRow, thirdRow));
+
+    document.getElementById('confirmSelectionButton').style.display = 'none';
+    document.getElementById('resetSelectionsButton').style.display = 'none';
+    document.getElementById('tryAgainButton').style.display = 'inline';
+    document.getElementById('selection').style.display = 'flow-root';
+}
+
+function resetEverything() {
+    document.getElementById('dropdowns').innerHTML = '';
+    document.getElementById('distributionForm').style.display = 'block';
+    document.getElementById('memberSelection').style.display = 'none';
+    document.getElementById('tryAgainButton').style.display = 'none';
+    document.getElementById('selectionCount').style.display = 'block';
+    document.getElementById('confirmButton').style.display = 'none'; // Hide the confirm button
+    document.getElementById('selection').style.display = 'none'; // Show "Try Again" button after confirming selection
+    resetDistribution();
+}
+
+
+
+</script>

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Probabilistic Idol Ranker</title>
+  <style>
+    body {
+      font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      color: #333;
+    }
+
+    .container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+    }
+
+    .comparison-area {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .card {
+      border: 1px solid blue;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .card img {
+      max-width: 300px;
+      height: auto;
+    }
+
+    .stats-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    .stats-table th, .stats-table td {
+      padding: 8px;
+      border: 1px solid blue;
+      text-align: left;
+    }
+
+    .stats-table th {
+      background-color: #f5f5f5;
+    }
+
+    .stats-table tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+
+    .control-panel {
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 8px 16px;
+      margin-right: 10px;
+      border: 1px solid blue;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    select {
+      padding: 8px;
+      border: 1px solid blue;
+    }
+
+    .confidence-bar {
+      height: 4px;
+      background-color: gray;
+      border-radius: 2px;
+      overflow: hidden;
+    }
+
+    .confidence-fill {
+      height: 100%;
+      background-color: purple;
+      transition: width 0.3s ease;
+    }
+
+    /* Loading spinner */
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid purple;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin: 20px auto;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Probabilistic Idol Ranker</h1>
+  <p>Select your preferred idol in each comparison. The system will adaptively learn rankings while accounting for noise/inconsistency in your choices.</p>
+  <button id="finish-btn" style="display:none">Finish & Show Results</button>
+  <br>
+  <div class="control-panel">
+    <select id="group-select">
+      <option value="active-members">Active Members</option>
+      <option value="first-gen">1st Generation</option>
+      <option value="second-gen">2nd Generation</option>
+      <option value="third-gen">3rd Generation</option>
+      <option value="fourth-gen">4th Generation</option>
+      <option value="fifth-gen">5th Generation</option>
+      <option value="all-gens">All Generations</option>
+    </select>
+    <button id="start-btn">Start Ranking</button>
+  </div>
+
+  <div class="container">
+    <div class="comparison-area">
+      <div class="card" id="card1">
+        <img id="image1" src="/api/placeholder/300/300" alt="Idol 1">
+        <h3 id="name1"></h3>
+        <p>Current Rating: <span id="rating1"></span></p>
+        <div class="confidence-bar">
+          <div class="confidence-fill" id="confidence1"></div>
+        </div>
+      </div>
+      <div class="card" id="card2">
+        <img id="image2" src="/api/placeholder/300/300" alt="Idol 2">
+        <h3 id="name2"></h3>
+        <p>Current Rating: <span id="rating2"></span></p>
+        <div class="confidence-bar">
+          <div class="confidence-fill" id="confidence2"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="results">
+      <h2>Current Rankings</h2>
+      <table class="stats-table">
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Name</th>
+            <th>Rating</th>
+            <th>Uncertainty</th>
+            <th>Comparisons</th>
+            <th>Win Rate</th>
+          </tr>
+        </thead>
+        <tbody id="rankings">
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+  
+  document.head.insertAdjacentHTML('beforeend', `
+  <style>
+    .group-select-container {
+      transition: opacity 0.3s;
+    }
+    
+    .results-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+    }
+    
+    .results-content {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 90%;
+      max-height: 90%;
+      overflow: auto;
+    }
+
+    .close-results {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: white;
+      border: none;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+  </style>
+`);
+
+// Add results overlay div to the body
+document.body.insertAdjacentHTML('beforeend', `
+  <div class="results-overlay">
+    <button class="close-results">×</button>
+    <div class="results-content"></div>
+  </div>
+`);
+
+const originalStartHandler = document.getElementById('start-btn').onclick;
+document.getElementById('start-btn').onclick = function() {
+  document.getElementById('group-select').parentElement.style.opacity = '0';
+  setTimeout(() => {
+    document.getElementById('group-select').parentElement.style.display = 'none';
+  }, 300);
+  originalStartHandler.call(this);
+};
+
+async function generateResultsPNG(rankings) {
+  const GRID_SIZE = Math.ceil(Math.sqrt(rankings.length));
+  const CELL_SIZE = 150;
+  const PADDING = 10;
+  const IMG_SIZE = 120;
+  const width = GRID_SIZE * CELL_SIZE;
+  const height = GRID_SIZE * CELL_SIZE;
+
+  // Create canvas
+  const canvas = document.createElement('canvas');
+  canvas.width = width;
+  canvas.height = height;
+  const ctx = canvas.getContext('2d');
+
+  // Fill background
+  ctx.fillStyle = 'white';
+  ctx.fillRect(0, 0, width, height);
+
+  // Add watermark
+  ctx.font = '24px Arial';
+  ctx.fillStyle = 'rgba(0,0,0,0.1)';
+  ctx.textAlign = 'center';
+  ctx.fillText('otakucanchangetheworld', width/2, height-20);
+
+  // Function to load image and return a promise
+  const loadImage = (src) => {
+    return new Promise((resolve, reject) => {
+      const img = new Image();
+      img.crossOrigin = 'Anonymous'; // Handle CORS issues
+      img.onload = () => resolve(img);
+      img.onerror = () => reject(new Error('Image load failed'));
+      img.src = src;
+    });
+  };
+
+  // Draw single idol card
+  const drawIdolCard = async (idol, index) => {
+    const row = Math.floor(index / GRID_SIZE);
+    const col = index % GRID_SIZE;
+    const x = col * CELL_SIZE + PADDING;
+    const y = row * CELL_SIZE + PADDING;
+    
+    // Draw card background
+    ctx.strokeStyle = '#ccc';
+    ctx.strokeRect(x, y, CELL_SIZE-PADDING*2, CELL_SIZE-PADDING*2);
+
+    // Load and draw image
+    try {
+      const imagePath = imagePaths[idol.name] || '/api/placeholder/120/120';
+      const img = await loadImage(imagePath);
+      const imgX = x + (CELL_SIZE-PADDING*2-IMG_SIZE)/2;
+      const imgY = y + 10;
+      ctx.drawImage(img, imgX, imgY, IMG_SIZE, IMG_SIZE);
+    } catch (error) {
+      console.error('Error loading image:', error);
+      // Draw placeholder rectangle if image fails to load
+      ctx.fillStyle = '#eee';
+      ctx.fillRect(x + 15, y + 10, IMG_SIZE, IMG_SIZE);
+    }
+
+    // Draw text
+    ctx.fillStyle = 'black';
+    ctx.textAlign = 'center';
+    const centerX = x + (CELL_SIZE-PADDING*2)/2;
+
+    // Name (bold)
+    ctx.font = 'bold 12px Arial';
+    ctx.fillText(idol.name, centerX, y + IMG_SIZE + 30);
+
+    // Stats
+    ctx.font = '10px Arial';
+    ctx.fillText(`Rating: ${Math.round(idol.rating)}`, centerX, y + IMG_SIZE + 45);
+    ctx.fillText(
+      `Certainty: ${Math.round(100-(idol.uncertainty/MAX_UNCERTAINTY*100))}%`,
+      centerX, y + IMG_SIZE + 60
+    );
+  };
+
+  // Draw all idol cards
+  for (let i = 0; i < rankings.length; i++) {
+    await drawIdolCard(rankings[i], i);
+  }
+  
+  // Return the PNG data URL directly
+  return canvas.toDataURL('image/png');
+}
+
+// Example usage:
+/* 
+// Method 1: Using async/await
+async function displayResults(rankings) {
+  const pngDataUrl = await generateResultsPNG(rankings);
+  const img = document.createElement('img');
+  img.src = pngDataUrl;
+  document.body.appendChild(img);
+}
+
+// Method 2: Using .then()
+generateResultsPNG(rankings).then(pngDataUrl => {
+  const img = document.createElement('img');
+  img.src = pngDataUrl;
+  document.body.appendChild(img);
+});
+*/
+
+    // Constants for the Bradley-Terry model
+    const K_FACTOR = 32; // Learning rate
+    const MIN_UNCERTAINTY = 50; // Minimum uncertainty value
+    const MAX_UNCERTAINTY = 400; // Starting uncertainty
+    const UNCERTAINTY_DECAY = 0.95; // How much uncertainty reduces after each comparison
+
+    class IdolRanker {
+      constructor() {
+        this.idols = new Map(); // Map of idol name to {rating, uncertainty, wins, losses}
+        this.comparisons = new Map(); // Map of "idol1-idol2" to array of comparison results
+        this.currentPair = null;
+      }
+
+      initializeIdol(name) {
+        if (!this.idols.has(name)) {
+          this.idols.set(name, {
+            rating: 1500,
+            uncertainty: MAX_UNCERTAINTY,
+            wins: 0,
+            losses: 0
+          });
+        }
+      }
+
+      // Get expected win probability using Bradley-Terry model
+      getWinProbability(rating1, rating2) {
+        return 1 / (1 + Math.pow(10, (rating2 - rating1) / 400));
+      }
+
+      // Update ratings after a comparison
+      updateRatings(winner, loser) {
+        const winnerStats = this.idols.get(winner);
+        const loserStats = this.idols.get(loser);
+        
+        const expectedWinProb = this.getWinProbability(winnerStats.rating, loserStats.rating);
+        
+        // Update ratings
+        const ratingChange = K_FACTOR * (1 - expectedWinProb);
+        winnerStats.rating += ratingChange;
+        loserStats.rating -= ratingChange;
+        
+        // Update uncertainties
+        winnerStats.uncertainty = Math.max(MIN_UNCERTAINTY, 
+          winnerStats.uncertainty * UNCERTAINTY_DECAY);
+        loserStats.uncertainty = Math.max(MIN_UNCERTAINTY, 
+          loserStats.uncertainty * UNCERTAINTY_DECAY);
+        
+        // Update win/loss counts
+        winnerStats.wins++;
+        loserStats.losses++;
+        
+        // Record comparison
+        const pairKey = [winner, loser].sort().join('-');
+        if (!this.comparisons.has(pairKey)) {
+          this.comparisons.set(pairKey, []);
+        }
+        this.comparisons.get(pairKey).push({
+          winner,
+          timestamp: Date.now()
+        });
+      }
+
+      // Select next pair to compare based on highest combined uncertainty
+      selectNextPair() {
+        const idolArray = Array.from(this.idols.entries());
+        let maxUncertainty = -1;
+        let bestPair = null;
+
+        for (let i = 0; i < idolArray.length; i++) {
+          for (let j = i + 1; j < idolArray.length; j++) {
+            const [name1, stats1] = idolArray[i];
+            const [name2, stats2] = idolArray[j];
+            
+            // Calculate combined uncertainty weighted by rating difference
+            const ratingDiff = Math.abs(stats1.rating - stats2.rating);
+            const combinedUncertainty = (stats1.uncertainty + stats2.uncertainty) * 
+              (1 + Math.exp(-ratingDiff / 400));
+
+            if (combinedUncertainty > maxUncertainty) {
+              maxUncertainty = combinedUncertainty;
+              bestPair = [name1, name2];
+            }
+          }
+        }
+
+        this.currentPair = bestPair;
+        return bestPair;
+      }
+
+      // Get current rankings
+      getRankings() {
+        return Array.from(this.idols.entries())
+          .map(([name, stats]) => ({
+            name,
+            ...stats,
+            totalComparisons: stats.wins + stats.losses,
+            winRate: stats.wins / (stats.wins + stats.losses || 1)
+          }))
+          .sort((a, b) => b.rating - a.rating);
+      }
+    }
+
+    // Initialize the ranker and UI elements
+    const ranker = new IdolRanker();
+    let imagePaths = {}; // Will be populated with idol image paths
+
+    // UI update functions
+    function updateComparisonDisplay(pair) {
+      if (!pair) return;
+      
+      const [idol1, idol2] = pair;
+      const stats1 = ranker.idols.get(idol1);
+      const stats2 = ranker.idols.get(idol2);
+
+      document.getElementById('name1').textContent = idol1;
+      document.getElementById('name2').textContent = idol2;
+      document.getElementById('rating1').textContent = Math.round(stats1.rating);
+      document.getElementById('rating2').textContent = Math.round(stats2.rating);
+      document.getElementById('confidence1').style.width = 
+        `${(1 - stats1.uncertainty/MAX_UNCERTAINTY) * 100}%`;
+      document.getElementById('confidence2').style.width = 
+        `${(1 - stats2.uncertainty/MAX_UNCERTAINTY) * 100}%`;
+      
+      document.getElementById('image1').src = imagePaths[idol1] || '/api/placeholder/300/300';
+      document.getElementById('image2').src = imagePaths[idol2] || '/api/placeholder/300/300';
+    }
+
+    function updateRankingsTable() {
+      const rankings = ranker.getRankings();
+      const tbody = document.getElementById('rankings');
+      tbody.innerHTML = rankings.map((idol, index) => `
+        <tr>
+          <td>${index + 1}</td>
+          <td>${idol.name}</td>
+          <td>${Math.round(idol.rating)}</td>
+          <td>${Math.round(idol.uncertainty)}</td>
+          <td>${idol.totalComparisons}</td>
+          <td>${(idol.winRate * 100).toFixed(1)}%</td>
+        </tr>
+      `).join('');
+    }
+
+    // Event handlers
+    document.getElementById('start-btn').addEventListener('click', () => {
+      const selectedGroup = document.getElementById('group-select').value;
+      const idols = lists[selectedGroup];
+      
+      idols.forEach(name => ranker.initializeIdol(name));
+      document.getElementById('start-btn').style.display = 'none';
+      document.getElementById('finish-btn').style.display = 'block';
+      
+      const pair = ranker.selectNextPair();
+      updateComparisonDisplay(pair);
+      updateRankingsTable();
+    });
+
+    document.getElementById('finish-btn').onclick = async function() {
+    const rankings = ranker.getRankings();
+    const pngDataUrl = await generateResultsPNG(rankings);
+  
+    const resultsOverlay = document.querySelector('.results-overlay');
+    const resultsContent = document.querySelector('.results-content');
+    
+    resultsContent.innerHTML = `<img src="${pngDataUrl}" alt="Rankings Results">`;
+    resultsOverlay.style.display = 'flex';
+
+};
+
+    document.getElementById('card1').addEventListener('click', () => {
+      if (!ranker.currentPair) return;
+      const [winner, loser] = ranker.currentPair;
+      ranker.updateRatings(winner, loser);
+      const nextPair = ranker.selectNextPair();
+      updateComparisonDisplay(nextPair);
+      updateRankingsTable();
+    });
+
+    document.getElementById('card2').addEventListener('click', () => {
+      if (!ranker.currentPair) return;
+      const [loser, winner] = ranker.currentPair;
+      ranker.updateRatings(winner, loser);
+      const nextPair = ranker.selectNextPair();
+      updateComparisonDisplay(nextPair);
+      updateRankingsTable();
+    });
+
+    // Keyboard controls
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'a' || e.key === 'A') {
+        document.getElementById('card1').click();
+      } else if (e.key === 'd' || e.key === 'D') {
+        document.getElementById('card2').click();
+      }
+    });
+
+    document.querySelector('.close-results').onclick = function() {
+  document.querySelector('.results-overlay').style.display = 'none';
+};
+
+    // Initialize idol lists and image paths (using the same data from original code)
+    const lists = {
+        'active-members': [
+          "ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI", "SATO KAEDE",
+          "NAKAMURA RENO","MUKAI HAZUKI", "YAMASHITA MIZUKI", "YOSHIDA AYANO CHRISTIE", "YODA YUKI",
+          "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",  "SATO RIKA", "SHIBATA YUNA",
+          "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",  "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA",
+          "MATSUO MIYU", "YAKUBO MIO", "YUMIKI NAO","IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
+          "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO", "NAKANISHI ARUNO",
+          "OKAMOTO HINA"
+        ],
+        'first-gen': [ "AKIMOTO MANATSU", "SAITO ASUKA", "WADA MAYA", "HIGUCHI HINA", "HOSHINO MINAMI", "IKUTA ERIKA", "TAKAYAMA KAZUMI", "MATSUMURA SAYURI", "SHIRAISHI MAI", "NAKADA KANA", "INOUE SAYURI", "SAKURAI REIKA", "SAITO YURI", "ETO MISA", "NISHINO NANASE", "KAWAGO HINA", "NOJO AMI", "WAKATSUKI YUMI", "SAITO CHIHARU", "IKOMA RINA", "KAWAMURA MAHIRO", "NAKAMOTO HIMEKA", "ITO MARIKA", "HASHIMOTO NANAMI", "FUKAGAWA MAI", "NAGASHIMA SEIRA", "HATANAKA SEIRA", "YAMATO RINA", "ITO NENE", "ICHIKI RENA", "MIYAZAWA SEIRA", "KASHIWA YUKINA", "ANDO MIKUMO", "IWASE YUMIKO"
+        ],
+        'second-gen': ["SUZUKI AYANE", "YAMAZAKI RENA", "KITANO HINAKO", "SHINUCHI MAI", "TERADA RANZE", "WATANABE MIRIA", "ITO JUNNA", "HORI MIONA", "SASAKI KOTOKO", "ITO KARIN", "SAGARA IORI", "YONETOKU KYOKA", "YADA RISAKO", "NISHIKAWA NANAMI",
+        ],
+        'third-gen': [
+          "ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI", "SATO KAEDE",
+          "NAKAMURA RENO","MUKAI HAZUKI", "YAMASHITA MIZUKI", "YOSHIDA AYANO CHRISTIE", "YODA YUKI",
+        ],
+        'fourth-gen': [
+          "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",  "SATO RIKA", "SHIBATA YUNA",
+          "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",  "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA",
+          "MATSUO MIYU", "YAKUBO MIO", "YUMIKI NAO",
+        ],
+        'fifth-gen': [
+          "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
+          "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO", "NAKANISHI ARUNO",
+          "OKAMOTO HINA"
+        ],
+        'all-gens': [
+          "MATSUI RENA", "AKIMOTO MANATSU", "SAITO ASUKA", "WADA MAYA", "HIGUCHI HINA", "HOSHINO MINAMI", "IKUTA ERIKA", "TAKAYAMA KAZUMI", "MATSUMURA SAYURI", "SHIRAISHI MAI", "NAKADA KANA", "INOUE SAYURI", "SAKURAI REIKA", "SAITO YURI", "ETO MISA", "NISHINO NANASE", "KAWAGO HINA", "NOJO AMI", "WAKATSUKI YUMI", "SAITO CHIHARU", "IKOMA RINA", "KAWAMURA MAHIRO", "NAKAMOTO HIMEKA", "ITO MARIKA", "HASHIMOTO NANAMI", "FUKAGAWA MAI", "NAGASHIMA SEIRA", "HATANAKA SEIRA", "YAMATO RINA", "ITO NENE", "ICHIKI RENA", "MIYAZAWA SEIRA", "KASHIWA YUKINA", "ANDO MIKUMO", "IWASE YUMIKO",
+          "SUZUKI AYANE", "YAMAZAKI RENA", "KITANO HINAKO", "SHINUCHI MAI", "TERADA RANZE", "WATANABE MIRIA", "ITO JUNNA", "HORI MIONA", "SASAKI KOTOKO", "ITO KARIN", "SAGARA IORI", "YONETOKU KYOKA", "YADA RISAKO", "NISHIKAWA NANAMI",
+          "ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI", "SATO KAEDE",
+          "NAKAMURA RENO","MUKAI HAZUKI", "YAMASHITA MIZUKI", "YOSHIDA AYANO CHRISTIE", "YODA YUKI",
+          "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",  "SATO RIKA", "SHIBATA YUNA",
+          "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",  "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA",
+          "MATSUO MIYU", "YAKUBO MIO", "YUMIKI NAO",
+          "IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
+          "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO", "NAKANISHI ARUNO",
+          "OKAMOTO HINA"
+        ]
+      };
+
+    imagePaths = {
+      "ITO RIRIA":'images/sorter_pics/ririan.jpg',
+      "IWAMOTO RENKA":'images/sorter_pics/renka.jpg',
+      "UMEZAWA MINAMI":'images/sorter_pics/ume.jpg',
+      "KUBO SHIORI":'images/sorter_pics/kubo.jpg',
+      "SAKAGUCHI TAMAMI":'images/sorter_pics/tamami.jpg',
+      "SATO KAEDE":'images/sorter_pics/kaede.jpg',
+      "NAKAMURA RENO":'images/sorter_pics/reno.jpg',
+      "MUKAI HAZUKI":'images/sorter_pics/mukai.jpg',
+      "YAMASHITA MIZUKI":'images/sorter_pics/mizuki.jpg',
+      "YOSHIDA AYANO CHRISTIE":'images/sorter_pics/yac.jpg',
+      "YODA YUKI":'images/sorter_pics/yoda.jpg',
+      "ENDO SAKURA":'images/sorter_pics/enpii.jpg',
+      "KAKI HARUKA":'images/sorter_pics/falseflag.jpg',
+      "KANAGAWA SAYA":'images/sorter_pics/saya.jpg',
+      "KUROMI HARUKA":'images/sorter_pics/kuruminha.jpg',
+      "SATO RIKA":'images/sorter_pics/rika.jpg',
+      "SHIBATA YUNA":'images/sorter_pics/shibata.jpg',
+      "SEIMIYA REI":'images/sorter_pics/rei.jpg',
+      "KAKEHASHI SAYAKA":'images/sorter_pics/kakehashi.jpg',
+      "TAMURA MAYU":'images/sorter_pics/mayutan.jpg',
+      "TSUTSUI AYAME":'images/sorter_pics/ayamen.jpg',
+      "HAYAKAWA SEIRA":'images/sorter_pics/normalbros.jpg',
+      "HAYASHI RUNA":'images/sorter_pics/runa.jpg',
+      "MATSUO MIYU":'images/sorter_pics/miyu.jpg',
+      "YAKUBO MIO":'images/sorter_pics/yakubo.jpg',
+      "YUMIKI NAO":'images/sorter_pics/yumiki.jpg',
+      "IOKI MAO":'images/sorter_pics/mao.jpg',
+      "IKEDA TERESA":'images/sorter_pics/terepan.jpg',
+      "ICHINOSE MIKU":'images/sorter_pics/miku.jpg',
+      "INOUE NAGI":'images/sorter_pics/nyagi.jpg',
+      "OGAWA AYA":'images/sorter_pics/aya.jpg',
+      "OKUDA IROHA":'images/sorter_pics/iroha.jpg',
+      "KAWASAKI SAKURA":'images/sorter_pics/sprite.jpg',
+      "SUGAWARA SATSUKI":'images/sorter_pics/satsuki.jpg',
+      "TOMISATO NAO":'images/sorter_pics/nao.jpg',
+      "NAKANISHI ARUNO":'images/sorter_pics/arno.jpg',
+      "OKAMOTO HINA":'images/sorter_pics/hina.jpg',
+    };
+
+  </script>
+</body>
+</html>
