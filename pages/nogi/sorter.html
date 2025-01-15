@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Probabilistic Idol Ranker</title>
+  <title>乃木坂46 Autistic Sorter</title>
   <style>
     body {
       font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -116,7 +116,7 @@
 </head>
 <body>
   <a href="/">Return Home</a>
-  <h1>乃木坂46 Bayesian Sorter</h1>
+  <h1>乃木坂46 Autistic Sorter</h1>
   <p>Select your preferred idol in each comparison. The system will adaptively learn rankings while accounting for noise/inconsistency in your choices.</p>
   <p>This sorter tracks pairwise comparisons between items and infers their underlying ratings based on a noisy, probabilistic model inspired by the Elo or Bradley-Terry approach. It dynamically identifies and queries the user with comparisons involving items with the highest uncertainty in their current ratings, aiming to efficiently reduce uncertainty. The process continues interactively until the user ends the session, at which point a fully rescaled and finalized set of ratings is output.</p>
   <button id="finish-btn" style="display:none">Finish & Show Results</button>
@@ -543,10 +543,10 @@ generateResultsPNG(rankings).then(pngDataUrl => {
     // Initialize idol lists and image paths (using the same data from original code)
     const lists = {
         'active-members': [
-          "ITO RIRIA", "IWAMOTO RENKA", "UMEZAWA MINAMI", "KUBO SHIORI", "SAKAGUCHI TAMAMI", "SATO KAEDE",
-          "NAKAMURA RENO","MUKAI HAZUKI", "YAMASHITA MIZUKI", "YOSHIDA AYANO CHRISTIE", "YODA YUKI",
+          "ITO RIRIA", "UMEZAWA MINAMI", "KUBO SHIORI", "SATO KAEDE",
+          "NAKAMURA RENO", "YOSHIDA AYANO CHRISTIE", "YODA YUKI",
           "ENDO SAKURA", "KAKI HARUKA", "KANAGAWA SAYA", "KUROMI HARUKA",  "SATO RIKA", "SHIBATA YUNA",
-          "SEIMIYA REI", "KAKEHASHI SAYAKA", "TAMURA MAYU",  "TSUTSUI AYAME", "HAYAKAWA SEIRA", "HAYASHI RUNA",
+          "KAKEHASHI SAYAKA", "TAMURA MAYU",  "TSUTSUI AYAME", "HAYASHI RUNA",
           "MATSUO MIYU", "YAKUBO MIO", "YUMIKI NAO","IOKI MAO", "IKEDA TERESA", "ICHINOSE MIKU", "INOUE NAGI",
           "OGAWA AYA", "OKUDA IROHA", "KAWASAKI SAKURA", "SUGAWARA SATSUKI", "TOMISATO NAO", "NAKANISHI ARUNO",
           "OKAMOTO HINA"
