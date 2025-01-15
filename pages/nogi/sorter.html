@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Probabilistic Idol Ranker</title>
+  <title>乃木坂46 Bayesian Sorter</title>
   <style>
     body {
       font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -277,10 +277,6 @@ async function generateResultsPNG(rankings) {
     const col = index % GRID_SIZE;
     const x = col * (CELL_SIZE + MARGIN); // Include margin in x
     const y = row * (CELL_SIZE + MARGIN); // Include margin in y
-
-    // Draw card background
-    ctx.strokeStyle = '#ccc';
-    ctx.strokeRect(x, y, CELL_SIZE, CELL_SIZE);
 
     // Load and draw image
     try {
